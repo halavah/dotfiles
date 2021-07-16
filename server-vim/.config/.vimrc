@@ -1,7 +1,7 @@
-" ============================================= 一、插件设置 =============================================
+" ============================================= 01.PlugIn ===============================================
 
 " =============================================
-" 1.老板设置：\w 等价 :w
+" 01.mapleader
 " =============================================
 
 let mapleader = ','
@@ -9,39 +9,29 @@ let g:mapleader = ','
 
 
 " =============================================
-" 2.语法高亮：开启
+" 02.syntax
 " =============================================
 
 syntax on
 
 
 " =============================================
-" 3.插件设置
+" 03.plugIn
 " =============================================
 
-" 插件设置：不会与VI兼容
-set nocompatible
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+elseif filereadable(expand("~/.config/nvim/vimrc.bundles")) " neovim
+  source ~/.config/nvim/vimrc.bundles
+endif
 
-" 插件设置：检测文件类型
-filetype off
-
-" 插件设置：开始
-" call plug#begin('~/.vim/plugged')
-
-" 插件设置：插件列表
-" Plug 'morhetz/gruvbox'
-
-" 插件设置：结束
-" call plug#end()
-
-" 插件设置：加载自带或插件的脚本
 filetype plugin indent on
 
 
-" ============================================= 二、文件类型 =============================================
+" ============================================= 02.FileType =============================================
 
 " =============================================
-" 1.一般配置：python、ruby、markdown、.sh、.py、...
+" 01.fileType
 " =============================================
 
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
@@ -53,7 +43,7 @@ au BufWinEnter *.php set mps-=<:>
 
 
 " =============================================
-" 2.移除空格：自动移除多余空格
+" 02.remove spaces: auto remove extra spaces
 " =============================================
 
 fun! <SID>StripTrailingWhitespaces()
@@ -66,22 +56,18 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
 
 
 " =============================================
-" 3.创建文件：自动插入文件头
+" 03.create file: auto insert file header
 " =============================================
 autocmd BufNewFile *.sh,*.py exec " :call AutoSetFileHead()"
 function! AutoSetFileHead()
-    " 如果文件类型为.sh文件
     if &filetype == 'sh'
         call setline(1, " \#!/bin/bash" )
     endif
-
-    " 如果文件类型为python
     if &filetype == 'python'
         " call setline(1, " \#!/usr/bin/env python" )
         " call append(1, " \# encoding: utf-8" )
         call setline(1, " \# -*- coding: utf-8 -*-" )
     endif
-
     normal G
     normal o
     normal o
@@ -89,7 +75,7 @@ endfunc
 
 
 " =============================================
-" 4.自定高亮：自定义一些高亮关键字
+" 04.highlight: some highlight keywords
 " =============================================
 
 if has(" autocmd" )
@@ -102,23 +88,14 @@ endif
 
 
 " =============================================
-" 5.代码折叠：根据代码文件格式折叠
+" 05.fold: according to code file format fold
 " =============================================
 
-" 代码折叠
 set foldenable
 
-" 折叠方法
-" manual    手工折叠
-" indent    使用缩进表示折叠
-" expr      使用表达式定义折叠
-" syntax    使用语法定义折叠
-" diff      对没有更改的文本进行折叠
-" marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
 set foldmethod=indent
 set foldlevel=99
 
-" 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
 map <leader>zz :call ToggleFold()<cr>
 fun! ToggleFold()
@@ -133,21 +110,21 @@ endfun
 
 
 " =============================================
-" 6.不切行首：py文件中输入新行时#号注释不切回行首
+" 06.Do not switch to the beginning of the line
 " =============================================
 
 autocmd BufNewFile,BufRead *.py inoremap # X<c-h>#
 
 
 " =============================================
-" 7.缓冲信息：关闭时记住缓冲区信息，viminfo用户可写
+" 07.buffer
 " =============================================
 
 set viminfo^=%
 
 
 " =============================================
-" 8.缓冲信息：当一个缓冲区被遗弃时，它就会被隐藏起来
+" 08.buffer
 " =============================================
 
 set hidden
@@ -156,7 +133,7 @@ set ttyfast
 
 
 " =============================================
-" 9.编辑位置：光标移至最后编辑位置，viminfo用户可写
+" 09.editing position
 " =============================================
 
 if has(" autocmd" )
@@ -164,13 +141,12 @@ if has(" autocmd" )
 endif
 
 
-" ============================================= 三、系统设置 =============================================
+" ============================================= 03.System ===============================================
 
 " =============================================
-" 1.主题设置
+" 01.theme
 " =============================================
 
-" 主题颜色：GUI
 if has(" gui_running" )
     set guifont=Monaco:h14
     if has(" gui_gtk2" )   " GTK2
@@ -187,18 +163,14 @@ if has(" gui_running" )
     set t_Co=256
 endif
 
-" 主题背景：dark
 set background=dark
 
-" 主题配色：desert、gruvbox、molokai
 colorscheme desert
 
-" 主题配置：设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
 hi! link ShowMarksHLl DiffAdd
 hi! link ShowMarksHLu DiffChange
 
-" 主题配置：防止错误整行标红导致看不清
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
 highlight clear SpellCap
@@ -208,7 +180,6 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
-" 主题配置：防止tmux下vim的背景色显示异常
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
   " render properly when inside 256-color tmux and GNU screen.
@@ -218,223 +189,170 @@ endif
 
 
 " =============================================
-" 2.鼠标操作
+" 02.mouse
 " =============================================
 
-" 鼠标操作：启用
 set mouse=a
 
-" 鼠标操作：不启用
 " set mouse-=a
 
-" 多光标操作：修复ctrl+m 多光标操作选择的bug，但是改变了ctrl+v进行字符选中时将包含光标下的字符
 set selection=inclusive
 set selectmode=mouse,key
 
 
 " =============================================
-" 3.行尾空格
+" 03.trailing space
 " =============================================
 
-" 行尾空格：显示可见小方块
 set listchars=tab:>-,trail:.,precedes:<,extends:>
 
-" 行尾空格：显示非可见字符
 set list
 
 
 " =============================================
-" 4.TAB补全
+" 04.TAB completion
 " =============================================
 
-" TAB补全：第一次按下Tab，显示所有匹配的指令
 set wildmenu
 
-" TAB补全：第二次按下Tab，会依次选择各个指令
 set wildmode=longest:list,full
 
+set completeopt=longest,menu
+
 
 " =============================================
-" 5.窗口标题 / 当前模式 / 当前命令 / 历史条数
+" 05.title / cmd / mode / history
 " =============================================
 
-" 窗口标题：更改终端标题
 set title
 
-" 当前模式：屏幕最后一行，显示部分的命令
 set showcmd
 
-" 当前命令：屏幕最后一行，显示当前的模式
 set showmode
 
-" 历史条数：历史命令条数，设置可查询条数
 set history=1000
 
 
 " =============================================
-" 6.援助提示 / 正则字符 / 出错提示 / 误删恢复
+" 06.assist / reg / error / recovery
 " =============================================
 
-" 援助提示：不显示援助儿童提示
 set shortmess=atI
 
-" 正则字符：对于正则表达式，将magic打开
 set magic
 
-" 出错提示：Vim外修改的的文件，发出提示操作
 set autoread
 
-" 出错提示：关闭出错时提示声音
-set novisualbell
 set novisualbell
 set noerrorbells
 set t_vb=
 set tm=500
 
-" 设置退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
-" 好处：误删什么的，如果以前屏幕打开，可以找回
 set t_ti= t_te=
 
 
-" ============================================= 四、常见设置 =============================================
+" ============================================= 04.Daily ===============================================
 
 " =============================================
-" 1.备份文件、交换文件、操作历史
+" 01.backup / swapfile / undofile
 " =============================================
 
-" 备份文件，保存不创建备份文件（.backup）
 set nobackup
 
-" 交换文件，系统崩溃时恢复文件（.swp）
 set noswapfile
 
-" 操作历史，文件撤销上一次操作（.un~）
 set noundofile
 
-" 保存位置，备份文件、交换文件、操作历史文件
 set backupdir=~/.vim/.backup/
 
-" 保存位置，备份文件、交换文件、操作历史文件
 set directory=~/.vim/.swp/
 
-" 保存位置，备份文件、交换文件、操作历史文件
 set undodir=~/.vim/.undo/
 
 
 " =============================================
-" 2.编码设置
+" 02.encoding
 " =============================================
 
-" 编码设置：内部字符的编码
 set encoding=utf-8
 
-" 编码设置：写入文件的编码
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-" 编码设置：终端编码的类型
 set termencoding=utf-8
 
-" 编码设置：检测换行符格式，unix,dos,mac：备选列表
 set fileformats=unix,dos,mac
 
-" 编码设置：排版完成的方式，m：在任何值高于 255 的多字节字符上插入一行
 set formatoptions+=m
 
-" 编码设置：排版完成的方式，B：在连接行不要在两个多字节字符之间插入空格
 set formatoptions+=B
 
 
 " =============================================
-" 3.搜索结果
+" 03.search
 " =============================================
 
-" 搜索结果：跳转对应括号，停留时间由 matchtime 设置
 set showmatch
 set matchtime=2
 
-" 搜索结果：如果搜索模式中根据输入字符，Vim 会根据当前搜索，高亮显示结果
 set hlsearch
 
-" 搜索结果：如果搜索模式中根据输入字符，Vim 会根据当前搜索，进行及时更新
 set incsearch
 
-" 搜索结果：如果搜索模式中包含大写字母，Vim 会认为当前搜索，是区分大小写
 set ignorecase
 
-" 搜索结果：如果搜索模式不包含大写字母，Vim 会认为当前搜索，不区分大小写
 set smartcase
 
 
 " =============================================
-" 4.缩进设置
+" 04.expandtab
 " =============================================
 
-" 缩进设置：将Tab自动转化成空格
 set expandtab
 
-" 缩进设置：shiftwidth启用
 set smarttab
 
-" 缩进设置：shiftwidth取整
 set shiftround
 
-" 缩进设置：继承前一行缩进
 set autoindent
 
-" 缩进设置：新增行智能缩进
 set smartindent
 
-" 缩进设置：每一次缩进对应的空格数
 set shiftwidth=2
 
-" 缩进设置：设置Tab宽度，等同空格个数
 set tabstop=2
 
-" 缩进设置：按退格键时可以一次删掉4个空格
 set softtabstop=2
 
 
 " =============================================
-" 5.行号设置
+" 05.Line number
 " =============================================
 
-" 行号设置：高亮当前的行
 set cursorline
 
-" 行号设置：高亮当前的列
 set cursorcolumn
 
-" 行号设置：取消自动折行
 set nowrap
 
-" 行号设置：设置每行长度
 " set textwidth=120
 
-" 行号设置：单词内不折行
 set linebreak
 
-" 行号设置：折行处字符数，折行处与编辑窗口右边缘的空字符数
 set wrapmargin=2
 
-" 行号设置：垂直进行滚动，光标距离顶部/底部的位置（单位：行）
 set scrolloff=7
 
-" 行号设置：水平进行滚动，光标距离行首或行尾的位置（单位：字符）
 set sidescrolloff=15
 
-" 行号设置：显示行号列号，状态栏显示光标的当前位置（位置：行列）
 set ruler
 
-" 行号设置：显示的状态栏，0不显示，1只在多窗口时显示，2显示
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 set laststatus=2
 
-" 行号设置：绝对 或 相对
 set relativenumber number
 au FocusLost * :set norelativenumber number
 au FocusGained * :set relativenumber
 
-" 行号设置：插入模式下用绝对行号, 普通模式下用相对行号，用C-n>手动切换
 autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
@@ -447,42 +365,35 @@ endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
 
-" ============================================= 五、键盘映射 =============================================
+" ============================================= 05.KeyMap ==============================================
 
 " =============================================
-" 1.常见设置
+" 01.common
 " =============================================
 
-" 常见设置：插入模式，退出Vim控制，ESC
 inoremap kj <Esc>
 
-" 常见设置：命令模式，退出Vim控制，快速文本保存
 nnoremap <leader>q :q<CR>
 
-" 常见设置：命令模式，退出Vim控制，快速文本退出
 nnoremap <leader>w :w<CR>
 
-" 常见设置：命令模式，退出Vim控制，保存权限问题
 cmap w!! w !sudo tee >/dev/null %
 
-" 常见设置：普通模式，保存 .vimrc，自动重启加载
 autocmd! bufwritepost .vimrc source %
 
-" 常见设置：<Ctrl-s>锁定屏幕，<Ctrl-q>解锁屏幕
 map <C-S> :w<CR>
 
-" 常见设置：离开插入模式后自动关闭预览窗口
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+
 
 " =============================================
-" 2.Fn 设置
+" 02.Fn
 " =============================================
 
-" Fn 设置：<F1>，废弃系统帮助
 noremap <F1> <Esc>"
 
-" Fn 设置：<F2>，快速显示行号
 function! HideNumber()
   if(&relativenumber == &number)
     set relativenumber! number!
@@ -495,22 +406,16 @@ function! HideNumber()
 endfunc
 nnoremap <F2> :call HideNumber()<CR>
 
-" Fn 设置：<F3>，快速打印字符
 nnoremap <F3> :set list! list?<CR>
 
-" Fn 设置：<F4>，快速换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
-" Fn 设置：<F5>，快速粘贴模式，用于有格式的代码粘贴
 set pastetoggle=<F5>
 
-" Fn 设置：<F6>，快速语法开关
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
-" Fn 设置：<  >，退出Vim控制，插入关闭粘贴
 au InsertLeave * set nopaste
 
-" Fn 设置：<F5>，快速粘贴模式，插入模式下自动设置Vim的粘贴模式
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste
@@ -520,34 +425,28 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 
 " =============================================
-" 3.方向控制
+" 03.controller
 " =============================================
 
-" 方向控制：普通模式，禁用光标移动
 nnoremap <Up> :echomsg " Use k" <cr>
 nnoremap <Down> :echomsg " Use j" <cr>
 nnoremap <Left> :echomsg " Use h" <cr>
 nnoremap <Right> :echomsg " Use l" <cr>
 
-" 方向控制：普通模式，光标行的移动
 nnoremap k gk
 nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
-" 方向控制：普通模式，光标持续移动
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 
-" 方向控制：普通模式，切换前后buffer
 " nnoremap [b :bprevious<cr>
 " nnoremap ]b :bnext<cr>
 
-" 方向控制：普通模式，方向键切换buffer
 " noremap <left> :bp<CR>
 " noremap <right> :bn<CR>
 
-" 方向控制：可视模式，上下左右键会显示其他信息
 " inoremap <expr> <Down>     pumvisible() ? " \<C-n>" : " \<Down>"
 " inoremap <expr> <Up>       pumvisible() ? " \<C-p>" : " \<Up>"
 " inoremap <expr> <PageDown> pumvisible() ? " \<PageDown>\<C-p>\<C-n>" : " \<PageDown>"
@@ -555,69 +454,55 @@ nnoremap <C-y> 2<C-y>
 
 
 " =============================================
-" 4.搜索操作
+" 04.search result
 " =============================================
 
-" 搜索操作：普通模式，关闭搜索高亮
 noremap <silent><leader>/ :nohls<CR>
 
-" 搜索操作：普通模式，始终屏幕中间
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
-" 搜索操作：普通模式，选中并高亮最后一次插入的内容
 nnoremap gv `[v`]
 
 
 " =============================================
-" 5.多行缩进 / 本行光标 / 全文光标 / 空格搜索
+" 05.indent / line / text /space search
 " =============================================
 
-" 多行缩进：可视模式，缩进保持选中
 vnoremap < <gv
 vnoremap > >gv
 
-" 本行光标：行首 / 行尾
 nnoremap H ^
 nnoremap L $
 
-" 本行光标：文首 / 文尾
 cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
-" 空格搜索：将 <Space>   映射到 / (搜索）
 map <space> /
 
-" 空格搜索：将 C-<Space> 映射到 ?（向后搜索）
 nnoremap / /\v
 vnoremap / /\v
 
 
 " =============================================
-" 6.复制操作 / 撤销操作 / 选中操作 / 调换键位
+" 06.copy / cancel / select / switch key
 " =============================================
 
-" 复制操作：普通模式，复制文件行末
 map Y y$
 
-" 复制操作：普通模式，复制选中到剪切板
 vnoremap <leader>y " +y
 
-" 撤销操作：普通模式，撤销上个动作
 nnoremap U <C-r>
 
-" 选中操作：命令模式，选中全部文本
 map <Leader>sa ggVG
 
-" 选中操作：命令模式，选中段落文本
 nnoremap <leader>v V`}
 
-" 调换键位：' ` ; : # *
 nnoremap ' `
 nnoremap ` '
 nnoremap ; :
@@ -626,22 +511,19 @@ nnoremap # *
 nnoremap * #
 
 
-" ============================================= 六、多窗操作 =============================================
+" =========================================== 06.Multi-window ==========================================
 
 " =============================================
-" 1.多窗模式
+" 01.Multi-window
 " =============================================
 
-" 多窗模式：分屏窗口切换
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" 多窗模式：默认打开上次编辑的文件目录
 set autochdir
 
-" 多窗编辑：临时放大某个窗口，编辑完再切回原来的布局
 function! s:ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
         execute t:zoom_winrestcmd
@@ -658,7 +540,7 @@ nnoremap <silent> <Leader>z :ZoomToggle<CR>
 
 
 " =============================================
-" 2.标签切换
+" 02.label switch
 " =============================================
 
 map <leader>th :tabfirst<cr>
@@ -673,7 +555,7 @@ map <leader>tm :tabm<cr>
 
 
 " =============================================
-" 3.准确切换
+" 03.accurate switch
 " =============================================
 
 noremap <leader>1 1gt
@@ -689,7 +571,7 @@ noremap <leader>0 :tablast<cr>
 
 
 " =============================================
-" 4.标签配置
+" 04.label config
 " =============================================
 
 " Toggles between the active and last active tab "
@@ -703,9 +585,8 @@ autocmd TabLeave * let g:last_active_tab = tabpagenr()
 
 
 " =============================================
-" 5.新建标签
+" 05.new label
 " =============================================
 
-" 新建标签：<C-t>     ，普通模式 / 可视模式
 nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>

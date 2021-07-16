@@ -1,0 +1,407 @@
+"==========================================
+" 01.Initial Plugin
+"==========================================
+
+let mapleader = ','
+let g:mapleader = ','
+
+syntax on
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+elseif filereadable(expand("~/.config/nvim/vimrc.bundles")) " neovim
+  source ~/.config/nvim/vimrc.bundles
+endif
+
+filetype plugin indent on
+
+"==========================================
+" 02.General Settings
+"==========================================
+
+set history=2000
+
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+set autoread
+set shortmess=atI
+
+"set backup
+"set backupext=.bak
+"set backupdir=/tmp/vimbk/
+
+set nobackup
+set noswapfile
+set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
+
+set cursorcolumn
+set cursorline
+
+set t_ti= t_te=
+
+" set mouse-=a
+
+set selection=inclusive
+set selectmode=mouse,key
+
+set title
+set novisualbell
+set noerrorbells
+set t_vb=
+set tm=500
+
+set viminfo^=%
+set magic
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+"==========================================
+" 03.Display Settings
+"==========================================
+
+set ruler
+set showcmd
+set showmode
+set scrolloff=7
+set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
+set laststatus=2
+set number
+set nowrap
+set showmatch
+set matchtime=2
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set foldenable
+set foldmethod=indent
+set foldlevel=99
+let g:FoldMethod = 0
+map <leader>zz :call ToggleFold()<cr>
+fun! ToggleFold()
+    if g:FoldMethod == 0
+        exe "normal! zM"
+        let g:FoldMethod = 1
+    else
+        exe "normal! zR"
+        let g:FoldMethod = 0
+    endif
+endfun
+
+set smartindent
+set autoindent
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set smarttab
+set expandtab
+set shiftround
+
+set hidden
+set wildmode=list:longest
+set ttyfast
+
+set nrformats=
+
+set relativenumber number
+au FocusLost * :set norelativenumber number
+au FocusGained * :set relativenumber
+
+autocmd InsertEnter * :set norelativenumber number
+autocmd InsertLeave * :set relativenumber
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
+
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
+"==========================================
+" 04.FileEncode Settings
+"==========================================
+
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set helplang=cn
+set termencoding=utf-8
+set ffs=unix,dos,mac
+set formatoptions+=m
+set formatoptions+=B
+
+"==========================================
+" 05.others
+"==========================================
+autocmd! bufwritepost _vimrc source %
+autocmd! bufwritepost .vimrc source %
+
+set completeopt=longest,menu
+
+set wildmenu
+set wildignore=*.o,*~,*.pyc,*.class
+
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
+autocmd BufReadPost quickfix nnoremap <buffer> s <C-w><Enter><C-w>K
+
+autocmd CmdwinEnter * nnoremap <buffer> <CR> <CR>
+
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+"==========================================
+" 07.HotKey Setting
+"==========================================
+
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
+noremap <F1> <Esc>"
+
+function! HideNumber()
+  if(&relativenumber == &number)
+    set relativenumber! number!
+  elseif(&number)
+    set number!
+  else
+    set relativenumber!
+  endif
+  set number?
+endfunc
+nnoremap <F2> :call HideNumber()<CR>
+
+nnoremap <F3> :set list! list?<CR>
+
+nnoremap <F4> :set wrap! wrap?<CR>
+
+nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+
+set pastetoggle=<F5>
+
+au InsertLeave * set nopaste
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+function! s:ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
+    else
+        let t:zoom_winrestcmd = winrestcmd()
+        resize
+        vertical resize
+        let t:zoomed = 1
+    endif
+endfunction
+command! ZoomToggle call s:ZoomToggle()
+nnoremap <silent> <Leader>z :ZoomToggle<CR>
+
+noremap H ^
+noremap L $
+
+nnoremap ; :
+
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
+map <space> /
+nnoremap / /\v
+vnoremap / /\v
+
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+noremap <silent><leader>/ :nohls<CR>
+
+nnoremap # *
+nnoremap * #
+
+autocmd BufNewFile,BufRead *.py inoremap # X<c-h>#
+
+nnoremap [b :bprevious<cr>
+nnoremap ]b :bnext<cr>
+
+noremap <left> :bp<CR>
+noremap <right> :bn<CR>
+
+map <leader>th :tabfirst<cr>
+map <leader>tl :tablast<cr>
+map <leader>tj :tabnext<cr>
+map <leader>tk :tabprev<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprev<cr>
+map <leader>te :tabedit<cr>
+map <leader>td :tabclose<cr>
+map <leader>tm :tabm<cr>
+
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+let g:last_active_tab = 1
+nnoremap <silent> <leader>tt :execute 'tabnext ' . g:last_active_tab<cr>
+autocmd TabLeave * let g:last_active_tab = tabpagenr()
+
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+
+map Y y$
+vnoremap <leader>y "+y
+
+map <Leader>sa ggVG
+nnoremap <leader>v V`}
+
+cmap w!! w !sudo tee >/dev/null %
+
+inoremap kj <Esc>
+
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>
+
+nnoremap <leader>q :q<CR>
+
+nnoremap <leader>w :w<CR>
+
+nnoremap ' `
+nnoremap ` '
+
+nnoremap U <C-r>
+
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+"==========================================
+" 08.FileType Settings
+"==========================================
+
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType ruby,javascript,html,css,xml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
+autocmd BufRead,BufNewFile *.part set filetype=html
+au BufWinEnter *.php set mps-=<:>
+
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
+function! AutoSetFileHead()
+    if &filetype == 'sh'
+        call setline(1, "\#!/bin/bash")
+    endif
+    if &filetype == 'python'
+        call setline(1, "\#!/usr/bin/env python")
+        call append(1, "\# encoding: utf-8")
+    endif
+    normal G
+    normal o
+    normal o
+endfunc
+
+if has("autocmd")
+  " Highlight TODO, FIXME, NOTE, etc.
+  if v:version > 701
+    autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|DONE\|XXX\|BUG\|HACK\)')
+    autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\|NOTICE\)')
+  endif
+endif
+
+"==========================================
+" 09.Theme Settings
+"==========================================
+
+if has("gui_running")
+    set guifont=Monaco:h14
+    if has("gui_gtk2")   "GTK2
+        set guifont=Monaco\ 12,Monospace\ 12
+    endif
+    set guioptions-=T
+    set guioptions+=e
+    set guioptions-=r
+    set guioptions-=L
+    set guitablabel=%M\ %t
+    set showtabline=1
+    set linespace=2
+    set noimd
+    set t_Co=256
+endif
+
+set background=dark
+set t_Co=256
+
+" colorscheme solarized
+colorscheme molokai
+" colorscheme desert
+
+hi! link SignColumn   LineNr
+hi! link ShowMarksHLl DiffAdd
+hi! link ShowMarksHLu DiffChange
+
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
