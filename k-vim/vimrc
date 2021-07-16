@@ -42,7 +42,7 @@ set cursorline
 
 set t_ti= t_te=
 
-" set mouse-=a
+set mouse=a
 
 set selection=inclusive
 set selectmode=mouse,key
@@ -66,6 +66,7 @@ set ruler
 set showcmd
 set showmode
 set scrolloff=7
+" set winwidth=79
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 set laststatus=2
 set number
@@ -266,7 +267,6 @@ autocmd BufNewFile,BufRead *.py inoremap # X<c-h>#
 
 nnoremap [b :bprevious<cr>
 nnoremap ]b :bnext<cr>
-
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
 
@@ -323,8 +323,9 @@ nnoremap ` '
 
 nnoremap U <C-r>
 
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 "==========================================
 " 08.FileType Settings
@@ -334,6 +335,8 @@ autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby,javascript,html,css,xml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+
 au BufWinEnter *.php set mps-=<:>
 
 fun! <SID>StripTrailingWhitespaces()
@@ -359,7 +362,6 @@ function! AutoSetFileHead()
 endfunc
 
 if has("autocmd")
-  " Highlight TODO, FIXME, NOTE, etc.
   if v:version > 701
     autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|DONE\|XXX\|BUG\|HACK\)')
     autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\|NOTICE\)')

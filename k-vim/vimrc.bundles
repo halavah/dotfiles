@@ -1,238 +1,199 @@
-" ################### 包依赖 #####################
-" package dependence:  ctags, ag(he_silver_searcher)
-" python dependence:   pep8, pyflake
+" ======================================================= 01.PlugIn: settings [General PlugIn]=======================================================
 
 set nocompatible
-filetype off " required! turn off
-
-" ################### 插件管理 ###################
-
+filetype off
 if !exists('g:bundle_groups')
-    " let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'tmux', 'beta', 'json', 'nginx', 'golang', 'ruby', 'less', 'php', 'coffeescript', 'shell']
+    " let g:bundle_groups=['python', 'javascript', 'golang', 'php', 'ruby', 'shell', 'markdown', 'html', 'css', 'less', 'coffeescript', 'tmux', 'json', 'beta']
     let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'tmux', 'beta']
 endif
-
-" ----------------------------------------------------------------------------
-" 使用 vim-plug 管理插件
-" ----------------------------------------------------------------------------
-
 call plug#begin('~/.vim/bundle')
 
-" syntastic
-Plug 'scrooloose/syntastic'
+" -------------------------------------------------------
+" 01.syntastic / ale
+" -------------------------------------------------------
+if v:version < 800
+    Plug 'scrooloose/syntastic'
+else
+    Plug 'w0rp/ale'
+endif
 
-" Snippets
+" -------------------------------------------------------
+" 02.YouCompleteMe / ultisnips / delimitMate / closetag
+" -------------------------------------------------------
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" auto complete
 Plug 'Valloric/YouCompleteMe'
 Plug 'Raimondi/delimitMate'
 Plug 'docunext/closetag.vim', { 'for': ['html', 'xml'] }
 
-" quick edit
+" -------------------------------------------------------
+" 03.nerdcommenter / trailingwhitespace / easyalign
+" -------------------------------------------------------
 Plug 'scrooloose/nerdcommenter'
-
 Plug 'tpope/vim-repeat' | Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
 
-" quick movement
+" -------------------------------------------------------
+" 04.easymotion / quickscope
+" -------------------------------------------------------
 Plug 'Lokaltog/vim-easymotion'
-
-" quickscope
 Plug 'unblevable/quick-scope'
 
+" -------------------------------------------------------
+" xx.remark
+" -------------------------------------------------------
 Plug 'vim-scripts/matchit.zip'
 Plug 'kshenoy/vim-signature'
 
-" quick selection and edit
+" -------------------------------------------------------
+" 05.expandregion / multiplecursors
+" -------------------------------------------------------
 Plug 'terryma/vim-expand-region'
 Plug 'terryma/vim-multiple-cursors'
 
-" quick locate file or function
+" -------------------------------------------------------
+" 06.ctrlp / ctrlsf / fugitive / gitgutter / gundo
+" -------------------------------------------------------
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'tacahiroy/ctrlp-funky'
 Plug 'dyng/ctrlsf.vim'
-
-" quick run
-Plug 'thinca/vim-quickrun'
-
-" git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-
-" gundo
 Plug 'sjl/gundo.vim'
 
-" view
-" airline
+" -------------------------------------------------------
+" xx.quickrun
+" -------------------------------------------------------
+Plug 'thinca/vim-quickrun'
+
+" -------------------------------------------------------
+" 07.airline / rainbow_parentheses
+" -------------------------------------------------------
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
+
+" -------------------------------------------------------
+" 08.solarized / molokai
+" -------------------------------------------------------
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 
-" nav
+" -------------------------------------------------------
+" 09.nerdtree / nerdtreetabs / ctrlspace / tagbar
+" -------------------------------------------------------
 Plug 'scrooloose/nerdtree' | Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'majutsushi/tagbar'
 
-" text object
+" -------------------------------------------------------
+" 10.text-user / text-line / text-entire / text-indent
+" -------------------------------------------------------
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 
+
+" ======================================================= 02.PlugIn: settings [Language PlugIn]======================================================
+
+" 01.tmux
 if count(g:bundle_groups, 'tmux')
-    " tmux
-    " For tmux navigator Ctrl-hjkl
     Plug 'christoomey/vim-tmux-navigator'
 endif
 
+" 02.markdown
 if count(g:bundle_groups, 'markdown')
     Plug 'plasticboy/vim-markdown', {'for': 'md'}
-    " https://github.com/suan/vim-instant-markdown
-    " npm -g install instant-markdown-d
-    " Plug 'suan/vim-instant-markdown'
-    " let g:instant_markdown_slow = 1
-    " let g:instant_markdown_autostart = 0
-    " map <F12> :InstantMarkdownPreview<CR>
 endif
 
+" 03.golang
 if count(g:bundle_groups, 'golang')
-    " 1. vim a.go
-    " 2. :GoInstallBinaries
-    " vimgo  https://github.com/fatih/vim-go
     Plug 'fatih/vim-go', {'for': 'go'}
 endif
 
-
+" 04.python
 if count(g:bundle_groups, 'python')
-    " for python.vim syntax highlight
-    " pythonsyntax
     Plug 'hdima/python-syntax'
     Plug 'hynek/vim-python-pep8-indent'
     Plug 'Glench/Vim-Jinja2-Syntax'
-
-    " isort  https://github.com/timothycrosley/isort#readme + https://github.com/fisadev/vim-isort#installation
-    " pip install isort
     Plug 'fisadev/vim-isort'
     let g:vim_isort_map = '<C-i>'
 endif
 
+" 05.php
 if count(g:bundle_groups, 'php')
-    " piv
     Plug 'spf13/PIV'
 endif
 
+" 06.ruby
 if count(g:bundle_groups, 'ruby')
     Plug 'vim-ruby/vim-ruby'
     Plug 'tpope/vim-rails'
-    " dir / dar
     Plug 'nelstrom/vim-textobj-rubyblock'
-
-    " Plug 'tpope/vim-endwise'
 endif
 
+" 07.javascript
 if count(g:bundle_groups, 'javascript')
-    " javascript
     Plug 'othree/yajs.vim' | Plug 'pangloss/vim-javascript'
-    " Plug 'jelera/vim-javascript-syntax' | Plug 'pangloss/vim-javascript'
-
-    " TODO: jquery? for, remove or keep
     Plug 'othree/javascript-libraries-syntax.vim'
     let g:used_javascript_libs = 'jquery,underscore,backbone'
-
-    " see https://github.com/marijnh/tern_for_vim
-    " Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 endif
 
-
+" 08.coffeescript
 if count(g:bundle_groups, 'coffeescript')
     Plug 'kchmck/vim-coffee-script'
 endif
 
+" 09.shell
 " if count(g:bundle_groups, 'shell')
     " Plug 'Shougo/vimshell.vim'
 " endif
 
+" 10.json
 if count(g:bundle_groups, 'json')
     " json
     Plug 'elzr/vim-json', {'for': 'json'}
 endif
 
+" 11.css
 if count(g:bundle_groups, 'css')
-    " css
-    " not work in iterm2 which termianl selection is not xterm-256, and it slow
-    " Plug 'ap/vim-css-color'
-
-    " Plug 'gorodinskiy/vim-coloresque'
-    " Plug 'lilydjwg/colorizer'
 endif
 
+" 12.less
 if count(g:bundle_groups, 'less')
-    " ###### vim.less : less 自动更新##########
-    " Plug 'groenewege/vim-less'
-    " autocmd BufWritePost *.less :!lessc % > %:p:r.css
+    Plug 'groenewege/vim-less'
 endif
 
+" 13.html
 if count(g:bundle_groups, 'html')
-    " ###### emmet HTML complete #########
-    " Plug "mattn/emmet-vim"
 endif
 
-if count(g:bundle_groups, 'nginx')
-    " Plug 'evanmiller/nginx-vim-syntax'
-endif
-
-
-" this is just for beta version
+" 14.beta
 if count(g:bundle_groups, 'beta')
-    " indent
     Plug 'nathanaelkane/vim-indent-guides'
-    " <leader>ig to trigger
     let g:indent_guides_start_level = 2
     let g:indent_guides_guide_size = 1
-    let g:indent_guides_auto_colors = 0
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
-
+    let g:indent_guides_auto_colors = 1
 endif
 
-
-" Add plugins to &runtimepath
 call plug#end()
 
 
-" ################### 基础 ######################
+" ======================================================= 03.PlugIn: manager [General PlugIn]========================================================
 
+" -------------------------------------------------------
+" 01.syntastic / ale
+" -------------------------------------------------------
 " syntastic {{{
-    " dependence
-    " 1. shellcheck `brew install shellcheck` https://github.com/koalaman/shellcheck
-
+if has_key(g:plugs, 'syntastic')
     let g:syntastic_error_symbol='>>'
     let g:syntastic_warning_symbol='>'
     let g:syntastic_check_on_open=1
     let g:syntastic_check_on_wq=0
     let g:syntastic_enable_highlighting=1
-
-    " checkers
-
-    " let g:syntastic_python_checkers=['pyflakes']
-
-    " error code: http://pep8.readthedocs.org/en/latest/intro.html#error-codes
-    let g:syntastic_python_checkers=['pyflakes', 'pep8']
-    let g:syntastic_python_pep8_args='--ignore=E501,E225,E124,E712'
-
-    " pylint codes: http://pylint-messages.wikidot.com/all-codes
-    " let g:syntastic_python_checkers=['pyflakes', 'pylint']
-    " let g:syntastic_python_checkers=['pylint']
-    " let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
-
-    " if js
-    " let g:syntastic_javascript_checkers = ['jsl', 'jshint']
-    " let g:syntastic_html_checkers=['tidy', 'jshint']
-
-    " to see error location list
+    let g:syntastic_python_checkers=['flake8', ]
+    let g:syntastic_python_flake8_options='--ignore=E501,E225,E124,E712,E116,E131'
+    let g:syntastic_javascript_checkers = ['eslint']
     let g:syntastic_always_populate_loc_list = 1
     let g:syntastic_enable_signs = 1
     let g:syntastic_auto_loc_list = 0
@@ -249,7 +210,6 @@ call plug#end()
     endfunction
     nnoremap <Leader>s :call ToggleErrors()<cr>
 
-    " ,en ,ep to jump between errors
     function! <SID>LocationPrevious()
     try
         lprev
@@ -272,49 +232,91 @@ call plug#end()
     nmap <silent> <Leader>en    <Plug>LocationNext
 
     highlight SyntasticErrorSign guifg=white guibg=black
-
-    " thanks to @marsqing, see https://github.com/wklken/k-vim/issues/164
     let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['java'] }
-
     nnoremap <silent> <Leader>ec :SyntasticToggleMode<CR>
+endif
 " }}}
 
+" ale {{{
+if has_key(g:plugs, 'ale')
+    " pip install flake8
+    " npm install -g eslint eslint-plugin-standard eslint-plugin-promise eslint-config-standard
+    " npm install -g eslint-plugin-import eslint-plugin-node eslint-plugin-html babel-eslint
+    let g:ale_linters = {
+    \   'python': ['flake8'],
+    \   'javascript': ['eslint'],
+    \}
 
-" ################### 自动补全 ###################
+    let g:ale_python_flake8_options="--ignore=E121,E123,E126,E226,E24,E704,W503 --max-line-length=120"
 
+    let g:ale_sign_error = '>>'
+    let g:ale_sign_warning = '>'
+
+    let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+    let g:ale_echo_msg_error_str = 'E'
+    let g:ale_echo_msg_warning_str = 'W'
+    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+    nmap <silent> <Leader>ep <Plug>(ale_previous_wrap)
+    nmap <silent> <Leader>en <Plug>(ale_next_wrap)
+
+    nnoremap <silent> <Leader>ec :ALEToggle<CR>
+
+    " troggle quickfix list
+    function! ToggleErrors()
+        let old_last_winnr = winnr('$')
+        lclose
+        if old_last_winnr == winnr('$')
+            " Nothing was closed, open syntastic_error location panel
+            lopen
+        endif
+    endfunction
+    nnoremap <Leader>s :call ToggleErrors()<cr>
+
+    let g:ale_set_highlights = 1
+    highlight clear ALEErrorSign
+    highlight clear ALEWarningSign
+endif
+" }}}
+
+" -------------------------------------------------------
+" 02.YouCompleteMe / ultisnips / delimitMate / closetag
+" -------------------------------------------------------
 " YouCompleteMe {{{
-    "let g:ycm_key_list_select_completion=['<c-n>']
     let g:ycm_key_list_select_completion = ['<Down>']
-    "let g:ycm_key_list_previous_completion=['<c-p>']
     let g:ycm_key_list_previous_completion = ['<Up>']
     let g:ycm_complete_in_comments = 1
     let g:ycm_complete_in_strings = 1
     let g:ycm_use_ultisnips_completer = 1
     let g:ycm_collect_identifiers_from_comments_and_strings = 1
     let g:ycm_collect_identifiers_from_tags_files = 1
+
     let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_key_list_stop_completion = ['<CR>']
 
     let g:ycm_goto_buffer_command = 'horizontal-split'
-    " nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+    let g:ycm_register_as_syntastic_checker = 0
+
     nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
     nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
-    " old version
     if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
         let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
     endif
-    " new version
+
     if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
         let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
     endif
 
-    " let g:ycm_key_invoke_completion = '<C-Space>'
+    if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py"))
+        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py"
+    endif
+
     let g:ycm_filetype_blacklist = {
         \ 'tagbar' : 1,
         \ 'gitcommit' : 1,
         \}
 " }}}
-
 
 " ultisnips {{{
     let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -322,6 +324,7 @@ call plug#end()
     let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
     let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
     let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+
     map <leader>us :UltiSnipsEdit<CR>
 
     func! g:JInYCM()
@@ -344,20 +347,18 @@ call plug#end()
     let g:UltiSnipsJumpBackwordTrigger = "<c-k>"
 " }}}
 
-
 " delimitMate {{{
     au FileType python let b:delimitMate_nesting_quotes = ['"']
     au FileType php let delimitMate_matchpairs = "(:),[:],{:}"
-    "au FileType mail let b:delimitMate_autoclose = 0
 " }}}
-
 
 " closetag {{{
     let g:closetag_html_style=1
 " }}}
 
-" ################### 快速编码 ###################
-
+" -------------------------------------------------------
+" 03.nerdcommenter / trailingwhitespace / easyalign
+" -------------------------------------------------------
 " nerdcommenter {{{
     let g:NERDSpaceDelims=1
     let g:NERDAltDelims_python = 1
@@ -374,16 +375,14 @@ call plug#end()
     let g:easy_align_delimiters = {}
     endif
     let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
-    " Default:
-    " If a delimiter is in a highlight group whose name matches any of the followings, it will be ignored.
     let g:easy_align_ignore_groups = ['Comment', 'String']
 " }}}
 
-" ################### 快速移动 ###################
-
+" -------------------------------------------------------
+" 04.easymotion / quickscope
+" -------------------------------------------------------
 " easymotion {{{
     let g:EasyMotion_smartcase = 1
-    "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
     map <Leader><leader>h <Plug>(easymotion-linebackward)
     map <Leader><Leader>j <Plug>(easymotion-j)
     map <Leader><Leader>k <Plug>(easymotion-k)
@@ -391,43 +390,38 @@ call plug#end()
     map <Leader><leader>. <Plug>(easymotion-repeat)
 " }}}
 
-
 " quickscope {{{
     let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-    " let g:qs_first_occurrence_highlight_color = '#afff5f' " gui vim
-    " let g:qs_first_occurrence_highlight_color = 155       " terminal vim
-    " let g:qs_second_occurrence_highlight_color = '#5fffff'  " gui vim
-    " let g:qs_second_occurrence_highlight_color = 81         " terminal vim
 " }}}
 
-" ################### 快速选中 ###################
-
+" -------------------------------------------------------
+" 05.expandregion / multiplecursors
+" -------------------------------------------------------
 " expandregion {{{
-    " map + <Plug>(expand_region_expand)
-    " map _ <Plug>(expand_region_shrink)
     vmap v <Plug>(expand_region_expand)
     vmap V <Plug>(expand_region_shrink)
-    " Extend the global default
-    call expand_region#custom_text_objects({
-      \ 'a]' :1,
-      \ 'ab' :1,
-      \ 'aB' :1,
-      \ 'ii' :0,
-      \ 'ai' :0,
-      \ })
+    if exists("*expand_region#custom_text_objects")
+        call expand_region#custom_text_objects({
+        \ 'a]' :1,
+        \ 'ab' :1,
+        \ 'aB' :1,
+        \ 'ii' :0,
+        \ 'ai' :0,
+        \ })
+    endif
 " }}}
 
 " multiplecursors {{{
     let g:multi_cursor_use_default_mapping=0
-    " Default mapping
     let g:multi_cursor_next_key='<C-m>'
     let g:multi_cursor_prev_key='<C-p>'
     let g:multi_cursor_skip_key='<C-x>'
     let g:multi_cursor_quit_key='<Esc>'
 " }}}
 
-" ################### 功能相关 ###################
-
+" -------------------------------------------------------
+" 06.ctrlp / ctrlsf / git / fugitive / gitgutter / gundo
+" -------------------------------------------------------
 " ctrlp ctrlpfunky{{{
     let g:ctrlp_map = '<leader>p'
     let g:ctrlp_cmd = 'CtrlP'
@@ -442,30 +436,17 @@ call plug#end()
     let g:ctrlp_match_window_reversed=0
     let g:ctrlp_mruf_max=500
     let g:ctrlp_follow_symlinks=1
-    " if executable('ag')
-    " " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " " ag is fast enough that CtrlP doesn't need to cache
-    " let g:ctrlp_use_caching = 0
-    " endif
 
-    " ctrlpfunky
     nnoremap <Leader>fu :CtrlPFunky<Cr>
-    " narrow the list down with a word under cursor
     nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
     let g:ctrlp_funky_syntax_highlight = 1
-
     let g:ctrlp_extensions = ['funky']
 " }}}
 
 " ctrlsf {{{
     nmap \ <Plug>CtrlSFCwordPath<CR>
-    " let g:ctrlsf_position = 'below'
-    " let g:ctrlsf_winsize = '30%'
     let g:ctrlsf_auto_close = 0
     let g:ctrlsf_confirm_save = 0
-    " Note: cannot use <CR> or <C-m> for open
-    " Use : <sapce> or <tab>
     let g:ctrlsf_mapping = {
         \ "open"  : "<Space>",
         \ "openb" : "O",
@@ -480,15 +461,7 @@ call plug#end()
 " }}}
 
 " fugitive {{{
-    " :Gdiff  :Gstatus :Gvsplit
     nnoremap <leader>ge :Gdiff<CR>
-    " not ready to open
-    " <leader>gb maps to :Gblame<CR>
-    " <leader>gs maps to :Gstatus<CR>
-    " <leader>gd maps to :Gdiff<CR>  和现有冲突
-    " <leader>gl maps to :Glog<CR>
-    " <leader>gc maps to :Gcommit<CR>
-    " <leader>gp maps to :Git push<CR>
 " }}}
 
 " gitgutter {{{
@@ -502,9 +475,9 @@ call plug#end()
     noremap <leader>h :GundoToggle<CR>
 " }}}
 
-
-" ################### 显示增强 ###################
-
+" -------------------------------------------------------
+" 07.airline / rainbow_parentheses
+" -------------------------------------------------------
 " airline {{{
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
@@ -515,10 +488,12 @@ call plug#end()
     let g:airline_right_alt_sep = '❮'
     let g:airline_symbols.linenr = '¶'
     let g:airline_symbols.branch = '⎇'
+    " 是否打开tabline
     " let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " rainbow_parentheses {{{
+    " 不加入这行, 防止黑色括号出现, 很难识别
     " \ ['black',       'SeaGreen3'],
     let g:rbpt_colorpairs = [
         \ ['brown',       'RoyalBlue3'],
@@ -537,6 +512,7 @@ call plug#end()
         \ ['darkred',     'DarkOrchid3'],
         \ ['red',         'firebrick3'],
         \ ]
+
     let g:rbpt_max = 16
     let g:rbpt_loadcmd_toggle = 0
     au VimEnter * RainbowParenthesesToggle
@@ -545,9 +521,9 @@ call plug#end()
     au Syntax * RainbowParenthesesLoadBraces
 " }}}
 
-
-" ################### 显示增强-主题 ###################"
-
+" -------------------------------------------------------
+" 08.solarized / molokai
+" -------------------------------------------------------
 " solarized {{{
     let g:solarized_termtrans=1
     let g:solarized_contrast="normal"
@@ -556,26 +532,27 @@ call plug#end()
 " }}}
 
 " molokai {{{
+    " monokai原始背景色
     let g:molokai_original = 1
     let g:rehash256 = 1
 " }}}
 
-
-" ################### 快速导航 ###################
-
+" -------------------------------------------------------
+" 09.nerdtree / nerdtreetabs / ctrlspace / tagbar
+" -------------------------------------------------------
 " nerdtree nerdtreetabs {{{
+    " nerdtree
     let NERDTreeHighlightCursorline=1
     let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$' ]
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
     let g:NERDTreeMapOpenSplit = 's'
     let g:NERDTreeMapOpenVSplit = 'v'
+    let g:NERDTreeNodeDelimiter = "\u00a0"
 
+    " nerdtreetabs
     map <Leader>n <plug>NERDTreeTabsToggle<CR>
-    " let g:nerdtree_tabs_synchronize_view=0
-    " let g:nerdtree_tabs_synchronize_focus=0
-    " thank to @ListenerRi, see https://github.com/wklken/k-vim/issues/165
-    " let g:nerdtree_tabs_open_on_console_startup=0
-    " let g:nerdtree_tabs_open_on_gui_startup=0
+    let g:nerdtree_tabs_open_on_console_startup=0
+    let g:nerdtree_tabs_open_on_gui_startup=0
 " }}}
 
 " ctrlspace {{{
@@ -589,9 +566,6 @@ call plug#end()
 " tagbar {{{
     nmap <F9> :TagbarToggle<CR>
     let g:tagbar_autofocus = 1
-    " let g:tagbar_autoshowtag = 1
-    " let g:tagbar_show_visibility = 1
-    " for ruby
     let g:tagbar_type_ruby = {
         \ 'kinds' : [
             \ 'm:modules',
@@ -602,7 +576,6 @@ call plug#end()
             \ 'F:singleton methods'
         \ ]
     \ }
-
     let g:tagbar_type_go = {
         \ 'ctagstype' : 'go',
         \ 'kinds'     : [
@@ -633,7 +606,7 @@ call plug#end()
 " }}}
 
 
-" ################### 语言相关 ###################
+" ======================================================= 04.PlugIn: manager [Language PlugIn]=======================================================
 
 " quickrun {{{
     let g:quickrun_config = {
@@ -661,9 +634,7 @@ call plug#end()
     let g:go_highlight_structs = 1
     let g:go_highlight_operators = 1
     let g:go_highlight_build_constraints = 1
-
     let g:go_fmt_fail_silently = 1
-    " format with goimports instead of gofmt
     let g:go_fmt_command = "goimports"
     let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
     let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go', 'java'] }
@@ -674,7 +645,6 @@ call plug#end()
 " }}}
 
 " javascript {{{
-    " pangloss/vim-javascript
     let g:html_indent_inctags = "html,body,head,tbody"
     let g:html_indent_script1 = "inc"
     let g:html_indent_style1 = "inc"
@@ -687,8 +657,7 @@ call plug#end()
 " css {{{
 " }}}
 
-" nginx {{{
+" beta {{{
+    autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
+    autocmd FileType python vnoremap <leader>y :!yapf<Cr>
 " }}}
-
-
-
