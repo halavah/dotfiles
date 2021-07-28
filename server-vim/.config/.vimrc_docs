@@ -287,7 +287,7 @@ set magic
 set autoread
 
 " 出错提示：关闭出错时提示声音
-set novisualbell
+set visualbell
 set noerrorbells
 set t_vb=
 set tm=500

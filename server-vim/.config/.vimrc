@@ -243,7 +243,7 @@ set magic
 
 set autoread
 
-set novisualbell
+set visualbell
 set noerrorbells
 set t_vb=
 set tm=500
