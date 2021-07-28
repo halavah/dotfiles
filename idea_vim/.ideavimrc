@@ -1,0 +1,291 @@
+" ============================================= 01.Daily ===============================================
+
+" =============================================
+" 01.conflict
+" =============================================
+
+sethandler <C-2> a:ide
+sethandler <C-S-2> a:ide
+sethandler <C-S-6> a:ide
+sethandler <C-A> a:ide
+sethandler <C-B> a:ide
+sethandler <C-C> a:ide
+sethandler <C-D> a:ide
+sethandler <C-E> a:ide
+sethandler <C-F> a:ide
+sethandler <C-G> a:ide
+sethandler <C-H> a:ide
+sethandler <C-I> a:ide
+sethandler <C-J> a:ide
+sethandler <C-K> a:ide
+sethandler <C-L> a:ide
+sethandler <C-M> a:ide
+sethandler <C-N> a:ide
+sethandler <C-O> a:ide
+sethandler <C-P> a:ide
+sethandler <C-Q> a:ide
+sethandler <C-R> a:ide
+sethandler <C-S> a:ide
+sethandler <C-T> a:ide
+sethandler <C-U> a:ide
+sethandler <C-V> a:ide
+sethandler <C-W> a:ide
+sethandler <C-X> a:ide
+sethandler <C-Y> a:ide
+sethandler <C-[> a:ide
+sethandler <C-]> a:ide
+
+" =============================================
+" 02.mapleader
+" =============================================
+
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+
+" ============================================= 02.PlugIn Setting =======================================
+
+" =============================================
+" 01.plugin install
+" =============================================
+
+" set easymotion
+" set NERDTree
+" set surround
+" set multiple-cursors
+" set commentary
+" set ReplaceWithRegister
+" set argtextobj
+" set exchange
+
+" set textobj-entire
+" set textobj-indent
+
+" set highlightedyank
+" set vim-paragraph-motion
+
+set keep-english-in-normal-and-restore-in-insert
+
+
+" =============================================
+" 02.Idea specific settings
+" =============================================
+
+" set ideajoin
+" set idearefactormode=keep
+
+
+" =============================================
+" 03.Built in plugin
+" =============================================
+
+" nerdtree
+" map <leader>e :NERDTreeToggle<CR>
+" nnoremap <leader>d :NERDTreeFocus<CR>
+
+" easymotion
+" map <leader>f <Plug>(easymotion-s)
+
+" Remap multiple-cursors shortcuts for Mac
+" nmap <C-n> <Plug>NextWholeOccurrence
+" xmap <C-n> <Plug>NextWholeOccurrence
+" nmap <C-x> <Plug>SkipOccurrence
+" xmap <C-x> <Plug>SkipOccurrence
+" nmap <C-p> <Plug>RemoveOccurrence
+" xmap <C-p> <Plug>RemoveOccurrence
+" nmap <S-C-n> <Plug>AllWholeOccurrences
+" xmap <S-C-n> <Plug>AllWholeOccurrences
+
+
+" ============================================= 03.System ===============================================
+
+" =============================================
+" 01.mode
+" =============================================
+
+set showmode
+
+" =============================================
+" 02.history
+" =============================================
+
+set history=1000
+
+" =============================================
+" 03.error sound
+" =============================================
+
+set visualbell
+set noerrorbells
+
+
+" ============================================= 04.Daily ===============================================
+
+" =============================================
+" 01.backup / swapfile / undofile
+" =============================================
+
+set nobackup
+set noswapfile
+set noundofile
+
+" =============================================
+" 02.search
+" =============================================
+
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+
+" =============================================
+" 03.search result
+" =============================================
+
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+" =============================================
+" 04.Line number
+" =============================================
+
+set nu
+set rnu
+set scrolloff=15
+set sidescrolloff=15
+
+
+" ============================================= 05.KeyMap ==============================================
+
+" =============================================
+" 01.pasteboard
+" =============================================
+
+" shared system pasteboard
+" set clipboard=unnamed,unnamedplus
+" set clipboard+=ideaput
+
+" copy and paste
+nnoremap y ""yy
+nnoremap Y ""y$
+
+nnoremap p ""p
+nnoremap P "0p
+
+nnoremap <leader>y "*yy
+nnoremap <leader>p "*p
+
+" =============================================
+" 02.normal mode
+" =============================================
+
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
+nnoremap H ^
+nnoremap L $
+
+nnoremap < <<
+nnoremap > >>
+
+nnoremap ; :
+nnoremap : ;
+
+nnoremap U <C-r>
+
+nnoremap <A-e> <C-e>
+nnoremap <A-y> <C-y>
+nnoremap <A-d> <C-d>
+nnoremap <A-u> <C-u>
+
+nnoremap <Leader>sa ggVG
+
+" =============================================
+" 03.visual modes
+" =============================================
+
+vnoremap k gk
+vnoremap gk k
+vnoremap j gj
+vnoremap gj j
+
+vnoremap H ^
+vnoremap L $
+
+vnoremap < <gv
+vnoremap > >gv
+
+" =============================================
+" 04.insert mode
+" =============================================
+
+inoremap <A-h> <Left>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-l> <Right>
+inoremap <A-a> <Home>
+inoremap <A-e> <End>
+inoremap <A-d> <Delete>
+
+
+" =========================================== 06.Multi-window ==========================================
+
+" =============================================
+" 01.File
+" =============================================
+
+" unknown error
+nnoremap s <Esc>"
+
+" quit insert mode
+inoremap kj <Esc>
+vnoremap kj <Esc>
+
+" quit file
+nnoremap <leader>fq :q<CR>
+
+" exit file
+nnoremap <leader>fw :wq!<CR>
+
+" quit edit vimrc
+nnoremap <leader>fn :e C:/Users/mysla/.ideavimrc<CR>
+nnoremap <leader>fm :source C:/Users/mysla/.ideavimrc<CR>
+
+" clear the highlighted search result
+nnoremap <Leader>fd :nohlsearch<CR>
+
+" clear all register content
+" command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+" autocmd VimEnter * WipeReg
+
+" =============================================
+" 02.Label switch
+" =============================================
+
+nnoremap tn gt
+nnoremap tm gT
+
+" =============================================
+" 03.Multi-window
+" =============================================
+
+" Split horizontal →
+nnoremap <leader>fv <C-W>v
+
+" Split vertical   ↓
+nnoremap <leader>fs <C-W>s
+
+" Toggle windows
+nnoremap <leader>ff <C-W>w
+
+" Move windows
+nnoremap <leader>fh <C-W>h
+nnoremap <leader>fj <C-W>j
+nnoremap <leader>fk <C-W>k
+nnoremap <leader>fl <C-W>l
+
