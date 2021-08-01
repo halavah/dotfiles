@@ -4,36 +4,205 @@
 " 01.conflict
 " =============================================
 
-sethandler <C-2> a:ide
-sethandler <C-S-2> a:ide
-sethandler <C-S-6> a:ide
-sethandler <C-A> a:ide
-sethandler <C-B> a:ide
-sethandler <C-C> a:ide
-sethandler <C-D> a:ide
-sethandler <C-E> a:ide
-sethandler <C-F> a:ide
-sethandler <C-G> a:ide
-sethandler <C-H> a:ide
-sethandler <C-I> a:ide
-sethandler <C-J> a:ide
-sethandler <C-K> a:ide
-sethandler <C-L> a:ide
-sethandler <C-M> a:ide
-sethandler <C-N> a:ide
-sethandler <C-O> a:ide
-sethandler <C-P> a:ide
-sethandler <C-Q> a:ide
-sethandler <C-R> a:ide
-sethandler <C-S> a:ide
-sethandler <C-T> a:ide
-sethandler <C-U> a:ide
-sethandler <C-V> a:ide
-sethandler <C-W> a:ide
-sethandler <C-X> a:ide
-sethandler <C-Y> a:ide
-sethandler <C-[> a:ide
-sethandler <C-]> a:ide
+sethandler     <C-S-2> a:ide
+sethandler     <C-S-6> a:ide
+sethandler       <C-E> a:ide
+sethandler       <C-J> a:ide
+sethandler       <C-L> a:ide
+sethandler       <C-M> a:ide
+sethandler       <C-N> a:ide
+sethandler       <C-S> a:ide
+sethandler       <C-T> a:ide
+sethandler       <C-[> a:ide
+sethandler       <C-]> a:ide
+" =============================================
+sethandler       <C-G> a:ide
+" ----------------------
+sethandler       <C-F> a:ide
+sethandler     <S-C-F> a:ide
+sethandler        <F2> a:ide
+sethandler      <S-F2> a:ide
+" ----------------------
+sethandler       <C-R> a:ide
+sethandler     <S-C-R> a:ide
+" ----------------------
+sethandler      <S-F6> a:ide
+" ----------------------
+sethandler     <A-C-V> a:ide
+sethandler     <A-C-C> a:ide
+sethandler     <A-C-F> a:ide
+" -----------
+sethandler   <A-S-C-T> a:ide
+" =============================================
+sethandler       <C-Z> a:ide
+sethandler     <S-C-Z> a:ide
+" ----------------------
+sethandler       <C-X> a:ide
+" ----------------------
+sethandler       <C-C> a:ide
+sethandler     <S-C-C> a:ide
+" ----------------------
+sethandler       <C-V> a:ide
+sethandler     <S-C-V> a:ide
+" ----------------------
+sethandler       <C-D> a:ide
+sethandler       <C-Y> a:ide
+" -----------
+sethandler       <C-W> a:ide
+sethandler       <C-A> a:ide
+" =============================================
+sethandler       <C-Q> a:ide
+sethandler     <S-C-Q> a:ide
+sethandler       <C-P> a:ide
+sethandler     <S-C-P> a:ide
+" ----------------------
+sethandler       <C-H> a:ide
+sethandler     <S-C-H> a:ide
+sethandler     <A-C-H> a:ide
+" ----------------------
+sethandler       <C-B> a:ide
+sethandler     <S-C-B> a:ide
+" ----------------------
+sethandler       <C-U> a:ide
+sethandler       <C-I> a:ide
+sethandler       <C-O> a:ide
+" =============================================
+sethandler     <A-C-T> a:ide
+sethandler     <A-C-O> a:ide
+sethandler     <A-C-L> a:ide
+" ----------------------
+sethandler     <S-C-T> a:ide
+sethandler     <S-C-O> a:ide
+sethandler     <S-C-U> a:ide
+" =============================================
+sethandler       <Tab> a:ide
+sethandler     <S-Tab> a:ide
+" ----------------------
+sethandler       <C--> a:ide
+sethandler       <C-=> a:ide
+sethandler     <S-C--> a:ide
+sethandler     <S-C-=> a:ide
+" ----------------------
+sethandler       <C-/> a:ide
+sethandler     <S-C-/> a:ide
+" =============================================
+sethandler      <S-Up> a:ide
+sethandler    <S-Down> a:ide
+sethandler    <S-Left> a:ide
+sethandler   <S-Right> a:ide
+sethandler    <A-S-Up> a:ide
+sethandler  <A-S-Down> a:ide
+" ----------------------
+sethandler  <A-C-Left> a:ide
+sethandler <A-C-Right> a:ide
+" ----------------------
+sethandler    <A-Left> a:ide
+sethandler   <A-Right> a:ide
+" ----------------------
+sethandler      <A-Up> a:ide
+sethandler    <A-Down> a:ide
+" =============================================
+sethandler       <C-N> a:ide
+sethandler     <C-S-A> a:ide
+" ----------------------
+sethandler       <A-W> a:ide
+sethandler     <A-S-W> a:ide
+" -----------
+sethandler     <S-Esc> a:ide
+sethandler     <A-S-S> a:ide
+" ----------------------
+sethandler     <A-S-[> a:ide
+sethandler     <A-S-]> a:ide
+" ----------------------
+sethandler     <A-Ins> a:ide
+sethandler      <A-CR> a:ide
+" -----------
+sethandler      <S-CR> a:ide
+sethandler    <A-C-CR> a:ide
+" -----------
+sethandler      <C-CR> a:ide
+sethandler    <A-S-CR> a:ide
+" -----------
+sethandler    <C-S-CR> a:ide
+sethandler    <C-S-BS> a:ide
+
+" =============================================
+sethandler       <C-1> a:ide
+sethandler       <C-2> a:ide
+sethandler       <C-3> a:ide
+sethandler       <C-4> a:ide
+sethandler       <C-5> a:ide
+sethandler       <C-6> a:ide
+sethandler       <C-7> a:ide
+sethandler       <C-8> a:ide
+sethandler       <C-9> a:ide
+sethandler       <C-0> a:ide
+" =============================================
+sethandler       <A-1> a:ide
+sethandler       <A-2> a:ide
+sethandler     <A-S-2> a:ide
+sethandler       <A-3> a:ide
+sethandler       <A-4> a:ide
+sethandler       <A-5> a:ide
+sethandler       <A-6> a:ide
+sethandler       <A-7> a:ide
+sethandler       <A-8> a:ide
+sethandler       <A-9> a:ide
+sethandler       <A-0> a:ide
+" =============================================
+sethandler      <C-F1> a:ide
+sethandler      <C-F2> a:ide
+sethandler      <C-F3> a:ide
+sethandler      <C-F4> a:ide
+" ----------------------
+sethandler      <C-F5> a:ide
+sethandler    <S-C-F5> a:ide
+sethandler      <C-F6> a:ide
+sethandler    <S-C-F6> a:ide
+" ----------------------
+sethandler        <F7> a:ide
+sethandler      <S-F7> a:ide
+sethandler    <A-S-F7> a:ide
+sethandler    <C-S-F7> a:ide
+sethandler      <C-F7> a:ide
+" ----------------------
+sethandler       <F8> a:ide
+sethandler     <S-F8> a:ide
+sethandler   <A-S-F8> a:ide
+sethandler   <C-S-F8> a:ide
+sethandler     <C-F8> a:ide
+" ----------------------
+sethandler     <C-F9> a:ide
+sethandler    <C-F10> a:ide
+sethandler      <F11> a:ide
+sethandler    <C-F11> a:ide
+sethandler    <C-F12> a:ide
+" =============================================
+sethandler      <A-E> a:ide
+sethandler      <A-R> a:ide
+sethandler      <A-D> a:ide
+sethandler      <A-F> a:ide
+sethandler      <A-G> a:ide
+sethandler      <A-H> a:ide
+sethandler      <A-J> a:ide
+sethandler      <A-K> a:ide
+" ----------------------
+sethandler      <A-I> a:ide
+sethandler      <A-O> a:ide
+sethandler      <A-P> a:ide
+" =============================================
+sethandler      <C-K> a:ide
+sethandler    <A-C-A> a:ide
+sethandler    <S-C-K> a:ide
+sethandler    <S-C-J> a:ide
+" ----------------------
+sethandler      <A-L> a:ide
+sethandler    <A-S-L> a:ide
+" ----------------------
+sethandler    <A-S-T> a:ide
+sethandler    <A-S-Y> a:ide
+sethandler    <A-S-U> a:ide
+
 
 " =============================================
 " 02.mapleader
@@ -41,6 +210,11 @@ sethandler <C-]> a:ide
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "
+
+sethandler <A-;>       a:vim
+nnoremap   <leader>fsr <ESC>:action VimPluginToggle<CR>
+vnoremap   <leader>fsr <ESC>:action VimPluginToggle<CR>
+inoremap   <leader>fsr <ESC>:action VimPluginToggle<CR>
 
 
 " ============================================= 02.PlugIn Setting =======================================
@@ -64,16 +238,12 @@ let mapleader = " "
 " set highlightedyank
 " set vim-paragraph-motion
 
-set keep-english-in-normal-and-restore-in-insert
-
-
 " =============================================
 " 02.Idea specific settings
 " =============================================
 
 " set ideajoin
 " set idearefactormode=keep
-
 
 " =============================================
 " 03.Built in plugin
@@ -149,37 +319,242 @@ nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
 " =============================================
-" 04.Line number
+" 04.line number
 " =============================================
 
 set nu
 set rnu
 set scrolloff=15
-set sidescrolloff=15
+set sidescrolloff=7
 
 
-" ============================================= 05.KeyMap ==============================================
+" =========================================== 05.Quick-Select ==========================================
 
 " =============================================
-" 01.pasteboard
+" 匹配%、句子()、段落{}：以一个空白行开始和结束的片段
+"
+" [位置] [寄存器] 操作 位置，[]代表可选
+"
+" forbid  : s r x S R X C D
+" y / p
+" s + visual + [c / d / y / <leader>y]
+" c + insert
+" d + normal
+" y + normal
 " =============================================
 
-" shared system pasteboard
+" =============================================
+" 01.forbid
+" =============================================
+
+" noremap w <Nop>
+" noremap b <Nop>
+" noremap e <Nop>
+
+" noremap W <Nop>
+" noremap B <Nop>
+" noremap E <Nop>
+
+" ----------------------
+
+noremap s <Nop>
+noremap r <Nop>
+noremap x <Nop>
+
+noremap S <Nop>
+noremap R <Nop>
+noremap X <Nop>
+
+" ----------------------
+
+" noremap c <Nop>
+" noremap d <Nop>
+" noremap y <Nop>
+" noremap p <Nop>
+" noremap u <Nop>
+
+noremap C <Nop>
+noremap D <Nop>
+" noremap Y <Nop>
+" noremap P <Nop>
+" noremap U <Nop>
+
+" noremap J <Nop>
+" noremap M <Nop>
+
+" ----------------------
+
+" noremap a <Nop>
+" noremap A <Nop>
+" noremap i <Nop>
+" noremap I <Nop>
+" noremap o <Nop>
+" noremap O <Nop>
+
+" noremap v <Nop>
+" noremap V <Nop>
+
+" =============================================
+" 02.y / p
+" =============================================
+
 " set clipboard=unnamed,unnamedplus
 " set clipboard+=ideaput
 
-" copy and paste
-nnoremap y ""yy
-nnoremap Y ""y$
+noremap y y
+noremap Y <ESC>""y$
 
-nnoremap p ""p
-nnoremap P "0p
+noremap p p
+noremap P <ESC>"0p
 
-nnoremap <leader>y "*yy
-nnoremap <leader>p "*p
+noremap <leader>y "+y
+noremap <leader>p "+p
 
 " =============================================
-" 02.normal mode
+" 03.s + visual + [c / d / y / <leader>y]
+" =============================================
+
+" sa                                     _all _
+nnoremap sa  ggVG
+nnoremap sia ggVGyi
+
+" sw                                     _word_
+nnoremap sw  viw
+nnoremap siw viwbyi
+
+" sb                                     (word)
+nnoremap sb  vib
+nnoremap sib vibyi
+
+" ss                                     {word}
+nnoremap ss  vi{
+nnoremap sis vi{y^i
+
+" sr                                     [word]
+nnoremap sr  vi[
+nnoremap sir vi[y^i
+
+" st                                    <>word<>
+nnoremap st  vit
+nnoremap sit vityj^i
+
+" s'                                     "word"
+nnoremap s'  vi"
+nnoremap si' vi"yi
+
+" s"                                     'word'
+nnoremap s"  vi'
+nnoremap si" vi'yi
+
+" =============================================
+" 04.c + insert
+" =============================================
+
+" cw                                     _word_
+nnoremap cw    ciw
+nnoremap ciw "+ciw
+
+" cb                                     (word)
+nnoremap cb    cib
+nnoremap cib "+cib
+
+" cs                                     {word}
+nnoremap cs    ci{
+nnoremap cis "+ci{
+
+" cr                                     [word]
+nnoremap cr    ci[
+nnoremap cir "+ci[
+
+" ct                                    <>word<>
+nnoremap ct    cit
+nnoremap cit "+cit
+
+" c'                                     'word'
+nnoremap c'    ci'
+nnoremap ci' "+ci'
+
+" c"                                     "word"
+nnoremap c"    ci"
+nnoremap ci" "+ci"
+
+" =============================================
+" 05.d + normal
+" =============================================
+
+" dw                                     _word_
+nnoremap dw    diw
+nnoremap diw "+diw
+
+" db                                     (word)
+nnoremap db    dib
+nnoremap dib "+dib
+
+" ds                                     {word}
+nnoremap ds    di{
+nnoremap dis "+di{
+
+" dr                                     [word]
+nnoremap dr    di[
+nnoremap dir "+di[
+
+" dt                                    <>word<>
+nnoremap dt    dit
+nnoremap dit "+dit
+
+" d'                                     'word'
+nnoremap d'    di'
+nnoremap di' "+di'
+
+" d"                                     "word"
+nnoremap d"    di"
+nnoremap di" "+di"
+
+" =============================================
+" 06.y + normal
+" =============================================
+
+" yw                                     _word_
+nnoremap yw    yiw
+nnoremap yiw "+yiw
+
+" yb                                     (word)
+nnoremap yb    yib
+nnoremap yib "+yib
+
+" ys                                     {word}
+nnoremap ys    yi{
+nnoremap yis "+yi{
+
+" yr                                     [word]
+nnoremap yr    yi[
+nnoremap yir "+yi[
+
+" yt                                    <>word<>
+nnoremap yt    yit
+nnoremap yit "+yit
+
+" y'                                     'word'
+nnoremap y'    yi'
+nnoremap yi' "+yi'
+
+" y"                                     "word"
+nnoremap y"    yi"
+nnoremap yi" "+yi"
+
+
+" =========================================== 06.Mode-KeyMap ===========================================
+
+" =============================================
+" :actionlist 查询命令
+"
+" normal: ESC
+" visual: v
+" insert: a A i I o O
+" =============================================
+
+" =============================================
+" 01.normal mode
 " =============================================
 
 nnoremap k gk
@@ -189,24 +564,25 @@ nnoremap gj j
 
 nnoremap H ^
 nnoremap L $
-
-nnoremap < <<
-nnoremap > >>
+nnoremap K 3k
+nnoremap J 3j
 
 nnoremap ; :
 nnoremap : ;
 
-nnoremap U <C-r>
+nnoremap # *
+nnoremap * #
 
-nnoremap <A-e> <C-e>
-nnoremap <A-y> <C-y>
-nnoremap <A-d> <C-d>
-nnoremap <A-u> <C-u>
+nnoremap ' `
+nnoremap ` '
 
-nnoremap <Leader>sa ggVG
+nnoremap <A-E> <C-e>
+nnoremap <A-Y> <C-y>
+nnoremap <A-D> <C-d>
+nnoremap <A-U> <C-u>
 
 " =============================================
-" 03.visual modes
+" 02.visual modes
 " =============================================
 
 vnoremap k gk
@@ -216,76 +592,381 @@ vnoremap gj j
 
 vnoremap H ^
 vnoremap L $
+vnoremap K 3k
+vnoremap J 3j
+
+vnoremap ; <ESC>:
+vnoremap : <ESC>;
+
+vnoremap # <ESC>*
+vnoremap * <ESC>#
+
+nnoremap ' <ESC>`
+nnoremap ` <ESC>'
+
+vnoremap <A-E> <C-e>
+vnoremap <A-Y> <C-y>
+vnoremap <A-D> <C-d>
+vnoremap <A-U> <C-u>
+
+" =============================================
+" 03.insert mode
+" =============================================
+
+inoremap <A-H> <Left>
+inoremap <A-J> <Down>
+inoremap <A-K> <Up>
+inoremap <A-L> <Right>
+inoremap <A-A> <Esc>^i
+inoremap <A-E> <Esc>$a
+inoremap <A-D> <Delete>
+
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
+
+
+" =========================================== 07.Multi-Window ==========================================
+
+" =============================================
+" :actionlist 查询命令
+"
+" file  : q  n  m
+" window: wv ws ww wd wh wj wk wl
+" =============================================
+
+" =============================================
+" 01.file operation
+" =============================================
+
+noremap <C-Z>           <ESC>
+noremap <S-Z><S-Z>      <ESC>
+noremap <ESC>           <ESC>:nohlsearch<CR>
+
+noremap <leader>q <ESC>:wq!<CR>
+noremap <leader>n <ESC>:e C:/Users/mysla/.ideavimrc<CR>
+noremap <leader>m <ESC>:source C:/Users/mysla/.ideavimrc<CR>
+
+" =============================================
+" 02.window operation
+" =============================================
+
+" noremap <Leader>wd <ESC><C-W>c
+noremap <leader>ww <ESC><C-W>w
+
+noremap <leader>wv <ESC><C-W>v
+noremap <leader>ws <ESC><C-W>s
+
+noremap <leader>wh <ESC><C-W>h
+noremap <leader>wj <ESC><C-W>j
+noremap <leader>wk <ESC><C-W>k
+noremap <leader>wl <ESC><C-W>l
+
+
+" =========================================== 08.IDEA-Action1 ==========================================
+
+" =============================================
+" :actionlist 查询命令
+"
+" f   跳转、查找、替换、命名、重构
+" s   撤销、剪切、复制、粘贴、其他
+" g   参数/返回、结构/引用、调用/实现、父类/继承/重写
+" h   捕获/优化/格式、单元/依赖/字母
+" >z/ 缩进、折叠、注释
+" ide 代码、光标、标签、方法
+" ide 面板、关闭、切换、设置、提示/插入/结束/修改
+" =============================================
+
+" =============================================
+" 01.跳转、查找、替换、命名、重构
+" =============================================
+
+noremap <leader>fg  <ESC>:action GotoLine<CR>
+" ----------------------
+noremap <leader>\     <ESC>/
+noremap <leader><S-\> <ESC>:%s//g<left><left>
+
+noremap <leader>ff  <ESC>:action Find<CR>
+noremap <leader>fsf <ESC>:action FindInPath<CR>
+
+noremap <leader>f2  <ESC>:action GotoNextError<CR>
+noremap <leader>fs2 <ESC>:action GotoPreviousError<CR>
+" ----------------------
+noremap <leader>fr  <ESC>:action Replace<CR>
+noremap <leader>fsr <ESC>:action ReplaceInPath<CR>
+" ----------------------
+noremap <leader>fs6 <ESC>ciw
+" ----------------------
+noremap <leader>fav <ESC>:action IntroduceVariable<CR>
+noremap <leader>fac <ESC>:action IntroduceConstant<CR>
+noremap <leader>faf <ESC>:action IntroduceField<CR>
+" -----------
+noremap <leader>fad <ESC>:action Refactorings.QuickListPopupAction<CR>
+
+
+" =============================================
+" 02.撤销、剪切、复制、粘贴、其他
+" =============================================
+
+nnoremap u u
+nnoremap U <C-r>
+vnoremap u <ESC>u
+vnoremap U <ESC><C-r>
+" ----------------------
+" x
+" ----------------------
+" y
+noremap <leader>sc  <ESC>:action CopyReferencePopupGroup<CR>
+" ----------------------
+" p
+noremap <leader>sv  <ESC>:action PasteMultiple<CR>
+" ----------------------
+" yyp
+" dd
+" ----------------------
+" byw
+" aw、ab、a{、a[、at、a"、a'  iw、ib、i{、i[、it、i"、i'
+
+
+" =============================================
+" 03.参数/返回、结构/引用、调用/实现、父类/继承/重写
+" =============================================
+
+noremap <leader>gq  <ESC>:action QuickJavaDoc<CR>
+noremap <leader>gsq <ESC>:action QuickTypeDefinition<CR>
+noremap <leader>gp  <ESC>:action ParameterInfo<CR>
+noremap <leader>gsp <ESC>:action ExpressionTypeInfo<CR>
+" ----------------------
+noremap <leader>gh  <ESC>:action TypeHierarchy<CR>
+noremap <leader>gsh <ESC>:action FileStructurePopup<CR>
+noremap <leader>gah <ESC>:action ShowUsages<CR>
+" ----------------------
+noremap <leader>gb  <ESC>:action GotoDeclaration<CR>
+noremap <leader>gsb <ESC>:action GotoImplementation<CR>
+" ----------------------
+noremap <leader>gu  <ESC>:action GotoSuperMethod<CR>
+noremap <leader>gi  <ESC>:action ImplementMethods<CR>
+noremap <leader>go  <ESC>:action OverrideMethods<CR>
+
+
+" =============================================
+" 04.捕获/优化/格式、单元/依赖/字母
+" =============================================
+
+noremap <leader>hat <ESC>:action SurroundWith<CR>
+noremap <leader>hao <ESC>:action OptimizeImports<CR>
+noremap <leader>hal <ESC>:action ReformatCode<CR>
+" ----------------------
+noremap <leader>hst <ESC>:action GotoTest<CR>
+noremap <leader>hso <ESC>:action ExternalSystem.ProjectRefreshAction<CR>
+noremap <leader>hsu <ESC>:action EditorToggleCase<CR>
+
+
+" =============================================
+" 05.缩进、折叠、注释
+" =============================================
+
+nnoremap < <<
+nnoremap > >>
 
 vnoremap < <gv
 vnoremap > >gv
+" ----------------------
+noremap <leader>zc zc
+noremap <leader>zo zo
+
+noremap <leader>zm zM
+noremap <leader>zr zR
+" ----------------------
+" noremap <C-/>       :action CommentByLineComment<CR>
+" noremap <C-S-/>     :action CommentByBlockComment<CR>
+
 
 " =============================================
-" 04.insert mode
+" 06.代码、光标、标签、方法
 " =============================================
 
-inoremap <A-h> <Left>
-inoremap <A-j> <Down>
-inoremap <A-k> <Up>
-inoremap <A-l> <Right>
-inoremap <A-a> <Home>
-inoremap <A-e> <End>
-inoremap <A-d> <Delete>
+noremap <S-Up>      :action EditorUpWithSelection<CR>
+noremap <S-Down>    :action EditorDownWithSelection<CR>
+noremap <S-Left>    :action EditorLeftWithSelection<CR>
+noremap <S-Right>   :action EditorRightWithSelection<CR>
+noremap <A-S-Up>    :action MoveLineUp<CR>
+noremap <A-S-Down>  :action MoveLineDown<CR>
+" ----------------------
+noremap <A-S-H>     <ESC>:action Back<CR>
+noremap <A-S-L>     <ESC>:action Forward<CR>
+" ----------------------
+noremap <A-H>       <ESC>gT
+noremap <A-L>       <ESC>gt
+" ----------------------
+noremap <A-K>       <ESC>:action MethodUp<CR>
+noremap <A-J>       <ESC>:action MethodDown<CR>
 
-
-" =========================================== 06.Multi-window ==========================================
 
 " =============================================
-" 01.File
+" 07.面板、关闭、切换、设置、提示/插入/结束/修改
 " =============================================
 
-" unknown error
-nnoremap s <Esc>"
+nnoremap <C-N>      <ESC>:action GotoClass<CR>
+nnoremap <C-S-A>    <ESC>:action GotoAction<CR>
 
-" quit insert mode
-inoremap kj <Esc>
-vnoremap kj <Esc>
+inoremap <C-N>      <ESC>:action GotoClass<CR>i
+inoremap <C-S-A>    <ESC>:action GotoAction<CR>i
+" ----------------------
+nnoremap <A-W>      <ESC>:action CloseEditor<CR>
+nnoremap <A-S-W>    <ESC>:action CloseAllEditorsButActive<CR>
 
-" quit file
-nnoremap <leader>fq :q<CR>
+inoremap <A-W>      <ESC>:action CloseEditor<CR>i
+inoremap <A-S-W>    <ESC>:action CloseAllEditorsButActive<CR>i
+" -----------
+nnoremap <S-Esc>    <ESC>:action HideAllWindows<CR>
+nnoremap <A-S-S>    <ESC>:action CloseProject<CR>
 
-" exit file
-nnoremap <leader>fw :wq!<CR>
+inoremap <S-Esc>    <ESC>:action HideAllWindows<CR>i
+inoremap <A-S-S>    <ESC>:action CloseProject<CR>i
+" ----------------------
+nnoremap <A-S-[>    <ESC>:action EmmetPreviousEditPoint<CR>
+nnoremap <A-S-]>    <ESC>:action EmmetNextEditPoint<CR>
 
-" quit edit vimrc
-nnoremap <leader>fn :e C:/Users/mysla/.ideavimrc<CR>
-nnoremap <leader>fm :source C:/Users/mysla/.ideavimrc<CR>
+inoremap <A-S-[>    <ESC>:action EmmetPreviousEditPoint<CR>i
+inoremap <A-S-]>    <ESC>:action EmmetNextEditPoint<CR>i
+" ----------------------
+nnoremap <A-Ins>    <ESC>:action Generate<CR>
+nnoremap <A-CR>     <ESC>:action ShowIntentionActions<CR>
 
-" clear the highlighted search result
-nnoremap <Leader>fd :nohlsearch<CR>
+nnoremap <S-CR>     <ESC>:action EditorSplitLine<CR>
+nnoremap <A-C-CR>   <ESC>:action EditorJoinLines<CR>
 
-" clear all register content
-" command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
-" autocmd VimEnter * WipeReg
+nnoremap <C-CR>     <ESC>:action EditorStartNewLine<CR>
+nnoremap <A-S-CR>   <ESC>:action EditorStartNewLineBefore<CR>
+
+nnoremap <C-S-CR>   <ESC>:action EditorCompleteStatement<CR>
+nnoremap <C-S-BS>   <ESC>:action JumpToLastChange<CR>
+" -----------
+inoremap <A-Ins>    <ESC>:action Generate<CR>i
+inoremap <A-CR>     <ESC>:action ShowIntentionActions<CR>i
+
+inoremap <S-CR>     <ESC>:action EditorSplitLine<CR>i
+inoremap <A-C-CR>   <ESC>:action EditorJoinLines<CR>i
+
+inoremap <C-CR>     <ESC>:action EditorStartNewLine<CR>i
+inoremap <A-S-CR>   <ESC>:action EditorStartNewLineBefore<CR>i
+
+inoremap <C-S-CR>   <ESC>:action EditorCompleteStatement<CR>i
+inoremap <C-S-BS>   <ESC>:action JumpToLastChange<CR>i
+" -----------
+" noremap <S-CR>      <ESC>a<CR><ESC>
+" noremap <A-C-CR>    <ESC>J<ESC>
+
+" noremap <C-CR>      <ESC>o<ESC>
+" noremap <A-S-CR>    <ESC>O<Esc>
+
+" noremap <C-S-CR>    <ESC>j$a;<ESC>
+" noremap <C-S-BS>    <ESC>``
+
+
+" =========================================== 08.IDEA-Action2 ==========================================
 
 " =============================================
-" 02.Label switch
+" :actionlist 查询命令
+"
+" CTRL+ 123   常用窗口   <leader>c1 c2 c3
+" ALT + 123   工作窗口   <leader>a1 a2 a3
+" FN  + 123   项目窗口   <leader>f1 f2 f3
+" ALT + IOP   个人窗口   <leader>ai ao ap
+" CTRL+ XXX   软件窗口   <leader>gd gs gy
 " =============================================
 
-nnoremap tn gt
-nnoremap tm gT
-
 " =============================================
-" 03.Multi-window
+" 01.常用窗口
 " =============================================
 
-" Split horizontal →
-nnoremap <leader>fv <C-W>v
+noremap <leader>c1  <ESC>:action EditorLineStart<CR>
+noremap <leader>c2  <ESC>:action EditorLineEnd<CR>
+noremap <leader>c3  <ESC>:action EditorTextStart<CR>
+noremap <leader>c4  <ESC>:action EditorTextEnd<CR>
+noremap <leader>c5  <ESC>:action EditorOnlyLayoutChangeAction<CR>
+noremap <leader>c6  <ESC>:action PreviewOnlyLayoutChangeAction<CR>
 
-" Split vertical   ↓
-nnoremap <leader>fs <C-W>s
+" =============================================
+" 02.工作窗口
+" =============================================
 
-" Toggle windows
-nnoremap <leader>ff <C-W>w
+noremap <leader>a1  <ESC>:action ActivateProjectToolWindow<CR>
+noremap <leader>a2  <ESC>:action ActivateDatabaseToolWindow<CR>
+noremap <leader>as2 <ESC>:action ActivateServicesToolWindow<CR>
+noremap <leader>a3  <ESC>:action ActivateRunToolWindow<CR>
+noremap <leader>a4  <ESC>:action ActivateDebugToolWindow<CR>
+noremap <leader>a5  <ESC>:action ActivateTerminalToolWindow<CR>
+noremap <leader>a6  <ESC>:action ActivateFileTransferToolWindow<CR>
+noremap <leader>a7  <ESC>:action ActivateRemoteHostToolWindow<CR>
+noremap <leader>a8  <ESC>
+noremap <leader>a9  <ESC>
+noremap <leader>a0  <ESC>
 
-" Move windows
-nnoremap <leader>fh <C-W>h
-nnoremap <leader>fj <C-W>j
-nnoremap <leader>fk <C-W>k
-nnoremap <leader>fl <C-W>l
+" =============================================
+" 03.项目窗口
+" =============================================
+
+noremap <leader>f1  <ESC>:action PublishGroup.UploadTo<CR>
+noremap <leader>f2  <ESC>:action PublishGroup.DownloadFrom<CR>
+noremap <leader>f3  <ESC>:action PublishGroup.SyncLocalVsRemoteWith<CR>
+noremap <leader>f4  <ESC>:action EditSourceInNewWindow<CR>
+" ----------------------
+noremap <leader>f5  <ESC>:action Run<CR>
+noremap <leader>c5  <ESC>:action ChooseRunConfiguration<CR>
+noremap <leader>f6  <ESC>:action Debug<CR>
+noremap <leader>c6  <ESC>:action ChooseDebugConfiguration<CR>
+" ----------------------
+noremap <leader>7   <ESC>:action StepOver<CR>
+noremap <leader>s7  <ESC>
+noremap <leader>as7 <ESC>:action ForceStepOver<CR>
+noremap <leader>c7  <ESC>:action editRunConfigurations<CR>
+noremap <leader>f7  <ESC>:action ViewBreakpoints<CR>
+" ----------------------
+noremap <leader>8   <ESC>:action StepInto<CR>
+noremap <leader>s8  <ESC>:action StepOut<CR>
+noremap <leader>as8 <ESC>:action ForceStepInto<CR>
+noremap <leader>c8  <ESC>:action SmartStepInto<CR>
+noremap <leader>f8  <ESC>:action Resume<CR>
+" ----------------------
+noremap <leader>f9  <ESC>:action Stop<CR>
+noremap <leader>f10 <ESC>:action Compile<CR>
+noremap <leader>11  <ESC>:action ToggleFullScreen<CR>
+noremap <leader>f11 <ESC>:action ActivateVersionControlToolWindow<CR>
+noremap <leader>f12 <ESC>:action FileStructurePopup<CR>
+
+" =============================================
+" 04.个人窗口
+" =============================================
+noremap <leader>ae  <ESC>:action NewClass<CR>
+noremap <leader>ar  <ESC>:action NewDir<CR>
+noremap <leader>ad  <ESC>:action CreateVueSingleFileComp<CR>
+noremap <leader>af  <ESC>:action NewFile<CR>
+noremap <leader>ag  <ESC>:action NewStylesheetFile<CR>
+noremap <leader>av  <ESC>:action NewHtmlFile<CR>
+noremap <leader>ab  <ESC>:action NewJavaScriptFile<CR>
+noremap <leader>an  <ESC>:action NewTypeScriptFile<CR>
+" ----------------------
+noremap <leader>ai  <ESC>:action SelectInProjectView<CR>
+noremap <leader>ao  <ESC>:action RevealIn<CR>
+noremap <leader>ap  <ESC>:action OpenFile<CR>
+
+" =============================================
+" 05.软件窗口
+" =============================================
+noremap <leader>gdv <ESC>:action CheckinProject<CR>
+noremap <leader>gdb <ESC>:action Git.Add<CR>
+noremap <leader>gdn <ESC>:action Vcs.Push<CR>
+noremap <leader>gdm <ESC>:action Vcs.UpdateProject<CR>
+" =============================================
+noremap <leader>gm  <ESC>:action XDebugger.NewWatch<CR>
+noremap <leader>gsm <ESC>:action XDebugger.RemoveAllWatches<CR>
+" =============================================
+noremap <leader>ht  <ESC>:action ToggleRenderedDocPresentation<CR>
+noremap <leader>hy  <ESC>:action ToggleQuickDocTranslationActionWithShortcut<CR>
+noremap <leader>hu  <ESC>:action MybatisProGoToXml<CR>
+
+
 
