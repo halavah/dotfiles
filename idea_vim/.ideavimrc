@@ -1,11 +1,20 @@
+" ******************************************************************************************************
+"
+" 🔭 Author  : Halavah
+" 🌱 Version : v0.1
+" ⚡ Desc    : My ideavim config file
+" ⛵ Motto   : Don't let joy take you down !
+" 📝 Blog    : halavah.tk
+" 📫 Mail    : halavah@126.com
+"
+" ******************************************************************************************************
+
 " ============================================= 01.Daily ===============================================
 
 " =============================================
 " 01.conflict
 " =============================================
 
-sethandler     <C-S-2> a:ide
-sethandler     <C-S-6> a:ide
 sethandler       <C-E> a:ide
 sethandler       <C-J> a:ide
 sethandler       <C-L> a:ide
@@ -15,6 +24,15 @@ sethandler       <C-S> a:ide
 sethandler       <C-T> a:ide
 sethandler       <C-[> a:ide
 sethandler       <C-]> a:ide
+" ----------------------
+" sethandler       <A-1> a:vim
+" sethandler       <A-I> a:vim
+" sethandler       <A-F> a:vim
+" -----------
+sethandler       <A-B> a:vim
+sethandler       <A-N> a:vim
+sethandler     <S-A-N> a:vim
+sethandler       <A-M> a:vim
 " =============================================
 sethandler       <C-G> a:ide
 " ----------------------
@@ -166,105 +184,214 @@ sethandler    <A-S-F7> a:ide
 sethandler    <C-S-F7> a:ide
 sethandler      <C-F7> a:ide
 " ----------------------
-sethandler       <F8> a:ide
-sethandler     <S-F8> a:ide
-sethandler   <A-S-F8> a:ide
-sethandler   <C-S-F8> a:ide
-sethandler     <C-F8> a:ide
+sethandler        <F8> a:ide
+sethandler      <S-F8> a:ide
+sethandler    <A-S-F8> a:ide
+sethandler    <C-S-F8> a:ide
+sethandler      <C-F8> a:ide
 " ----------------------
-sethandler     <C-F9> a:ide
-sethandler    <C-F10> a:ide
-sethandler      <F11> a:ide
-sethandler    <C-F11> a:ide
-sethandler    <C-F12> a:ide
+sethandler      <C-F9> a:ide
+sethandler     <C-F10> a:ide
+sethandler       <F11> a:ide
+sethandler     <C-F11> a:ide
+sethandler     <C-F12> a:ide
 " =============================================
-sethandler      <A-E> a:ide
-sethandler      <A-R> a:ide
-sethandler      <A-D> a:ide
-sethandler      <A-F> a:ide
-sethandler      <A-G> a:ide
-sethandler      <A-H> a:ide
-sethandler      <A-J> a:ide
-sethandler      <A-K> a:ide
+sethandler     <A-S-E> a:ide
+sethandler     <A-S-R> a:ide
+sethandler     <A-S-D> a:ide
+sethandler     <A-S-F> a:ide
+sethandler     <A-S-G> a:ide
 " ----------------------
-sethandler      <A-I> a:ide
-sethandler      <A-O> a:ide
-sethandler      <A-P> a:ide
+sethandler       <A-I> a:ide
+sethandler       <A-O> a:ide
+sethandler       <A-P> a:ide
 " =============================================
-sethandler      <C-K> a:ide
-sethandler    <A-C-A> a:ide
-sethandler    <S-C-K> a:ide
-sethandler    <S-C-J> a:ide
+sethandler       <C-K> a:ide
+sethandler     <A-C-A> a:ide
+sethandler     <S-C-K> a:ide
+sethandler     <S-C-J> a:ide
 " ----------------------
-sethandler      <A-L> a:ide
-sethandler    <A-S-L> a:ide
+sethandler       <C-M> a:ide
+sethandler     <S-C-M> a:ide
 " ----------------------
-sethandler    <A-S-T> a:ide
-sethandler    <A-S-Y> a:ide
-sethandler    <A-S-U> a:ide
+sethandler     <A-S-T> a:ide
+sethandler     <A-S-Y> a:ide
+sethandler     <A-S-U> a:ide
 
+" =============================================
+sethandler       <A-`> a:ide
+sethandler       <A-;> a:ide
+sethandler     <C-S-1> a:ide
+sethandler     <C-S-2> a:ide
+sethandler     <C-S-3> a:ide
+sethandler     <C-S-4> a:ide
+sethandler     <C-S-5> a:ide
+sethandler     <C-S-6> a:ide
+sethandler     <C-S-7> a:ide
+sethandler     <C-S-8> a:ide
+sethandler     <C-S-9> a:ide
+sethandler     <C-S-0> a:ide
 
 " =============================================
 " 02.mapleader
 " =============================================
 
+map <A-V> <C-v>
+sethandler <A-;> a:ide
 nnoremap <SPACE> <Nop>
 let mapleader = " "
-
-sethandler <A-;>       a:vim
-nnoremap   <leader>fsr <ESC>:action VimPluginToggle<CR>
-vnoremap   <leader>fsr <ESC>:action VimPluginToggle<CR>
-inoremap   <leader>fsr <ESC>:action VimPluginToggle<CR>
 
 
 " ============================================= 02.PlugIn Setting =======================================
 
 " =============================================
-" 01.plugin install
+" 01.plugin 1
 " =============================================
 
-" set easymotion
-" set NERDTree
-" set surround
-" set multiple-cursors
-" set commentary
-" set ReplaceWithRegister
-" set argtextobj
-" set exchange
-
-" set textobj-entire
-" set textobj-indent
-
-" set highlightedyank
-" set vim-paragraph-motion
-
-" =============================================
-" 02.Idea specific settings
-" =============================================
-
+" ----------------------
+" a.IdeaSettings
+" ----------------------
 " set ideajoin
 " set idearefactormode=keep
 
+" ----------------------
+" b.IdeaVimExtension
+" ----------------------
+" set keep-english-in-normal
+" set keep-english-in-normal-and-restore-in-insert
+set keep-english-in-normal-and-restore-in-insert
+" set nokeep-english-in-normal
+
+" ----------------------
+" c.NERDTree
+" ----------------------
+set NERDTree
+" nnoremap <A-1> <ESC>:NERDTreeToggle<CR>
+" vnoremap <A-1> <ESC>:NERDTreeToggle<CR>
+" inoremap <A-1> <ESC>:NERDTreeToggle<CR>
+" nnoremap <A-I> <ESC>:NERDTreeFind<CR>
+" vnoremap <A-I> <ESC>:NERDTreeFind<CR>
+" inoremap <A-I> <ESC>:NERDTreeFind<CR>
+" nnoremap <A-F> <ESC>:NERDTreeRefreshRoot<CR>
+" vnoremap <A-F> <ESC>:NERDTreeRefreshRoot<CR>
+" inoremap <A-F> <ESC>:NERDTreeRefreshRoot<CR>
+
 " =============================================
-" 03.Built in plugin
+" 02.plugin 2
 " =============================================
 
-" nerdtree
-" map <leader>e :NERDTreeToggle<CR>
-" nnoremap <leader>d :NERDTreeFocus<CR>
+" ----------------------
+" a.easymotion
+" ----------------------
+set easymotion
+let g:EasyMotion_smartcase = 1
+" let g:EasyMotion_use_upper = 0
+map f  <Plug>(easymotion-bd-jk)
+map F  <Plug>(easymotion-lineanywhere)
+map gh <Plug>(easymotion-bd-w)
+map gl <Plug>(easymotion-bd-e)
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+map <Leader><leader>s <Plug>(easymotion-s)
+map <Leader><leader>S <Plug>(easymotion-s2)
 
-" easymotion
-" map <leader>f <Plug>(easymotion-s)
+" ----------------------
+" b.multiple-cursors
+" ----------------------
+set multiple-cursors
+nmap <A-B>   <Plug>SkipOccurrence
+xmap <A-B>   <Plug>SkipOccurrence
+nmap <A-N>   <Plug>NextWholeOccurrence
+xmap <A-N>   <Plug>NextWholeOccurrence
+nmap <S-A-N> <Plug>AllWholeOccurrences
+xmap <S-A-N> <Plug>AllWholeOccurrences
+nmap <A-M>   <Plug>RemoveOccurrence
+xmap <A-M>   <Plug>RemoveOccurrence
 
-" Remap multiple-cursors shortcuts for Mac
-" nmap <C-n> <Plug>NextWholeOccurrence
-" xmap <C-n> <Plug>NextWholeOccurrence
-" nmap <C-x> <Plug>SkipOccurrence
-" xmap <C-x> <Plug>SkipOccurrence
-" nmap <C-p> <Plug>RemoveOccurrence
-" xmap <C-p> <Plug>RemoveOccurrence
-" nmap <S-C-n> <Plug>AllWholeOccurrences
-" xmap <S-C-n> <Plug>AllWholeOccurrences
+" =============================================
+" 03.plugin 3
+" =============================================
+
+" ----------------------
+" a.surround
+" ----------------------
+set surround
+" ds"
+" cs"'
+" swS"
+" ysw"
+
+" ----------------------
+" b.commentary
+" ----------------------
+set commentary
+" gc  + <motion>
+" gcc
+" gcap
+
+" ----------------------
+" c.ReplaceWithRegister
+" ----------------------
+set ReplaceWithRegister
+" gr  + {motion}
+" grr
+
+" ----------------------
+" d.exchange
+" ----------------------
+set exchange
+" cxiw cxib
+" cxc
+" cxx
+" X
+
+" =============================================
+" 04.plugin 4
+" =============================================
+
+" ----------------------
+" a.argtextobj
+" ----------------------
+set argtextobj
+" via vaa
+" cia
+" daa
+" yaa
+
+" ----------------------
+" b.textobj-entire
+" ----------------------
+set textobj-entire
+" ae
+" ie
+
+" ----------------------
+" c.textobj-indent
+" ----------------------
+set textobj-indent
+" ai
+" aI
+" ii
+
+" =============================================
+" 05.plugin 5
+" =============================================
+
+" ----------------------
+" a.highlightedyank
+" ----------------------
+set highlightedyank
+" let g:highlightedyank_highlight_duration = 1000
+
+" ----------------------
+" b.vim-paragraph-motion
+" ----------------------
+set vim-paragraph-motion
+" {} Sentence, () Paragraph
+" Normally the { and } motions only match completely empty lines
+" With this plugin lines that only contain whitespace are also matched.
 
 
 " ============================================= 03.System ===============================================
@@ -335,8 +462,8 @@ set sidescrolloff=7
 "
 " [位置] [寄存器] 操作 位置，[]代表可选
 "
-" forbid  : s r x S R X C D
-" y / p
+" s r x S R X C D
+" y / p / [ / ]
 " s + visual + [c / d / y / <leader>y]
 " c + insert
 " d + normal
@@ -358,12 +485,16 @@ set sidescrolloff=7
 " ----------------------
 
 noremap s <Nop>
-noremap r <Nop>
-noremap x <Nop>
-
 noremap S <Nop>
-noremap R <Nop>
+
+noremap x <Nop>
 noremap X <Nop>
+
+nnoremap r  "+ciw
+nnoremap R  <ESC>:action RenameElement<CR>
+
+nnoremap -- <ESC>:action ReformatCode<CR>
+nnoremap == <ESC>:action OptimizeImports<CR>
 
 " ----------------------
 
@@ -415,132 +546,132 @@ noremap <leader>p "+p
 " =============================================
 
 " sa                                     _all _
-nnoremap sa  ggVG
-nnoremap sia ggVGyi
+nnoremap sa  <Esc>ggVG
+nnoremap sia <Esc>ggVGyi
 
 " sw                                     _word_
-nnoremap sw  viw
-nnoremap siw viwbyi
+nnoremap sw  <Esc>viw
+nnoremap siw <Esc>viwbyi
 
 " sb                                     (word)
-nnoremap sb  vib
-nnoremap sib vibyi
+nnoremap sb  <Esc>vib
+nnoremap sib <Esc>vibyi
 
 " ss                                     {word}
-nnoremap ss  vi{
-nnoremap sis vi{y^i
+nnoremap ss  <Esc>vi{
+nnoremap sis <Esc>vi{y^i
 
 " sr                                     [word]
-nnoremap sr  vi[
-nnoremap sir vi[y^i
+nnoremap sr  <Esc>vi[
+nnoremap sir <Esc>vi[y^i
 
 " st                                    <>word<>
-nnoremap st  vit
-nnoremap sit vityj^i
+nnoremap st  <Esc>vit
+nnoremap sit <Esc>vityj^i
 
 " s'                                     "word"
-nnoremap s'  vi"
-nnoremap si' vi"yi
+nnoremap s'  <Esc>vi"
+nnoremap si' <Esc>vi"yi
 
 " s"                                     'word'
-nnoremap s"  vi'
-nnoremap si" vi'yi
+nnoremap s"  <Esc>vi'
+nnoremap si" <Esc>vi'yi
 
 " =============================================
 " 04.c + insert
 " =============================================
 
 " cw                                     _word_
-nnoremap cw    ciw
-nnoremap ciw "+ciw
+" nnoremap cw  <Esc>ciw
+" nnoremap ciw <Esc>"+ciw
 
 " cb                                     (word)
-nnoremap cb    cib
-nnoremap cib "+cib
+" nnoremap cb  <Esc>cib
+" nnoremap cib <Esc>"+cib
 
 " cs                                     {word}
-nnoremap cs    ci{
-nnoremap cis "+ci{
+" nnoremap cs  <Esc>ci{
+" nnoremap cis <Esc>"+ci{
 
 " cr                                     [word]
-nnoremap cr    ci[
-nnoremap cir "+ci[
+" nnoremap cr  <Esc>ci[
+" nnoremap cir <Esc>"+ci[
 
 " ct                                    <>word<>
-nnoremap ct    cit
-nnoremap cit "+cit
+" nnoremap ct  <Esc>cit
+" nnoremap cit <Esc>"+cit
 
 " c'                                     'word'
-nnoremap c'    ci'
-nnoremap ci' "+ci'
+" nnoremap c'  <Esc>ci'
+" nnoremap ci' <Esc>"+ci'
 
 " c"                                     "word"
-nnoremap c"    ci"
-nnoremap ci" "+ci"
+" nnoremap c"  <Esc>ci"
+" nnoremap ci" <Esc>"+ci"
 
 " =============================================
 " 05.d + normal
 " =============================================
 
 " dw                                     _word_
-nnoremap dw    diw
-nnoremap diw "+diw
+" nnoremap dw  <Esc>diw
+" nnoremap diw <Esc>"+diw
 
 " db                                     (word)
-nnoremap db    dib
-nnoremap dib "+dib
+" nnoremap db  <Esc>dib
+" nnoremap dib <Esc>"+dib
 
 " ds                                     {word}
-nnoremap ds    di{
-nnoremap dis "+di{
+" nnoremap ds  <Esc>di{
+" nnoremap dis <Esc>"+di{
 
 " dr                                     [word]
-nnoremap dr    di[
-nnoremap dir "+di[
+" nnoremap dr  <Esc>di[
+" nnoremap dir <Esc>"+di[
 
 " dt                                    <>word<>
-nnoremap dt    dit
-nnoremap dit "+dit
+" nnoremap dt  <Esc>dit
+" nnoremap dit <Esc>"+dit
 
 " d'                                     'word'
-nnoremap d'    di'
-nnoremap di' "+di'
+" nnoremap d'  <Esc>di'
+" nnoremap di' <Esc>"+di'
 
 " d"                                     "word"
-nnoremap d"    di"
-nnoremap di" "+di"
+" nnoremap d"  <Esc>di"
+" nnoremap di" <Esc>"+di"
 
 " =============================================
 " 06.y + normal
 " =============================================
 
 " yw                                     _word_
-nnoremap yw    yiw
-nnoremap yiw "+yiw
+" nnoremap yw  <Esc>""yiw
+" nnoremap yiw <Esc>"+yiw
 
 " yb                                     (word)
-nnoremap yb    yib
-nnoremap yib "+yib
+" nnoremap yb  <Esc>""yib
+" nnoremap yib <Esc>"+yib
 
 " ys                                     {word}
-nnoremap ys    yi{
-nnoremap yis "+yi{
+" nnoremap ys  <Esc>""yi{
+" nnoremap yis <Esc>"+yi{
 
 " yr                                     [word]
-nnoremap yr    yi[
-nnoremap yir "+yi[
+" nnoremap yr  <Esc>""yi[
+" nnoremap yir <Esc>"+yi[
 
 " yt                                    <>word<>
-nnoremap yt    yit
-nnoremap yit "+yit
+" nnoremap yt  <Esc>""yit
+" nnoremap yit <Esc>"+yit
 
 " y'                                     'word'
-nnoremap y'    yi'
-nnoremap yi' "+yi'
+" nnoremap y'  <Esc>""yi'
+" nnoremap yi' <Esc>"+yi'
 
 " y"                                     "word"
-nnoremap y"    yi"
-nnoremap yi" "+yi"
+" nnoremap y"  <Esc>""yi"
+" nnoremap yi" <Esc>"+yi"
 
 
 " =========================================== 06.Mode-KeyMap ===========================================
@@ -601,9 +732,6 @@ vnoremap : <ESC>;
 vnoremap # <ESC>*
 vnoremap * <ESC>#
 
-nnoremap ' <ESC>`
-nnoremap ` <ESC>'
-
 vnoremap <A-E> <C-e>
 vnoremap <A-Y> <C-y>
 vnoremap <A-D> <C-d>
@@ -632,27 +760,28 @@ inoremap " ""<Esc>i
 " =============================================
 " :actionlist 查询命令
 "
-" file  : q  n  m
-" window: wv ws ww wd wh wj wk wl
+" file    : q  n  m
+" window  : wv ws ww wd wh wj wk wl
+" bookmark: nn mm m, m. m[ m] ms `s
 " =============================================
 
 " =============================================
 " 01.file operation
 " =============================================
 
-noremap <C-Z>           <ESC>
-noremap <S-Z><S-Z>      <ESC>
-noremap <ESC>           <ESC>:nohlsearch<CR>
+noremap <C-Z>      <ESC>
+noremap <S-Z><S-Z> <ESC>
+noremap <ESC>      <ESC>:nohlsearch<CR>
 
-noremap <leader>q <ESC>:wq!<CR>
-noremap <leader>n <ESC>:e C:/Users/mysla/.ideavimrc<CR>
-noremap <leader>m <ESC>:source C:/Users/mysla/.ideavimrc<CR>
+noremap <leader>q  <ESC>:wq!<CR>
+noremap <leader>n  <ESC>:e C:/Users/mysla/.ideavimrc<CR>
+noremap <leader>m  <ESC>:source C:/Users/mysla/.ideavimrc<CR>
 
 " =============================================
 " 02.window operation
 " =============================================
 
-" noremap <Leader>wd <ESC><C-W>c
+noremap <Leader>wd <ESC><C-W>c
 noremap <leader>ww <ESC><C-W>w
 
 noremap <leader>wv <ESC><C-W>v
@@ -662,6 +791,91 @@ noremap <leader>wh <ESC><C-W>h
 noremap <leader>wj <ESC><C-W>j
 noremap <leader>wk <ESC><C-W>k
 noremap <leader>wl <ESC><C-W>l
+
+noremap <Left>     <ESC><C-W>h
+noremap <Down>     <ESC><C-W>j
+noremap <Up>       <ESC><C-W>k
+noremap <Right>    <ESC><C-W>l
+
+" =============================================
+" 03.bookmark operation
+" =============================================
+
+noremap <A-`>      <ESC>:action ActivateFavoritesToolWindow<CR>
+noremap mm         <ESC>:action ToggleBookmarkWithMnemonic<CR>
+noremap m,         <ESC>:action ShowBookmarks<CR>
+noremap m.         <ESC>:action ToggleBookmark<CR>
+noremap m/         <ESC>:action EditBookmark<CR>
+" ----------------------
+noremap `0         <ESC>:action GotoBookmark0<CR>
+noremap `1         <ESC>:action GotoBookmark1<CR>
+noremap `2         <ESC>:action GotoBookmark2<CR>
+noremap `3         <ESC>:action GotoBookmark3<CR>
+noremap `4         <ESC>:action GotoBookmark4<CR>
+noremap `5         <ESC>:action GotoBookmark5<CR>
+noremap `6         <ESC>:action GotoBookmark6<CR>
+noremap `7         <ESC>:action GotoBookmark7<CR>
+noremap `8         <ESC>:action GotoBookmark8<CR>
+noremap `9         <ESC>:action GotoBookmark9<CR>
+noremap `a         <ESC>:action GotoBookmarkA<CR>
+noremap `b         <ESC>:action GotoBookmarkB<CR>
+noremap `c         <ESC>:action GotoBookmarkC<CR>
+noremap `d         <ESC>:action GotoBookmarkD<CR>
+noremap `e         <ESC>:action GotoBookmarkE<CR>
+noremap `f         <ESC>:action GotoBookmarkF<CR>
+noremap `g         <ESC>:action GotoBookmarkG<CR>
+noremap `h         <ESC>:action GotoBookmarkH<CR>
+noremap `i         <ESC>:action GotoBookmarkI<CR>
+noremap `j         <ESC>:action GotoBookmarkJ<CR>
+noremap `k         <ESC>:action GotoBookmarkK<CR>
+noremap `l         <ESC>:action GotoBookmarkL<CR>
+noremap `o         <ESC>:action GotoBookmarkO<CR>
+noremap `p         <ESC>:action GotoBookmarkP<CR>
+noremap `q         <ESC>:action GotoBookmarkQ<CR>
+noremap `r         <ESC>:action GotoBookmarkR<CR>
+noremap `s         <ESC>:action GotoBookmarkS<CR>
+noremap `t         <ESC>:action GotoBookmarkT<CR>
+noremap `u         <ESC>:action GotoBookmarkU<CR>
+noremap `v         <ESC>:action GotoBookmarkV<CR>
+noremap `w         <ESC>:action GotoBookmarkW<CR>
+noremap `x         <ESC>:action GotoBookmarkX<CR>
+noremap `y         <ESC>:action GotoBookmarkY<CR>
+noremap `z         <ESC>:action GotoBookmarkZ<CR>
+" ----------------------
+noremap m0         <ESC>:action ToggleBookmark0<CR>
+noremap m1         <ESC>:action ToggleBookmark1<CR>
+noremap m2         <ESC>:action ToggleBookmark2<CR>
+noremap m3         <ESC>:action ToggleBookmark3<CR>
+noremap m4         <ESC>:action ToggleBookmark4<CR>
+noremap m5         <ESC>:action ToggleBookmark5<CR>
+noremap m6         <ESC>:action ToggleBookmark6<CR>
+noremap m7         <ESC>:action ToggleBookmark7<CR>
+noremap m8         <ESC>:action ToggleBookmark8<CR>
+noremap m9         <ESC>:action ToggleBookmark9<CR>
+noremap ma         <ESC>:action ToggleBookmarkA<CR>
+noremap mb         <ESC>:action ToggleBookmarkB<CR>
+noremap mc         <ESC>:action ToggleBookmarkC<CR>
+noremap md         <ESC>:action ToggleBookmarkD<CR>
+noremap me         <ESC>:action ToggleBookmarkE<CR>
+noremap mf         <ESC>:action ToggleBookmarkF<CR>
+noremap mg         <ESC>:action ToggleBookmarkG<CR>
+noremap mh         <ESC>:action ToggleBookmarkH<CR>
+noremap mi         <ESC>:action ToggleBookmarkI<CR>
+noremap mj         <ESC>:action ToggleBookmarkJ<CR>
+noremap mk         <ESC>:action ToggleBookmarkK<CR>
+noremap ml         <ESC>:action ToggleBookmarkL<CR>
+noremap mo         <ESC>:action ToggleBookmarkO<CR>
+noremap mp         <ESC>:action ToggleBookmarkP<CR>
+noremap mq         <ESC>:action ToggleBookmarkQ<CR>
+noremap mr         <ESC>:action ToggleBookmarkR<CR>
+noremap ms         <ESC>:action ToggleBookmarkS<CR>
+noremap mt         <ESC>:action ToggleBookmarkT<CR>
+noremap mu         <ESC>:action ToggleBookmarkU<CR>
+noremap mv         <ESC>:action ToggleBookmarkV<CR>
+noremap mw         <ESC>:action ToggleBookmarkW<CR>
+noremap mx         <ESC>:action ToggleBookmarkX<CR>
+noremap my         <ESC>:action ToggleBookmarkY<CR>
+noremap mz         <ESC>:action ToggleBookmarkZ<CR>
 
 
 " =========================================== 08.IDEA-Action1 ==========================================
@@ -684,7 +898,6 @@ noremap <leader>wl <ESC><C-W>l
 
 noremap <leader>fg  <ESC>:action GotoLine<CR>
 " ----------------------
-noremap <leader>\     <ESC>/
 noremap <leader><S-\> <ESC>:%s//g<left><left>
 
 noremap <leader>ff  <ESC>:action Find<CR>
@@ -696,7 +909,7 @@ noremap <leader>fs2 <ESC>:action GotoPreviousError<CR>
 noremap <leader>fr  <ESC>:action Replace<CR>
 noremap <leader>fsr <ESC>:action ReplaceInPath<CR>
 " ----------------------
-noremap <leader>fs6 <ESC>ciw
+noremap <leader>fs6 <ESC>:action RenameFile<CR>
 " ----------------------
 noremap <leader>fav <ESC>:action IntroduceVariable<CR>
 noremap <leader>fac <ESC>:action IntroduceConstant<CR>
@@ -754,13 +967,13 @@ noremap <leader>go  <ESC>:action OverrideMethods<CR>
 " 04.捕获/优化/格式、单元/依赖/字母
 " =============================================
 
-noremap <leader>hat <ESC>:action SurroundWith<CR>
-noremap <leader>hao <ESC>:action OptimizeImports<CR>
-noremap <leader>hal <ESC>:action ReformatCode<CR>
+noremap <leader>hs  <ESC>:action SurroundWith<CR>
+noremap <leader>ho  <ESC>:action OptimizeImports<CR>
+noremap <leader>hf  <ESC>:action ReformatCode<CR>
 " ----------------------
-noremap <leader>hst <ESC>:action GotoTest<CR>
-noremap <leader>hso <ESC>:action ExternalSystem.ProjectRefreshAction<CR>
-noremap <leader>hsu <ESC>:action EditorToggleCase<CR>
+noremap <leader>ht  <ESC>:action GotoTest<CR>
+noremap <leader>hr  <ESC>:action ExternalSystem.ProjectRefreshAction<CR>
+noremap <leader>hc  <ESC>:action EditorToggleCase<CR>
 
 
 " =============================================
@@ -773,14 +986,22 @@ nnoremap > >>
 vnoremap < <gv
 vnoremap > >gv
 " ----------------------
-noremap <leader>zc zc
-noremap <leader>zo zo
+nnoremap \ %
 
-noremap <leader>zm zM
-noremap <leader>zr zR
+nnoremap [[ zc
+nnoremap ]] zo
+
+nnoremap [] zM
+nnoremap ][ zR
+
+nnoremap <leader>zc zc
+nnoremap <leader>zo zo
+
+nnoremap <leader>zm zM
+nnoremap <leader>zr zR
 " ----------------------
-" noremap <C-/>       :action CommentByLineComment<CR>
-" noremap <C-S-/>     :action CommentByBlockComment<CR>
+" nnoremap <C-/>       :action CommentByLineComment<CR>
+" nnoremap <C-S-/>     :action CommentByBlockComment<CR>
 
 
 " =============================================
@@ -886,13 +1107,15 @@ noremap <leader>c1  <ESC>:action EditorLineStart<CR>
 noremap <leader>c2  <ESC>:action EditorLineEnd<CR>
 noremap <leader>c3  <ESC>:action EditorTextStart<CR>
 noremap <leader>c4  <ESC>:action EditorTextEnd<CR>
-noremap <leader>c5  <ESC>:action EditorOnlyLayoutChangeAction<CR>
-noremap <leader>c6  <ESC>:action PreviewOnlyLayoutChangeAction<CR>
+noremap <leader>c9  <ESC>:action EditorOnlyLayoutChangeAction<CR>
+noremap <leader>c0  <ESC>:action PreviewOnlyLayoutChangeAction<CR>
 
 " =============================================
 " 02.工作窗口
 " =============================================
 
+noremap <leader>a`  <ESC>:action ActivateFavoritesToolWindow<CR>
+noremap <leader>aq  <ESC>:action ActivateStructureToolWindow<CR>
 noremap <leader>a1  <ESC>:action ActivateProjectToolWindow<CR>
 noremap <leader>a2  <ESC>:action ActivateDatabaseToolWindow<CR>
 noremap <leader>as2 <ESC>:action ActivateServicesToolWindow<CR>
@@ -944,10 +1167,10 @@ noremap <leader>ae  <ESC>:action NewClass<CR>
 noremap <leader>ar  <ESC>:action NewDir<CR>
 noremap <leader>ad  <ESC>:action CreateVueSingleFileComp<CR>
 noremap <leader>af  <ESC>:action NewFile<CR>
-noremap <leader>ag  <ESC>:action NewStylesheetFile<CR>
-noremap <leader>av  <ESC>:action NewHtmlFile<CR>
-noremap <leader>ab  <ESC>:action NewJavaScriptFile<CR>
-noremap <leader>an  <ESC>:action NewTypeScriptFile<CR>
+noremap <leader>ag  <ESC>:action NewHtmlFile<CR>
+noremap <leader>ab  <ESC>:action NewStylesheetFile<CR>
+noremap <leader>an  <ESC>:action NewJavaScriptFile<CR>
+noremap <leader>am  <ESC>:action NewTypeScriptFile<CR>
 " ----------------------
 noremap <leader>ai  <ESC>:action SelectInProjectView<CR>
 noremap <leader>ao  <ESC>:action RevealIn<CR>
@@ -956,17 +1179,19 @@ noremap <leader>ap  <ESC>:action OpenFile<CR>
 " =============================================
 " 05.软件窗口
 " =============================================
-noremap <leader>gdv <ESC>:action CheckinProject<CR>
-noremap <leader>gdb <ESC>:action Git.Add<CR>
-noremap <leader>gdn <ESC>:action Vcs.Push<CR>
-noremap <leader>gdm <ESC>:action Vcs.UpdateProject<CR>
-" =============================================
-noremap <leader>gm  <ESC>:action XDebugger.NewWatch<CR>
-noremap <leader>gsm <ESC>:action XDebugger.RemoveAllWatches<CR>
-" =============================================
-noremap <leader>ht  <ESC>:action ToggleRenderedDocPresentation<CR>
-noremap <leader>hy  <ESC>:action ToggleQuickDocTranslationActionWithShortcut<CR>
-noremap <leader>hu  <ESC>:action MybatisProGoToXml<CR>
+
+noremap <leader>\c  <ESC>:action CheckinProject<CR>
+noremap <leader>\a  <ESC>:action Git.Add<CR>
+noremap <leader>\p  <ESC>:action Vcs.Push<CR>
+noremap <leader>\l  <ESC>:action Vcs.UpdateProject<CR>
+" ----------------------
+noremap <leader>,m  <ESC>:action XDebugger.NewWatch<CR>
+noremap <leader>,sm <ESC>:action XDebugger.RemoveAllWatches<CR>
+" ----------------------
+noremap <leader>,t  <ESC>:action ToggleRenderedDocPresentation<CR>
+noremap <leader>,y  <ESC>:action ToggleQuickDocTranslationActionWithShortcut<CR>
+noremap <leader>,u  <ESC>:action MybatisProGoToXml<CR>
+
 
 
 
