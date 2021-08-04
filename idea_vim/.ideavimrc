@@ -771,7 +771,7 @@ inoremap " ""<Esc>i
 
 noremap <C-Z>      <ESC>
 noremap <S-Z><S-Z> <ESC>
-noremap <ESC>      <ESC>:nohlsearch<CR>
+noremap <leader><ESC> <ESC>:nohlsearch<CR>
 
 noremap <leader>q  <ESC>:wq!<CR>
 noremap <leader>n  <ESC>:e C:/Users/mysla/.ideavimrc<CR>
