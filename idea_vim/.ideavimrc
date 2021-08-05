@@ -474,56 +474,73 @@ set sidescrolloff=7
 " 01.forbid
 " =============================================
 
-" noremap w <Nop>
-" noremap b <Nop>
-" noremap e <Nop>
+" nnoremap w <Nop>
+" nnoremap W <Nop>
 
-" noremap W <Nop>
-" noremap B <Nop>
-" noremap E <Nop>
+" nnoremap b <Nop>
+" nnoremap B <Nop>
 
-" ----------------------
+  nnoremap e <ESC>k
+  vnoremap e <ESC>k
+  nnoremap E <ESC>gT
+  vnoremap E <ESC>gT
 
-noremap s <Nop>
-noremap S <Nop>
-
-noremap x <Nop>
-noremap X <Nop>
-
-nnoremap r  "+ciw
-nnoremap R  <ESC>:action RenameElement<CR>
-
-nnoremap -- <ESC>:action ReformatCode<CR>
-nnoremap == <ESC>:action OptimizeImports<CR>
+  nnoremap r <ESC>"+ciw
+  vnoremap r <ESC>"+ciw
+  nnoremap R <ESC>gt
+  vnoremap R <ESC>gt
 
 " ----------------------
 
-" noremap c <Nop>
-" noremap d <Nop>
-" noremap y <Nop>
-" noremap p <Nop>
-" noremap u <Nop>
+  nnoremap s <Nop>
+  vnoremap s <Nop>
+  nnoremap S <ESC>:action Back<CR>
+  vnoremap S <ESC>:action Back<CR>
 
-noremap C <Nop>
-noremap D <Nop>
-" noremap Y <Nop>
-" noremap P <Nop>
-" noremap U <Nop>
+  nnoremap d <ESC>j
+  vnoremap d <ESC>j
+  nnoremap D <ESC>:action Back<CR>
+  vnoremap D <ESC>:action Back<CR>
 
-" noremap J <Nop>
-" noremap M <Nop>
+  nnoremap x <ESC>:action CloseEditor<CR>
+  vnoremap x <ESC>:action CloseEditor<CR>
+  nnoremap X <ESC>:action CloseAllEditorsButActive<CR>
+  vnoremap X <ESC>:action CloseAllEditorsButActive<CR>
+
+  nnoremap cc <ESC>"+yiw
+  vnoremap cc <ESC>"+yiw
+  nnoremap C  <ESC>:action CopyReferencePopupGroup<CR>
+  vnoremap C  <ESC>:action CopyReferencePopupGroup<CR>
+
+  nnoremap -- <ESC>:action ReformatCode<CR>
+  vnoremap -- <ESC>:action ReformatCode<CR>
+  nnoremap == <ESC>:action OptimizeImports<CR>
+  vnoremap == <ESC>:action OptimizeImports<CR>
 
 " ----------------------
 
-" noremap a <Nop>
-" noremap A <Nop>
-" noremap i <Nop>
-" noremap I <Nop>
-" noremap o <Nop>
-" noremap O <Nop>
+" nnoremap y <Nop>
+" nnoremap p <Nop>
+" nnoremap u <Nop>
 
-" noremap v <Nop>
-" noremap V <Nop>
+" nnoremap Y <ESC>""y$
+" nnoremap P <ESC>"0p
+" nnoremap U <ESC><C-r>
+
+" nnoremap J <Nop>
+" nnoremap M <Nop>
+
+" ----------------------
+
+" nnoremap a <Nop>
+" nnoremap A <Nop>
+" nnoremap i <Nop>
+" nnoremap I <Nop>
+" nnoremap o <Nop>
+" nnoremap O <Nop>
+
+" nnoremap v <Nop>
+" nnoremap V <Nop>
 
 " =============================================
 " 02.y / p
@@ -707,8 +724,8 @@ nnoremap * #
 nnoremap ' `
 nnoremap ` '
 
-nnoremap <A-E> <C-e>
-nnoremap <A-Y> <C-y>
+nnoremap <A-E> j
+nnoremap <A-Y> k
 nnoremap <A-D> <C-d>
 nnoremap <A-U> <C-u>
 
@@ -732,8 +749,8 @@ vnoremap : <ESC>;
 vnoremap # <ESC>*
 vnoremap * <ESC>#
 
-vnoremap <A-E> <C-e>
-vnoremap <A-Y> <C-y>
+vnoremap <A-E> j
+vnoremap <A-Y> k
 vnoremap <A-D> <C-d>
 vnoremap <A-U> <C-u>
 
@@ -1016,7 +1033,7 @@ noremap <A-S-Up>    :action MoveLineUp<CR>
 noremap <A-S-Down>  :action MoveLineDown<CR>
 " ----------------------
 noremap <A-S-H>     <ESC>:action Back<CR>
-noremap <A-S-L>     <ESC>:action Forward<CR>
+noremap <A-S-L>     <ESC>:action Back<CR>
 " ----------------------
 noremap <A-H>       <ESC>gT
 noremap <A-L>       <ESC>gt
