@@ -48,10 +48,10 @@
     d.捕获/优化/格式、单元/依赖/字母
   */
   // 小写
-  { "keys": ["ctrl+shift+u"], "command": "lower_case" },
+  { "keys": ["ctrl+u"], "command": "lower_case" },
   { "keys": [""], "command": "soft_redo" },
   // 大写
-  { "keys": ["ctrl+u"], "command": "upper_case" },
+  { "keys": ["ctrl+shift+u"], "command": "upper_case" },
   { "keys": [""], "command": "soft_undo" },
 
 

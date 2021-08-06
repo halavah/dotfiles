@@ -1,0 +1,615 @@
+{
+  // 窗口：缩放级别
+  "window.zoomLevel": 0,
+  // 窗口：侧边栏样式
+  "window.titleBarStyle": "custom",
+  // 窗口：默认文件夹
+  "window.restoreWindows": "folders",
+  // 窗口：新打开文件
+  "window.openFilesInNewWindow": "on",
+  // 窗口：隐藏主菜单
+  "window.menubarvisibility": "toggle",
+  // 编辑：缩进空格数量
+  "editor.tabSize": 2,
+  // 编辑：设置文字大小
+  "editor.fontSize": 14,
+  // 编辑：添加自动换行
+  "editor.wordWrap": "off",
+  // 编辑：换行的字符数
+  "editor.wordWrapColumn": 120,
+  // 编辑：换行的提示线
+  "editor.rulers": [120],
+  // 编辑：设置代码行号
+  "editor.lineNumbers": "off",
+  // 编辑：格式编辑内容
+  "editor.formatOnType": true,
+  // 编辑：格式编辑内容
+  "editor.formatOnSave": true,
+  // 编辑：缩进插入空格
+  "editor.insertSpaces": true,
+  // 编辑：格式编辑内容
+  "editor.formatOnPaste": true,
+  // 编辑：填入最佳推荐
+  "editor.tabCompletion": "on",
+  // 编辑：滚轮缩放代码
+  "editor.mouseWheelZoom": true,
+  // 编辑：显示颜色预览
+  "editor.colorDecorators": true,
+  // 编辑：迷你地图显示
+  "editor.minimap.enabled": false,
+  // 编辑：缩进自动检测
+  "editor.detectIndentation": false,
+  // 编辑：显示空白字符
+  "editor.renderWhitespace": "none",
+  // 编辑：选中首个推荐
+  "editor.suggestSelection": "first",
+  // 编辑：缩排的辅助线
+  "editor.renderIndentGuides": false,
+  // 编辑：提示代码建议
+  "editor.snippetSuggestions": "top",
+  // 编辑：插入多个光标
+  "editor.multiCursorModifier": "alt",
+  // 编辑：渲染高亮显示
+  "editor.renderLineHighlight": "all",
+  // 编辑：编辑显示预览
+  "editor.rename.enablePreview": false,
+  // 编辑：显示控制字符
+  "editor.renderControlCharacters": true,
+  // 编辑：基于缩进折叠
+  "editor.foldingStrategy": "auto",
+  // 编辑：style无提示
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // 编辑：设置文字样式
+  "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+  // 编辑：选中间隔符号
+  "editor.wordSeparators": "`~!@$%^&*()=+[{]}\\|;:'\",.<>/?“”（）【】《》 ：、；，。",
+  // 编辑：代码立即修复
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": true,
+    // "source.fixAll.tslint": true,
+    "source.fixAll.stylelint": true,
+    "source.organizeImports": false
+  },
+  // 编辑：快速建议内容
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+
+  // 文件：设置文件编码
+  "files.encoding": "utf8",
+  // 文件：自动保存文件
+  "files.autoSaveDelay": 10,
+  // 文件：自动保存文件
+  "files.autoSave": "afterDelay",
+  // 文件：自动匹配中文
+  "files.autoGuessEncoding": true,
+  // 文件：剪裁多余空格
+  "files.trimTrailingWhitespace": true,
+  // 文件：语言文件关联
+  "files.associations": {
+    "*.vue": "vue",
+    "*.wpy": "vue",
+    "*.wxss": "css",
+    "*.wxml": "html",
+    "*.cjson": "jsonc",
+    "*.js": "javascript",
+    "*.wxs": "javascript"
+  },
+  // 文件：显示排除文件
+  "files.exclude": {
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/*.iml": true,
+    "**/.idea": true,
+    "**/target": true,
+    ".gitignore": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/rebel.xml": true,
+    "**/.DS_Store": true,
+    "**/.classpath": true,
+    "**/.factorypath": true
+  },
+
+  // 搜索：搜索排除文件
+  "search.exclude": {
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/*.code-search": true,
+    "**/bower_components": true
+  },
+
+  // 终端：设置字体大小
+  "terminal.integrated.fontSize": 14,
+  // 终端：设置字体样式
+  "terminal.integrated.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+
+  // 管理器：提示删除文件
+  "explorer.confirmDelete": false,
+  // 管理器：提示删除文件
+  "explorer.confirmDragAndDrop": false,
+  // 工作台：设置界面形式
+  "workbench.settings.editor": "json",
+  // 工作台：是否启用预览
+  "workbench.editor.enablePreview": false,
+  // 工作台：设置编辑主题
+  "workbench.colorTheme": "Monokai Dimmed",
+  // 工作台：设置图标主题
+  "workbench.iconTheme": "vscode-great-icons",
+  // 工作台：无标题的提示
+  "workbench.editor.untitled.hint": "hidden",
+  // 工作台：默认新建文本
+  "workbench.startupEditor": "newUntitledFile",
+  // 工作台：打开对照设置
+  "workbench.settings.openDefaultSettings": false,
+  // 工作台：自动键盘导航
+  "workbench.list.automaticKeyboardNavigation": false,
+  // 工作台：自定义主题色
+  "workbench.colorCustomizations": {
+    "terminal.background": "#212121",
+    "terminal.foreground": "#EEFFFF",
+    "terminalCursor.background": "#EEFFFF",
+    "terminalCursor.foreground": "#EEFFFF",
+    "terminal.ansiBlack": "#212121",
+    "terminal.ansiBlue": "#82AAFF",
+    "terminal.ansiBrightBlack": "#4A4A4A",
+    "terminal.ansiBrightBlue": "#82AAFF",
+    "terminal.ansiBrightCyan": "#89DDFF",
+    "terminal.ansiBrightGreen": "#C3E88D",
+    "terminal.ansiBrightMagenta": "#C792EA",
+    "terminal.ansiBrightRed": "#F07178",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiBrightYellow": "#FFCB6B",
+    "terminal.ansiCyan": "#89DDFF",
+    "terminal.ansiGreen": "#C3E88D",
+    "terminal.ansiMagenta": "#C792EA",
+    "terminal.ansiRed": "#F07178",
+    "terminal.ansiWhite": "#EEFFFF",
+    "terminal.ansiYellow": "#FFCB6B"
+  },
+
+  // 其他设置：打开调试界面
+  "debug.openDebug": "neverOpen",
+  // 其他设置：即将完成动作
+  "todohighlight.isEnable": true,
+  // 其他设置：忽略报错信息
+  "vetur.ignoreProjectWarning": true,
+  // 其他设置：忽略报错信息
+  "json.schemaDownload.enable": false,
+  // 其他设置：启动任务错误
+  "debug.onTaskErrors": "debugAnyway",
+  // 其他设置：任何地方调试
+  "debug.allowBreakpointsEverywhere": true,
+  // 其他设置：忽略空白空间
+  "diffEditor.ignoreTrimWhitespace": false,
+  // 其他设置：无扩展的建议
+  "extensions.ignoreRecommendations": true,
+  // 其他设置：手动容器环境
+  "DockerRun.DisableAutoGenerateConfig": true,
+  // 其他设置：自动格式文本
+  "formattingToggle.affects": ["formatOnSave"],
+  // 其他设置：面包屑的导航
+  "breadcrumbs.enabled": false,
+
+  // Java
+  "java.home": "D:\\software\\Java\\jdk-11.0.11",
+  "java.help.firstView": "gettingStarted",
+  "java.project.importOnFirstTimeStartup": "automatic",
+  "java.configuration.maven.userSettings": "D:\\software\\Java\\apache-maven-3.6.3\\conf\\settings.xml",
+  "java.configuration.maven.globalSettings": "D:\\software\\Java\\apache-maven-3.6.3\\conf\\settings.xml",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "D:\\software\\Java\\jdk-1.8.0_231"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "D:\\software\\Java\\jdk-11.0.11",
+      "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api",
+      "default": true
+    }
+  ],
+
+  // Maven
+  "maven.executable.options": "-DskipTests",
+  "maven.pomfile.autoUpdateEffectivePOM": true,
+  "maven.executable.path": "D:\\software\\Java\\apache-maven-3.6.3\\bin\\mvn.cmd",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "D:\\software\\Java\\jdk-11.0.11"
+    }
+  ],
+
+  // Remote SSH
+  "remote.SSH.path": "C:\\Program Files\\OpenSSH\\ssh.exe",
+  "remote.SSH.remotePlatform": {
+    "101.200.59.179": "linux",
+    "192.168.2.128": "linux"
+  },
+
+  // SSH FS
+  "sshfs.configs": [
+    {
+      "name": "192.168.2.128",
+      "host": "192.168.2.128",
+      "username": "root",
+      "privateKeyPath": "c:\\Users\\mysla\\.ssh\\id_rsa.ppk"
+    },
+    {
+      "name": "101.200.59.179",
+      "host": "101.200.59.179",
+      "username": "root",
+      "privateKeyPath": "c:\\Users\\mysla\\.ssh\\id_rsa.ppk"
+    }
+  ],
+
+  // Sync
+  "sync.autoUpload": true,
+  "sync.forceUpload": true,
+  "sync.autoDownload": false,
+  "sync.forceDownload": false,
+  "sync.syncExtensions": true,
+  "sync.removeExtensions": true,
+  "sync.gist": "a0dbe5b132ab02c15fc883803c440a6b",
+
+  // Git
+  "git.enabled": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreWindowsGit27Warning": true,
+  "git.path": "D:\\software\\Linux\\Window\\Git\\cmd\\git.exe",
+
+  // Gitlens
+  "gitlens.hovers.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.advanced.messages": {
+    "suppressGitVersionWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressCommitHasNoPreviousCommitWarning": false
+  },
+
+  // Drawio：主题
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjowLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+
+  // Thunder Client
+  "thunder-client.enableSaveOption": true,
+  "thunder-client.codeSnippetLanguage": "cs-httpclient",
+  "thunder-client.customLocation": "D:/software_ware/workspace_data/01.Express/05.debug",
+
+  // Alias-Skip
+  "alias-skip.mappings": {
+    "@": "/src"
+  },
+  "alias-skip.rootpath": "package.json",
+  "alias-skip.allowedsuffix": ["js", "vue", "jsx", "ts"],
+
+  // Path Intellisense
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  },
+
+  // AutoCorrect
+  "autocorrect.formatOnSave": true,
+  "autocorrect.path": "autocorrect",
+
+  // Textlint：自动运行修复
+  "textlint.run": "onSave",
+  // Textlint：保存自动修复
+  "textlint.autoFixOnSave": true,
+  // Textlint：自定配置路径
+  "textlint.configPath": "D:\\software_ware\\workspace_data\\VScode\\.textlintrc",
+  // Textlint：自定程序路径
+  "textlint.nodePath": "D:\\software\\JavaScript\\Nodejs\\node-global\\node_modules\\textlint",
+
+  // Auto-Correct
+  "auto-correct.dictionary": [
+    {
+      "languages": ["*"],
+      "words": {
+        "hte": "the",
+        "mispell": "misspell",
+        "mispelled": "misspelled",
+        "backgorund": "background",
+        "{despa,sepe}rat{e,es,ed,ing,ely,ion,ions,or}": "{despe,sepa}rat{}"
+      },
+      "useLargeList": false
+    },
+    {
+      "languages": [
+        "css",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ],
+      "words": {
+        "cosnt": "const",
+        "functoin": "function"
+      }
+    }
+  ],
+
+  // liveServer
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.ChromeDebuggingAttachment": false,
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito",
+
+  // oneDarkPro：解决斜体问题
+  "oneDarkPro.italic": false,
+  // oneDarkPro：部分字体粗体
+  "oneDarkPro.bold": true,
+  // oneDarkPro：MD格式的渲染
+  "oneDarkPro.markdownStyle": true,
+  // oneDarkPro：设置编辑主题
+  "oneDarkPro.editorTheme": "vscode",
+
+  // PartialDiff：禁止反馈数据
+  "partialDiff.enableTelemetry": false,
+  // PartialDiff：关闭右键菜单
+  "partialDiff.hideCommandsOnContextMenu": true,
+
+  // Npm：终端窗口输出
+  "npm.runInTerminal": true,
+  // Npm：验证依赖关系
+  "npm.validate.enable": true,
+
+  // Yarn：终端窗口输出
+  "yarn.runInTerminal": true,
+  // Yarn：保持终端输出
+  "yarn.dontHideOutputOnSuccess": false,
+
+  // MySQL：查询每页数量
+  "database-client.defaultSelectLimit": 30,
+  // MySQL：配置格式方言
+  "sql-formatter.dialect": "sql",
+  // MySQL：关键字转大写
+  "sql-formatter.uppercase": false,
+  // MySQL：查询间换行数
+  "sql-formatter.linesBetweenQueries": 2,
+  // MySQL：默认格式程序
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+
+  // Emmet：缩进触发扩展
+  "emmet.triggerExpansionOnTab": true,
+  // Emmet：显式语法提示
+  "emmet.showSuggestionsAsSnippets": true,
+  // Emmet：显示缩写建议
+  "emmet.showAbbreviationSuggestions": true,
+  // Emmet：显示标记语言
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  // Emmet：识别语法场景
+  "emmet.includeLanguages": {
+    "vue": "html",
+    "wpy": "html",
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+
+  // Eslint：开启保存触发
+  "eslint.run": "onSave",
+  // Eslint：开启自动格式
+  "eslint.format.enable": true,
+  // Eslint：开启状态显示
+  "eslint.alwaysShowStatus": true,
+  // Eslint：关闭代码检查
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // Eslint：关闭代码检查
+  "less.lint.zeroUnits": "error",
+  "css.lint.duplicateProperties": "error",
+  "scss.lint.duplicateProperties": "error",
+  // Eslint：关闭代码检查
+  "html.validate.scripts": false,
+  "html.format.indentInnerHtml": true,
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  // Eslint：语法检查场景
+  "eslint.options": { "extensions": [".js", ".vue"] },
+  // Eslint：开启代码检查
+  "eslint.validate": [
+    "vue",
+    "html",
+    "vue-html",
+    "javascript",
+    "javascriptreact"
+  ],
+
+  // Prettier：换行的字符数
+  "prettier.printWidth": 80,
+  // Prettier：缩进字符数量
+  "prettier.tabWidth": 2,
+  // Prettier：使用空格缩进
+  "prettier.useTabs": false,
+  // Prettier：句尾添加分号
+  "prettier.semi": false,
+  // Prettier：单引代替双引
+  "prettier.singleQuote": true,
+  // Prettier：引用的Props
+  "prettier.quoteProps": "as-needed",
+  // Prettier：单引代替双引
+  "prettier.jsxSingleQuote": false,
+  // Prettier：结束行无逗号
+  "prettier.trailingComma": "all",
+  // Prettier：数组文字括号
+  "prettier.bracketSpacing": true,
+  // Prettier：拒绝单独一行
+  "prettier.jsxBracketSameLine": false,
+  // Prettier：箭函省略括号
+  "prettier.arrowParens": "always",
+  // Prettier：格式全部内容
+  "prettier.rangeStart": 0,
+  "prettier.rangeEnd": "Infinity",
+  // Prettier：无需开头声明
+  "prettier.requirePragma": false,
+  // Prettier：无需自动插入
+  "prettier.insertPragma": false,
+  // Prettier：忽略敏感格式
+  "prettier.proseWrap": "preserve",
+  // Prettier：忽略空白空间
+  "prettier.htmlWhitespaceSensitivity": "css",
+  // Prettier：VUE脚本样式
+  "prettier.vueIndentScriptAndStyle": false,
+  // Prettier：结尾自动换行
+  "prettier.endOfLine": "lf",
+  // Prettier：嵌入格式引号
+  "prettier.embeddedLanguageFormatting": "auto",
+  // Prettier：是否需要文件（.prettierignore）
+  "prettier.requireConfig": false,
+  // Prettier：配置忽略文件（.prettierignore）
+  "prettier.ignorePath": ".prettierignore",
+
+  // Prettier：配置文件格式（CSS）
+  "[css]": {
+    // 编辑：基于缩进折叠
+    "editor.foldingStrategy": "indentation",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（less）
+  "[less]": {
+    // 编辑：基于缩进折叠
+    "editor.foldingStrategy": "indentation",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（scss）
+  "[scss]": {
+    // 编辑：基于缩进折叠
+    "editor.foldingStrategy": "indentation",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（html）
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（json）
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（jsonc）
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（javascript）
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（typescript）
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（javascript|react）
+  "[javascript|react]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Prettier：配置文件格式（typescript|react）
+  "[typescript|react]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Markdown：配件格式程序（markdown-all-in-one）
+  "[markdown]": {
+    // 添加自动换行
+    "editor.wordWrap": "off",
+    // 缩进提示内容
+    "editor.tabCompletion": "on",
+    // 开启提示建议
+    "editor.quickSuggestions": true,
+    // 允许显示空格
+    "editor.renderWhitespace": "none",
+    // snippet优先
+    "editor.snippetSuggestions": "top",
+    // 接受提示内容
+    "editor.acceptSuggestionOnEnter": "on",
+    // 设置格式程序
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // VUE：配件格式程序（Vetur）
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+
+  // Vetur：默认格式程序
+  "vetur.format.defaultFormatter.js": "prettier",
+  // Vetur：默认格式程序
+  "vetur.format.defaultFormatter.css": "prettier",
+  // Vetur：默认格式程序
+  "vetur.format.defaultFormatter.html": "prettier",
+  // Vetur：默认格式程序
+  "vetur.format.defaultFormatter.less": "prettier",
+  // Vetur：默认格式程序
+  "vetur.format.defaultFormatter.scss": "prettier",
+  // Vetur：默认格式程序
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  // Vetur：默认格式选项
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      // Prettier：换行的字符数
+      "printWidth": 8,
+      // Prettier：缩进字符数量
+      "tabWidth": 2,
+      // Prettier：使用TAB缩进
+      "useTabs": false,
+      // Prettier：句尾添加分号
+      "semi": false,
+      // Prettier：单引代替双引
+      "singleQuote": true,
+      // Prettier：引用的Props
+      "quoteProps": "as-needed",
+      // Prettier：单引代替双引
+      "jsxSingleQuote": false,
+      // Prettier：最后元素逗号
+      "trailingComma": "all",
+      // Prettier：数组文字括号
+      "bracketSpacing": true,
+      // Prettier：拒绝单独一行
+      "jsxBracketSameLine": false,
+      // Prettier：箭函省略括号
+      "arrowParens": "always",
+      // Prettier：格式全部内容
+      "rangeStart": 0,
+      "rangeEnd": "Infinity",
+      // Prettier：无需开头声明
+      "requirePragma": false,
+      // Prettier：无需自动插入
+      "insertPragma": false,
+      // Prettier：忽略敏感格式
+      "proseWrap": "preserve",
+      // Prettier：忽略空白空间
+      "htmlWhitespaceSensitivity": "css",
+      // Prettier：VUE脚本样式
+      "vueIndentScriptAndStyle": false,
+      // Prettier：结尾自动换行
+      "endOfLine": "lf",
+      // Prettier：嵌入格式引号
+      "embeddedLanguageFormatting": "auto",
+      // Prettier：是否需要文件（.prettierignore）
+      "requireConfig": false,
+      // Prettier：配置忽略文件（.prettierignore）
+      "ignorePath": ".prettierignore"
+    }
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false
+}
