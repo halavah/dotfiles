@@ -1,0 +1,148 @@
+[ /*
+    a.跳转、查找、替换
+  */
+  // 跳转
+  { "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+  // 查找
+  { "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+  { "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+  { "keys": ["f2"], "command": "find_next" },
+  { "keys": ["shift+f2"], "command": "find_prev" },
+  // 替换
+  { "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+  { "keys": [""], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+
+
+  /*
+    b.撤销、剪切、复制、粘贴、其他
+  */
+  // 撤销
+  { "keys": ["ctrl+z"], "command": "undo" },
+  { "keys": ["ctrl+shift+z"], "command": "redo" },
+  // 剪切
+  { "keys": ["ctrl+x"], "command": "cut" },
+  // 复制
+  { "keys": ["ctrl+c"], "command": "copy" },
+  // 粘贴
+  { "keys": ["ctrl+v"], "command": "paste" },
+  { "keys": [""], "command": "paste_and_indent" },
+  { "keys": ["ctrl+shift+v"], "command": "paste_from_history" },
+  // 其他
+  { "keys": ["ctrl+d"], "command": "duplicate_line" },
+  { "keys": [""], "command": "find_under_expand" },
+  // 其他
+  { "keys": ["ctrl+y"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  // 其他
+  { "keys": ["ctrl+w"], "command": "find_under_expand" },
+  // 其他
+  { "keys": ["ctrl+shift+s"], "command": "prompt_save_as" },
+
+
+  /*
+    c.参数/返回、结构/引用、调用/实现、父类/继承/重写
+  */
+  // 无
+
+
+  /*
+    d.捕获/优化/格式、单元/依赖/字母
+  */
+  // 小写
+  { "keys": ["ctrl+shift+u"], "command": "lower_case" },
+  { "keys": [""], "command": "soft_redo" },
+  // 大写
+  { "keys": ["ctrl+u"], "command": "upper_case" },
+  { "keys": [""], "command": "soft_undo" },
+
+
+  /*
+    e.缩进、折叠、注释
+  */
+  //
+  // 折叠
+  { "keys": ["ctrl+shift+]"], "command": "unfold" },
+  { "keys": ["ctrl+shift+["], "command": "fold" },
+  // 注释
+  { "keys": ["ctrl+/"], "command": "toggle_comment", "args": { "block": false } },
+  { "keys": ["ctrl+shift+/"], "command": "toggle_comment", "args": { "block": true } },
+
+
+  /*
+    f.代码、光标、标签、方法
+  */
+  // 代码
+  { "keys": ["shift+left"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true} },
+  { "keys": ["shift+right"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true} },
+  { "keys": ["shift+up"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true} },
+  { "keys": ["shift+down"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
+  { "keys": ["alt+shift+up"], "command": "swap_line_up" },
+  { "keys": ["alt+shift+down"], "command": "swap_line_down" },
+  // 标签
+  { "keys": ["alt+left"], "command": "next_view_in_stack" },
+  { "keys": ["alt+right"], "command": "prev_view_in_stack" },
+  { "keys": [""], "command": "move", "args": {"by": "subwords", "forward": false} },
+  { "keys": [""], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+
+
+  /*
+    g.面板、关闭、切换、设置、提示/插入/结束/修改
+  */
+  // 面板
+  { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+  // 关闭
+  { "keys": ["alt+w"], "command": "close" },
+  { "keys": [""], "command": "toggle_whole_word", "context":
+    [
+      { "key": "", "operator": "equal", "operand": true }
+    ]
+  },
+  { "keys": ["alt+shift+w"], "command": "close_window" },
+  { "keys": [""], "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" } },
+  // 窗口
+  { "keys": ["ctrl+shift+n"], "command": "new_window" },
+  // 结束
+  { "keys": ["ctrl+shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+  { "keys": [""], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+
+
+  /*
+    a.常用窗口
+  */
+  // 代码开头
+  { "keys": ["ctrl+1"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+  { "keys": [""], "command": "focus_group", "args": { "group": 0 } },
+  // 代码尾部
+  { "keys": ["ctrl+2"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+  { "keys": [""], "command": "focus_group", "args": { "group": 1 } },
+  // 文件开头
+  { "keys": ["ctrl+3"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+  { "keys": [""], "command": "focus_group", "args": { "group": 0 } },
+  // 文件尾部
+  { "keys": ["ctrl+4"], "command": "move_to", "args": {"to": "eof", "extend": false} },
+  { "keys": [""], "command": "focus_group", "args": { "group": 1 } },
+
+
+  /*
+    b.工作窗口
+  */
+  { "keys": ["alt+1"], "command": "toggle_side_bar" },
+  { "keys": [""], "command": "select_by_index", "args": { "index": 0 } },
+
+
+  /*
+    c.项目窗口
+  */
+  // F11
+
+
+  /*
+    d.个人窗口
+  */
+  // 文件位置
+  { "keys": ["alt+i"], "command": "open_dir", "args": { "dir": "$file_path", "file": "$file_name"}},
+  { "keys": [""], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
+  // 打开文件
+  { "keys": ["alt+o"], "command": "prompt_open_file" },
+  // 打开文夹
+  { "keys": ["alt+p"], "command": "prompt_open_folder"}
+]

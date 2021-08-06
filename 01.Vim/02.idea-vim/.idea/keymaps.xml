@@ -371,10 +371,6 @@
   <action id="RecentLocations" />
   <action id="Refresh" />
   <action id="RemoteHostView.CopyPaths" />
-  <action id="RenameElement" />
-  <action id="RenameFile">
-    <keyboard-shortcut first-keystroke="shift f6" />
-  </action>
   <action id="Rerun" />
   <action id="RerunTests" />
   <action id="ResizeToolWindowDown" />

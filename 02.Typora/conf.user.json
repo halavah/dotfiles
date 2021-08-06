@@ -1,0 +1,83 @@
+{
+  "defaultFontFamily": {
+  "standard": null,
+  "serif": null,
+  "sansSerif": null,
+  "monospace": null
+  },
+  "autoHideMenuBar": false,
+  "searchService": [
+    ["Search with Google", "https://google.com/search?q=%s"]
+  ],
+  /*
+    、
+  */
+  "keyBinding": {
+    // File
+    "New": "Ctrl+N",
+    "New Windows": "Ctrl+Shift+N",
+
+    "Open Quickly...": "Ctrl+P",
+
+    "Reopen Closed File": "Ctrl+Shift+T",
+    "Clear Items": "Ctrl+Shift+Alt+T",
+
+    "Open File Location...": "Alt+I",
+    "Open...": "Alt+O",
+    "Open Folder...": "Alt+P",
+
+    "PDF": "Ctrl+F1",
+    "HTML": "Ctrl+F2",
+    "Export and Overwrite with Previous": "Ctrl+F3",
+    "Close": "Alt+F4",
+
+    "Save": "Ctrl+S",
+    "Save As...": "Ctrl+Shift+S",
+    "Preferences...": "Ctrl+Alt+S",
+
+    // Edit
+    "Find...": "Ctrl+F",
+    "Find Next": "F2",
+    "Find Previous": "Shift+F2",
+
+    "Replace": "Ctrl+R",
+
+    "Undo": "Ctrl+Z",
+    "Redo": "Ctrl+Shift+Z",
+
+    "Cut": "Ctrl + X",
+
+    "Select All": "Ctrl+A",
+    "Select Word": "Ctrl+W",
+
+    // Paragraph
+    "Code": "Alt+`",
+    "Code Fences": "Ctrl+Shift+K",
+    "Quote": "Ctrl+Shift+L",
+
+    // Format
+    "Strong": "Ctrl+B",
+    "Emphasis": "Ctrl+I",
+    "Underline": "Ctrl+U",
+
+    "Strike": "Ctrl+Shift+-",
+    "Comment": "Ctrl+Shift+/",
+
+    "Hyperlink": "Ctrl+K",
+    "Insert Image": "Ctrl+L",
+
+    // View
+    "Toggle Sidebar": "Alt+1",
+
+    "Zoom In": "Ctrl+=",
+    "Zoom Out": "Ctrl+-",
+
+    "Toggle Fullscreen": "F11",
+    "Toggle DevTools": "F12",
+    "Source Code mode": "Ctrl+F12"
+  },
+  "monocolorEmoji": false,
+  "autoSaveTimer" : 3,
+  "maxFetchCountOnFileList": 500,
+  "flags": []
+}

@@ -1,0 +1,15 @@
+{
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "Package Control",
+    "SideBarEnhancements",
+    "Sourcegraph",
+    "Vue Syntax Highlight",
+    "VueFormatter",
+  ],
+  "SOURCEGRAPH_URL": "https://sourcegraph.com",
+}
