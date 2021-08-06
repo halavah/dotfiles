@@ -201,6 +201,9 @@ sethandler     <A-S-R> a:ide
 sethandler     <A-S-D> a:ide
 sethandler     <A-S-F> a:ide
 sethandler     <A-S-G> a:ide
+sethandler     <A-S-B> a:ide
+sethandler     <A-S-N> a:ide
+sethandler     <A-S-M> a:ide
 " ----------------------
 sethandler       <A-I> a:ide
 sethandler       <A-O> a:ide
@@ -926,7 +929,7 @@ noremap <leader>fs2 <ESC>:action GotoPreviousError<CR>
 noremap <leader>fr  <ESC>:action Replace<CR>
 noremap <leader>fsr <ESC>:action ReplaceInPath<CR>
 " ----------------------
-noremap <leader>fs6 <ESC>:action RenameFile<CR>
+noremap <leader>fs6 <ESC>:action RenameElement<CR>
 " ----------------------
 noremap <leader>fav <ESC>:action IntroduceVariable<CR>
 noremap <leader>fac <ESC>:action IntroduceConstant<CR>
@@ -1180,6 +1183,7 @@ noremap <leader>f12 <ESC>:action FileStructurePopup<CR>
 " =============================================
 " 04.个人窗口
 " =============================================
+" noremap <leader>ae  <ESC>:action NewPythonFile<CR>
 noremap <leader>ae  <ESC>:action NewClass<CR>
 noremap <leader>ar  <ESC>:action NewDir<CR>
 noremap <leader>ad  <ESC>:action CreateVueSingleFileComp<CR>
