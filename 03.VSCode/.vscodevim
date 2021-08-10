@@ -1,0 +1,113 @@
+{
+    "vim.leader": "<space>",
+    "vim.textwidth": 120,
+    "vim.hlsearch": true,
+    "vim.visualstar": true,
+
+    "vim.easymotion": false,
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": false,
+
+
+    "vim.insertModeKeyBindings": [
+
+    ],
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // - leader-/ to turn-off highlight
+        {
+            "before":["esc"],
+            "commands": [
+                ":nohl",
+            ]
+        },
+
+        // - switch # and *
+        {
+            "before": ["*"],
+            "after": ["#"]
+        },
+        {
+            "before": ["#"],
+            "after": ["*"]
+        },
+
+        // - leader-q to quit
+        {
+            "before": ["leader", "q"],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+
+        // - leader-w to save
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+
+        {
+            "before": ["E"],
+            "commands": [
+                {
+                    "command": "workbench.action.previousEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["R"],
+            "commands": [
+                {
+                    "command": "workbench.action.nextEditor",
+                    "args": []
+                }
+            ]
+        },
+
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+
+    // - auto switch input. detail https://github.com/VSCodeVim/Vim#input-method
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+
+    // - easymotion. detail https://github.com/VSCodeVim/Vim#vim-easymotion
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontFamily": "Menlo",
+    "vim.easymotionMarkerFontSize": "16",
+    "vim.easymotionMarkerHeight": 24,
+    "vim.easymotionMarkerBackgroundColor": "#f44242",
+}
