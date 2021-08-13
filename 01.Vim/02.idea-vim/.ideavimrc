@@ -279,6 +279,27 @@ set NERDTree
 " vnoremap <A-F> <ESC>:NERDTreeRefreshRoot<CR>
 " inoremap <A-F> <ESC>:NERDTreeRefreshRoot<CR>
 
+let g:NERDTreeMapPreviewVSplit = 'v'
+let g:NERDTreeMapPreviewSplit = 'V'
+
+" caps_e=keyFunc_moveUp
+" caps_d=keyFunc_moveDown
+
+let g:NERDTreeMapJumpPrevSibling = 'e'
+let g:NERDTreeMapJumpFirstChild = 'E'
+
+let g:NERDTreeMapJumpNextSibling = 'd'
+let g:NERDTreeMapJumpLastChild = 'D'
+
+let g:NERDTreeMapRefresh = 'r'
+let g:NERDTreeMapRefreshRoot = 'R'
+
+let g:NERDTreeMapPreview = 's'
+let g:NERDTreeMapOpenRecursively = 'S'
+
+let g:NERDTreeMapCloseDir = 'x'
+" let g:NERDTreeMapCloseChildren = 'X'
+
 " =============================================
 " 02.plugin 2
 " =============================================
