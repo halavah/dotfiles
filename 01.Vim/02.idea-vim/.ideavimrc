@@ -748,10 +748,10 @@ nnoremap * #
 nnoremap ' `
 nnoremap ` '
 
-nnoremap <A-E> j
-nnoremap <A-Y> k
+nnoremap <A-E> <C-u>
 nnoremap <A-D> <C-d>
-nnoremap <A-U> <C-u>
+nnoremap <A-Y> j
+nnoremap <A-U> k
 
 " =============================================
 " 02.visual modes
@@ -773,10 +773,10 @@ vnoremap : <ESC>;
 vnoremap # <ESC>*
 vnoremap * <ESC>#
 
-vnoremap <A-E> j
-vnoremap <A-Y> k
+vnoremap <A-E> <C-u>
 vnoremap <A-D> <C-d>
-vnoremap <A-U> <C-u>
+vnoremap <A-Y> j
+vnoremap <A-U> k
 
 " =============================================
 " 03.insert mode
