@@ -570,8 +570,8 @@ set sidescrolloff=7
 " 02.y / p
 " =============================================
 
-" set clipboard=unnamed,unnamedplus
-" set clipboard+=ideaput
+set clipboard=unnamed,unnamedplus
+set clipboard+=ideaput
 
 noremap y y
 noremap Y <ESC>""y$
@@ -736,8 +736,10 @@ nnoremap gj j
 
 nnoremap H ^
 nnoremap L $
-nnoremap K 3k
-nnoremap J 3j
+" nnoremap K 3k
+" nnoremap J 3j
+nnoremap K <ESC>:action MethodUp<CR>
+nnoremap J <ESC>:action MethodDown<CR>
 
 nnoremap ; :
 nnoremap : ;
@@ -764,8 +766,10 @@ vnoremap gj j
 
 vnoremap H ^
 vnoremap L $
-vnoremap K 3k
-vnoremap J 3j
+" vnoremap K 3k
+" vnoremap J 3j
+vnoremap K <ESC>:action MethodUp<CR>
+vnoremap J <ESC>:action MethodDown<CR>
 
 vnoremap ; <ESC>:
 vnoremap : <ESC>;
