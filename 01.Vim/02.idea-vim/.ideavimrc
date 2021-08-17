@@ -34,8 +34,8 @@ sethandler       <A-N> a:vim
 sethandler     <S-A-N> a:vim
 sethandler       <A-M> a:vim
 " -----------
-sethandler       <A-E> a:vim
-sethandler       <A-R> a:vim
+sethandler       <A-E> a:ide
+sethandler       <A-R> a:ide
 " =============================================
 sethandler       <C-G> a:ide
 " ----------------------
