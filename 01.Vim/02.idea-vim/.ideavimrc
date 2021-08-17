@@ -260,9 +260,9 @@ let mapleader = " "
 " ----------------------
 " b.IdeaVimExtension
 " ----------------------
-" set keep-english-in-normal
+set keep-english-in-normal
 " set keep-english-in-normal-and-restore-in-insert
-set keep-english-in-normal-and-restore-in-insert
+" set nokeep-english-in-normal-and-restore-in-insert
 " set nokeep-english-in-normal
 
 " ----------------------
@@ -752,8 +752,8 @@ nnoremap ` '
 
 nnoremap <A-E> <C-u>
 nnoremap <A-D> <C-d>
-nnoremap <A-Y> j
-nnoremap <A-U> k
+" nnoremap <A-Y> j
+" nnoremap <A-U> k
 
 " =============================================
 " 02.visual modes
@@ -779,8 +779,8 @@ vnoremap * <ESC>#
 
 vnoremap <A-E> <C-u>
 vnoremap <A-D> <C-d>
-vnoremap <A-Y> j
-vnoremap <A-U> k
+" vnoremap <A-Y> j
+" vnoremap <A-U> k
 
 " =============================================
 " 03.insert mode
@@ -790,9 +790,10 @@ inoremap <A-H> <Left>
 inoremap <A-J> <Down>
 inoremap <A-K> <Up>
 inoremap <A-L> <Right>
+
 inoremap <A-A> <Esc>^i
 inoremap <A-E> <Esc>$a
-inoremap <A-D> <Delete>
+" inoremap <A-D> <Delete>
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
