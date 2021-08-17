@@ -33,6 +33,9 @@ sethandler       <A-B> a:vim
 sethandler       <A-N> a:vim
 sethandler     <S-A-N> a:vim
 sethandler       <A-M> a:vim
+" -----------
+sethandler       <A-E> a:vim
+sethandler       <A-R> a:vim
 " =============================================
 sethandler       <C-G> a:ide
 " ----------------------
@@ -506,13 +509,21 @@ set sidescrolloff=7
 
   nnoremap e <ESC>k
   vnoremap e <ESC>k
-  nnoremap E <ESC>gT
-  vnoremap E <ESC>gT
+
+  nnoremap E <ESC>:action MethodUp<CR>
+  vnoremap E <ESC>:action MethodUp<CR>
+
+  nnoremap <A-E> <ESC>:action PreviousTab<CR>
+  vnoremap <A-E> <ESC>:action PreviousTab<CR>
 
   nnoremap r <ESC>"+ciw
   vnoremap r <ESC>"+ciw
-  nnoremap R <ESC>gt
-  vnoremap R <ESC>gt
+
+  nnoremap R <ESC>:action RenameElement<CR>
+  vnoremap R <ESC>:action RenameElement<CR>
+
+  nnoremap <A-R> <ESC>:action NextTab<CR>
+  vnoremap <A-R> <ESC>:action NextTab<CR>
 
 " ----------------------
 
@@ -523,8 +534,12 @@ set sidescrolloff=7
 
   nnoremap d <ESC>j
   vnoremap d <ESC>j
-  nnoremap D <ESC>:action Back<CR>
-  vnoremap D <ESC>:action Back<CR>
+
+  nnoremap D <ESC>:action MethodDown<CR>
+  vnoremap D <ESC>:action MethodDown<CR>
+
+  nnoremap <A-D> <ESC>
+  vnoremap <A-D> <ESC>
 
   nnoremap x <ESC>:action CloseEditor<CR>
   vnoremap x <ESC>:action CloseEditor<CR>
@@ -750,10 +765,12 @@ nnoremap * #
 nnoremap ' `
 nnoremap ` '
 
-nnoremap <A-E> <C-u>
-nnoremap <A-D> <C-d>
+" nnoremap <A-E> <C-u>
+" nnoremap <A-D> <C-d>
 " nnoremap <A-Y> j
 " nnoremap <A-U> k
+  nnoremap <A-Y> <C-d>
+  nnoremap <A-U> <C-u>
 
 " =============================================
 " 02.visual modes
@@ -777,10 +794,12 @@ vnoremap : <ESC>;
 vnoremap # <ESC>*
 vnoremap * <ESC>#
 
-vnoremap <A-E> <C-u>
-vnoremap <A-D> <C-d>
+" vnoremap <A-E> <C-u>
+" vnoremap <A-D> <C-d>
 " vnoremap <A-Y> j
 " vnoremap <A-U> k
+  vnoremap <A-Y> <C-d>
+  vnoremap <A-U> <C-u>
 
 " =============================================
 " 03.insert mode
