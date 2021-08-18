@@ -619,7 +619,7 @@
     "command": "-workbench.action.navigateToLastEditLocation"
   },
   {
-    "key": "alt+right",
+    "key": "alt+r",
     "command": "workbench.action.nextEditor"
   },
   {
@@ -641,7 +641,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "alt+left",
+    "key": "alt+e",
     "command": "workbench.action.previousEditor"
   },
   {
@@ -1302,5 +1302,9 @@
     "key": "ctrl+shift+l",
     "command": "-extension.insertLogStatement",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+q",
+    "command": "mysql2.refresh"
   }
 ]

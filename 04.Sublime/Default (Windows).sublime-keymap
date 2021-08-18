@@ -78,8 +78,8 @@
   { "keys": ["alt+shift+up"], "command": "swap_line_up" },
   { "keys": ["alt+shift+down"], "command": "swap_line_down" },
   // 标签
-  { "keys": ["alt+left"], "command": "next_view_in_stack" },
-  { "keys": ["alt+right"], "command": "prev_view_in_stack" },
+  { "keys": ["alt+e"], "command": "prev_view_in_stack" },
+  { "keys": ["alt+r"], "command": "next_view_in_stack" },
   { "keys": [""], "command": "move", "args": {"by": "subwords", "forward": false} },
   { "keys": [""], "command": "move", "args": {"by": "subword_ends", "forward": true} },
 

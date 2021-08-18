@@ -502,10 +502,20 @@ set sidescrolloff=7
 " =============================================
 
 " nnoremap w <Nop>
+" vnoremap w <Nop>
+
 " nnoremap W <Nop>
+" vnoremap W <Nop>
+
+" -----------
 
 " nnoremap b <Nop>
+" vnoremap b <Nop>
+
 " nnoremap B <Nop>
+" vnoremap B <Nop>
+
+" -----------
 
   nnoremap e <ESC>k
   vnoremap e <ESC>k
@@ -515,6 +525,8 @@ set sidescrolloff=7
 
   nnoremap <A-E> <ESC>:action PreviousTab<CR>
   vnoremap <A-E> <ESC>:action PreviousTab<CR>
+
+" -----------
 
   nnoremap r <ESC>"+ciw
   vnoremap r <ESC>"+ciw
@@ -529,8 +541,11 @@ set sidescrolloff=7
 
   nnoremap s <Nop>
   vnoremap s <Nop>
+
   nnoremap S <ESC>:action Back<CR>
   vnoremap S <ESC>:action Back<CR>
+
+" -----------
 
   nnoremap d <ESC>j
   vnoremap d <ESC>j
@@ -538,21 +553,30 @@ set sidescrolloff=7
   nnoremap D <ESC>:action MethodDown<CR>
   vnoremap D <ESC>:action MethodDown<CR>
 
-  nnoremap <A-D> <ESC>
-  vnoremap <A-D> <ESC>
+  nnoremap <A-D> <Nop>
+  vnoremap <A-D> <Nop>
+
+" -----------
 
   nnoremap x <ESC>:action CloseEditor<CR>
   vnoremap x <ESC>:action CloseEditor<CR>
+
   nnoremap X <ESC>:action CloseAllEditorsButActive<CR>
   vnoremap X <ESC>:action CloseAllEditorsButActive<CR>
 
+" -----------
+
   nnoremap cc <ESC>"+yiw
   vnoremap cc <ESC>"+yiw
+
   nnoremap C  <ESC>:action CopyReferencePopupGroup<CR>
   vnoremap C  <ESC>:action CopyReferencePopupGroup<CR>
 
+" -----------
+
   nnoremap -- <ESC>:action ReformatCode<CR>
   vnoremap -- <ESC>:action ReformatCode<CR>
+
   nnoremap == <ESC>:action OptimizeImports<CR>
   vnoremap == <ESC>:action OptimizeImports<CR>
 

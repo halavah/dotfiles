@@ -20,7 +20,7 @@
   // 编辑：换行的提示线
   "editor.rulers": [120],
   // 编辑：设置代码行号
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   // 编辑：格式编辑内容
   "editor.formatOnType": true,
   // 编辑：格式编辑内容
@@ -127,7 +127,6 @@
   "terminal.integrated.fontSize": 14,
   // 终端：设置字体样式
   "terminal.integrated.fontFamily": "JetBrains Mono, 'Courier New', monospace",
-
   // 管理器：提示删除文件
   "explorer.confirmDelete": false,
   // 管理器：提示删除文件
@@ -136,6 +135,8 @@
   "workbench.settings.editor": "json",
   // 工作台：是否启用预览
   "workbench.editor.enablePreview": false,
+  // 工作台：关闭信任提示
+  "security.workspace.trust.enabled": false,
   // 工作台：设置编辑主题
   "workbench.colorTheme": "Monokai Dimmed",
   // 工作台：设置图标主题
@@ -250,13 +251,14 @@
   ],
 
   // Sync
+  "sync.quietSync": true,
   "sync.autoUpload": true,
   "sync.forceUpload": true,
   "sync.autoDownload": false,
   "sync.forceDownload": false,
   "sync.syncExtensions": true,
   "sync.removeExtensions": true,
-  "sync.gist": "a0dbe5b132ab02c15fc883803c440a6b",
+  "sync.gist": "156709a206c9ff369a4c34c0c267622e",
 
   // Git
   "git.enabled": true,
@@ -351,6 +353,11 @@
   "liveServer.settings.ChromeDebuggingAttachment": false,
   "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
   "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito",
+
+  // NeoVim
+  "editor.scrollBeyondLastLine": false,
+  "vscode-neovim.neovimExecutablePaths.win32": "D:\\software\\Java\\neovim-0.5.0\\bin\\nvim.exe",
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\mysla\\AppData\\Local\\nvim\\init.vim",
 
   // oneDarkPro：解决斜体问题
   "oneDarkPro.italic": false,
@@ -609,7 +616,6 @@
       "ignorePath": ".prettierignore"
     }
   },
-  "security.workspace.trust.untrustedFiles": "open",
-  "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false
 }
