@@ -1232,7 +1232,7 @@ noremap <leader>f6  <ESC>:action Debug<CR>
 noremap <leader>c6  <ESC>:action ChooseDebugConfiguration<CR>
 " ----------------------
 noremap <leader>7   <ESC>:action StepOver<CR>
-noremap <leader>s7  <ESC>
+noremap <leader>s7  <ESC>:action ShowExecutionPoint<CR>
 noremap <leader>as7 <ESC>:action ForceStepOver<CR>
 noremap <leader>c7  <ESC>:action editRunConfigurations<CR>
 noremap <leader>f7  <ESC>:action ViewBreakpoints<CR>
