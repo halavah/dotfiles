@@ -516,11 +516,23 @@ set sidescrolloff=7
 " vnoremap B <Nop>
 
 " -----------
-  nnoremap e <ESC>k
-  vnoremap e <ESC>k
 
-  nnoremap E e
-  vnoremap E e
+" nnoremap e <ESC>k
+" vnoremap e <ESC>k
+
+" nnoremap E e
+" vnoremap E e
+
+" nnoremap <A-E> <ESC>:action PreviousTab<CR>
+" vnoremap <A-E> <ESC>:action PreviousTab<CR>
+
+" ------
+
+" nnoremap e <Nop>
+" vnoremap e <Nop>
+
+  nnoremap E <ESC>k
+  vnoremap E <ESC>k
 
   nnoremap <A-E> <ESC>:action PreviousTab<CR>
   vnoremap <A-E> <ESC>:action PreviousTab<CR>
@@ -549,11 +561,22 @@ set sidescrolloff=7
 
 " -----------
 
-  nnoremap d <ESC>j
-  vnoremap d <ESC>j
+" nnoremap d <ESC>j
+" vnoremap d <ESC>j
 
-  nnoremap D d
-  vnoremap D d
+" nnoremap D d
+" vnoremap D d
+
+" nnoremap <A-D> <ESC>:action MethodDown<CR>
+" vnoremap <A-D> <ESC>:action MethodDown<CR>
+
+" ------
+
+" nnoremap d <Nop>
+" vnoremap d <Nop>
+
+  nnoremap D <ESC>j
+  vnoremap D <ESC>j
 
   nnoremap <A-D> <ESC>:action MethodDown<CR>
   vnoremap <A-D> <ESC>:action MethodDown<CR>
