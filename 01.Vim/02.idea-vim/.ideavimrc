@@ -859,9 +859,8 @@ inoremap <A-J> <Down>
 inoremap <A-K> <Up>
 inoremap <A-L> <Right>
 
-inoremap <A-A> <Esc>^i
-inoremap <A-E> <Esc>$a
-" inoremap <A-D> <Delete>
+inoremap <A-S> <Esc>^i
+inoremap <A-D> <Esc>$a
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
@@ -1012,8 +1011,6 @@ noremap mz         <ESC>:action ToggleBookmarkZ<CR>
 
 noremap <leader>fg  <ESC>:action GotoLine<CR>
 " ----------------------
-noremap <leader><S-\> <ESC>:%s//g<left><left>
-
 noremap <leader>ff  <ESC>:action Find<CR>
 noremap <leader>fsf <ESC>:action FindInPath<CR>
 
