@@ -159,11 +159,17 @@ sethandler       <C-8> a:ide
 sethandler       <C-9> a:ide
 sethandler       <C-0> a:ide
 " =============================================
+sethandler       <A-~> a:ide
+sethandler     <A-S-~> a:ide
+sethandler       <A-Q> a:ide
+sethandler     <A-S-Q> a:ide
 sethandler       <A-1> a:ide
 sethandler       <A-2> a:ide
 sethandler     <A-S-2> a:ide
 sethandler       <A-3> a:ide
+sethandler     <A-S-3> a:ide
 sethandler       <A-4> a:ide
+sethandler     <A-S-4> a:ide
 sethandler       <A-5> a:ide
 sethandler       <A-6> a:ide
 sethandler       <A-7> a:ide
@@ -913,8 +919,6 @@ noremap <Right>    <ESC><C-W>l
 " =============================================
 " 03.bookmark operation
 " =============================================
-
-noremap <A-`>      <ESC>:action ActivateFavoritesToolWindow<CR>
 noremap mm         <ESC>:action ToggleBookmarkWithMnemonic<CR>
 noremap m,         <ESC>:action ShowBookmarks<CR>
 noremap m.         <ESC>:action ToggleBookmark<CR>
@@ -1010,6 +1014,8 @@ noremap mz         <ESC>:action ToggleBookmarkZ<CR>
 " =============================================
 
 noremap <leader>fg  <ESC>:action GotoLine<CR>
+noremap <leader>fe  <ESC>:action RecentFiles<CR>
+noremap <leader>fse <ESC>:action RecentChangedFiles<CR>
 " ----------------------
 noremap <leader>ff  <ESC>:action Find<CR>
 noremap <leader>fsf <ESC>:action FindInPath<CR>
@@ -1225,13 +1231,17 @@ noremap <leader>c0  <ESC>:action PreviewOnlyLayoutChangeAction<CR>
 " 02.工作窗口
 " =============================================
 
-noremap <leader>a`  <ESC>:action ActivateFavoritesToolWindow<CR>
-noremap <leader>aq  <ESC>:action ActivateStructureToolWindow<CR>
+noremap <leader>a`  <ESC>:action ActivateTODOToolWindow<CR>
+noremap <leader>as` <ESC>:action ActivateFavoritesToolWindow<CR>
+noremap <leader>aq  <ESC>:action Console.TableResult.Reload<CR>
+noremap <leader>asq <ESC>:action ActivateStructureToolWindow<CR>
 noremap <leader>a1  <ESC>:action ActivateProjectToolWindow<CR>
 noremap <leader>a2  <ESC>:action ActivateDatabaseToolWindow<CR>
-noremap <leader>as2 <ESC>:action ActivateServicesToolWindow<CR>
+noremap <leader>as2 <ESC>:action ActivateNoSqlExplorerToolWindow<CR>
 noremap <leader>a3  <ESC>:action ActivateRunToolWindow<CR>
+noremap <leader>as3 <ESC>:action ActivateServicesToolWindow<CR>
 noremap <leader>a4  <ESC>:action ActivateDebugToolWindow<CR>
+noremap <leader>as4 <ESC>:action ActivateMavenToolWindow<CR>
 noremap <leader>a5  <ESC>:action ActivateTerminalToolWindow<CR>
 noremap <leader>a6  <ESC>:action ActivateFileTransferToolWindow<CR>
 noremap <leader>a7  <ESC>:action ActivateRemoteHostToolWindow<CR>
@@ -1303,7 +1313,3 @@ noremap <leader>,sm <ESC>:action XDebugger.RemoveAllWatches<CR>
 noremap <leader>,t  <ESC>:action ToggleRenderedDocPresentation<CR>
 noremap <leader>,y  <ESC>:action ToggleQuickDocTranslationActionWithShortcut<CR>
 noremap <leader>,u  <ESC>:action MybatisProGoToXml<CR>
-
-
-
-
