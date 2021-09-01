@@ -1233,6 +1233,7 @@ noremap <leader>c0  <ESC>:action PreviewOnlyLayoutChangeAction<CR>
 
 noremap <leader>a`  <ESC>:action ActivateTODOToolWindow<CR>
 noremap <leader>as` <ESC>:action ActivateFavoritesToolWindow<CR>
+noremap <leader>ac` <ESC>:action ActivateVersionControlToolWindow<CR>
 noremap <leader>aq  <ESC>:action Console.TableResult.Reload<CR>
 noremap <leader>asq <ESC>:action ActivateStructureToolWindow<CR>
 noremap <leader>a1  <ESC>:action ActivateProjectToolWindow<CR>
