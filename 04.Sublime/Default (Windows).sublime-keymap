@@ -82,6 +82,8 @@
   { "keys": ["alt+r"], "command": "next_view_in_stack" },
   { "keys": [""], "command": "move", "args": {"by": "subwords", "forward": false} },
   { "keys": [""], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+  { "keys": ["alt+t"], "command": "new_file" },
+  { "keys": [""], "command": "new_file" },
 
 
   /*

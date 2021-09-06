@@ -1074,7 +1074,7 @@
     "when": "editorFocus && remoteName == 'wsl'"
   },
   {
-    "key": "alt+6",
+    "key": "shift+alt+5",
     "command": "workbench.view.extension.sshfs"
   },
   {
@@ -1179,7 +1179,7 @@
     "command": "workbench.view.extension.github-cweijan-mysql"
   },
   {
-    "key": "alt+3",
+    "key": "shift+alt+2",
     "command": "workbench.view.extension.github-cweijan-nosql"
   },
   {
@@ -1205,11 +1205,11 @@
     "command": "git-graph.view"
   },
   {
-    "key": "alt+7",
+    "key": "shift+alt+4",
     "command": "workbench.view.extension.project-manager"
   },
   {
-    "key": "alt+8",
+    "key": "alt+`",
     "command": "workbench.view.extension.todo-tree-container"
   },
   {
@@ -1232,7 +1232,7 @@
     "command": "-workbench.action.focusNextPart"
   },
   {
-    "key": "alt+4",
+    "key": "ctrl+alt+2",
     "command": "workbench.view.extension.mongoDB"
   },
   {
@@ -1306,5 +1306,31 @@
   {
     "key": "alt+q",
     "command": "mysql2.refresh"
+  },
+  {
+    "key": "shift+alt+q",
+    "command": "outline.focus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "list.collapseAll",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-list.collapseAll",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+t",
+    "command": "welcome.showNewFileEntries"
+  },
+  {
+    "key": "ctrl+alt+win+n",
+    "command": "-welcome.showNewFileEntries"
   }
 ]

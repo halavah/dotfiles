@@ -234,6 +234,10 @@
     "192.168.2.128": "linux"
   },
 
+  // Proxy
+  "http.proxy": "http://127.0.0.1:7890",
+  "https.proxy": "http://127.0.0.1:7890",
+
   // SSH FS
   "sshfs.configs": [
     {
@@ -251,7 +255,6 @@
   ],
 
   // Sync
-  "sync.quietSync": true,
   "sync.autoUpload": true,
   "sync.forceUpload": true,
   "sync.autoDownload": false,
@@ -616,6 +619,6 @@
       "ignorePath": ".prettierignore"
     }
   },
-  "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false
 }
