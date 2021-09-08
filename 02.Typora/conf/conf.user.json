@@ -33,7 +33,7 @@
 
     "Save": "Ctrl+S",
     "Save As...": "Ctrl+Shift+S",
-    "Preferences...": "Ctrl+Alt+S",
+    "Preferences...": "Ctrl+Shift+P",
 
     // Edit
     "Find...": "Ctrl+F",

@@ -1125,6 +1125,22 @@ nnoremap <leader>zr zR
 " 06.代码、光标、标签、方法
 " =============================================
 
+" noremap <S-Up>      :action EditorUpWithSelection<CR>
+" noremap <S-Down>    :action EditorDownWithSelection<CR>
+" noremap <S-Left>    :action EditorLeftWithSelection<CR>
+" noremap <S-Right>   :action EditorRightWithSelection<CR>
+" noremap <A-S-Up>    :action MoveLineUp<CR>
+" noremap <A-S-Down>  :action MoveLineDown<CR>
+" ----------------------
+" noremap <A-S-H>     <ESC>:action Back<CR>
+" noremap <A-S-L>     <ESC>:action Back<CR>
+" ----------------------
+" noremap <A-H>       <ESC>gT
+" noremap <A-L>       <ESC>gt
+" ----------------------
+" noremap <A-K>       <ESC>:action MethodUp<CR>
+" noremap <A-J>       <ESC>:action MethodDown<CR>
+
 noremap <S-Up>      :action EditorUpWithSelection<CR>
 noremap <S-Down>    :action EditorDownWithSelection<CR>
 noremap <S-Left>    :action EditorLeftWithSelection<CR>
@@ -1132,11 +1148,11 @@ noremap <S-Right>   :action EditorRightWithSelection<CR>
 noremap <A-S-Up>    :action MoveLineUp<CR>
 noremap <A-S-Down>  :action MoveLineDown<CR>
 " ----------------------
-noremap <A-S-H>     <ESC>:action Back<CR>
-noremap <A-S-L>     <ESC>:action Back<CR>
+" noremap <A-S-H>     <ESC>:action Back<CR>
+" noremap <A-S-L>     <ESC>:action Back<CR>
 " ----------------------
-noremap <A-H>       <ESC>gT
-noremap <A-L>       <ESC>gt
+noremap <A-H>       <ESC>^
+noremap <A-L>       <ESC>$
 " ----------------------
 noremap <A-K>       <ESC>:action MethodUp<CR>
 noremap <A-J>       <ESC>:action MethodDown<CR>
