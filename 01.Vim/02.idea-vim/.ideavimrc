@@ -1250,8 +1250,8 @@ noremap <leader>c0  <ESC>:action PreviewOnlyLayoutChangeAction<CR>
 noremap <leader>a`  <ESC>:action ActivateTODOToolWindow<CR>
 noremap <leader>as` <ESC>:action ActivateFavoritesToolWindow<CR>
 noremap <leader>ac` <ESC>:action ActivateVersionControlToolWindow<CR>
-noremap <leader>aq  <ESC>:action Console.TableResult.Reload<CR>
-noremap <leader>asq <ESC>:action ActivateStructureToolWindow<CR>
+noremap <leader>aq  <ESC>:action ActivateStructureToolWindow<CR>
+noremap <leader>asq <ESC>:action Console.TableResult.Reload<CR>
 noremap <leader>a1  <ESC>:action ActivateProjectToolWindow<CR>
 noremap <leader>a2  <ESC>:action ActivateDatabaseToolWindow<CR>
 noremap <leader>as2 <ESC>:action ActivateNoSqlExplorerToolWindow<CR>
@@ -1328,5 +1328,5 @@ noremap <leader>,m  <ESC>:action XDebugger.NewWatch<CR>
 noremap <leader>,sm <ESC>:action XDebugger.RemoveAllWatches<CR>
 " ----------------------
 noremap <leader>,t  <ESC>:action ToggleRenderedDocPresentation<CR>
-noremap <leader>,y  <ESC>:action ToggleQuickDocTranslationActionWithShortcut<CR>
+noremap <leader>,y  <ESC>:action $ShowTranslationDialogAction<CR>
 noremap <leader>,u  <ESC>:action MybatisProGoToXml<CR>
