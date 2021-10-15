@@ -824,8 +824,8 @@ nnoremap ` '
 " nnoremap <A-D> <C-d>
 " nnoremap <A-Y> j
 " nnoremap <A-U> k
-  nnoremap <A-Y> <C-d>
-  nnoremap <A-U> <C-u>
+" nnoremap <A-Y> <C-d>
+" nnoremap <A-U> <C-u>
 
 " =============================================
 " 02.visual modes
@@ -853,8 +853,8 @@ vnoremap * <ESC>#
 " vnoremap <A-D> <C-d>
 " vnoremap <A-Y> j
 " vnoremap <A-U> k
-  vnoremap <A-Y> <C-d>
-  vnoremap <A-U> <C-u>
+" vnoremap <A-Y> <C-d>
+" vnoremap <A-U> <C-u>
 
 " =============================================
 " 03.insert mode

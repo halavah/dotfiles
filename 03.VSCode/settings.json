@@ -269,7 +269,7 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.ignoreWindowsGit27Warning": true,
-  "git.path": "D:\\software\\Linux\\Window\\Git\\cmd\\git.exe",
+  "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
 
   // Gitlens
   "gitlens.hovers.enabled": false,
@@ -620,5 +620,6 @@
     }
   },
   "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "redhat.telemetry.enabled": true
 }
