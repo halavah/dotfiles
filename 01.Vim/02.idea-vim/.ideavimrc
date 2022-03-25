@@ -122,6 +122,15 @@ sethandler   <A-Right> a:ide
 " ----------------------
 sethandler      <A-Up> a:ide
 sethandler    <A-Down> a:ide
+" ----------------------
+sethandler    <C-Left> a:ide
+sethandler   <C-Right> a:ide
+" ----------------------
+sethandler      <C-Up> a:ide
+sethandler    <C-Down> a:ide
+" ----------------------
+sethandler       <C-;> a:ide
+sethandler     <C-S-;> a:ide
 " =============================================
 sethandler       <C-N> a:ide
 sethandler     <C-S-A> a:ide
@@ -149,7 +158,9 @@ sethandler    <C-S-BS> a:ide
 
 " =============================================
 sethandler       <C-1> a:ide
+sethandler       <A-S> a:ide
 sethandler       <C-2> a:ide
+sethandler       <A-D> a:ide
 sethandler       <C-3> a:ide
 sethandler       <C-4> a:ide
 sethandler       <C-5> a:ide
@@ -560,8 +571,8 @@ set sidescrolloff=7
   nnoremap S <ESC>:action Back<CR>
   vnoremap S <ESC>:action Back<CR>
 
-  nnoremap <A-S> <ESC>:action MethodUp<CR>
-  vnoremap <A-S> <ESC>:action MethodUp<CR>
+" nnoremap <A-S> <ESC>:action MethodUp<CR>
+" vnoremap <A-S> <ESC>:action MethodUp<CR>
 
 " -----------
 
@@ -858,13 +869,13 @@ vnoremap * <ESC>#
 " 03.insert mode
 " =============================================
 
-inoremap <A-H> <Left>
-inoremap <A-J> <Down>
-inoremap <A-K> <Up>
-inoremap <A-L> <Right>
+" inoremap <A-H> <Left>
+" inoremap <A-J> <Down>
+" inoremap <A-K> <Up>
+" inoremap <A-L> <Right>
 
-inoremap <A-S> <Esc>^i
-inoremap <A-D> <Esc>$a
+" inoremap <A-S> <Esc>^i
+" inoremap <A-D> <Esc>$a
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
@@ -1149,11 +1160,11 @@ noremap <A-S-Down>  :action MoveLineDown<CR>
 " noremap <A-S-H>     <ESC>:action Back<CR>
 " noremap <A-S-L>     <ESC>:action Back<CR>
 " ----------------------
-noremap <A-H>       <ESC>^
-noremap <A-L>       <ESC>$
+" noremap <A-H>       <ESC>^
+" noremap <A-L>       <ESC>$
 " ----------------------
-noremap <A-K>       <ESC>:action MethodUp<CR>
-noremap <A-J>       <ESC>:action MethodDown<CR>
+" noremap <A-K>       <ESC>:action MethodUp<CR>
+" noremap <A-J>       <ESC>:action MethodDown<CR>
 
 
 " =============================================
