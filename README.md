@@ -9,7 +9,7 @@
   - 软件： `Chrome`、`Jetbrains`、`VScode`、`Sublime`、`Postman`、`Obsidian` 和 `Typora`等
 
 - 操作如下：
-  - ![workflow1](https://cdn.jsdelivr.net/gh/halavah/dotfiles@master/00.assets/workflow1.gif)
+  - ![workflow1](https://github.com/halavah/dotfiles/blob/master/00.assets/workflow1.gif)
 
 ### Obsidian
 
