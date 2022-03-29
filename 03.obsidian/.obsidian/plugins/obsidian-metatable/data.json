@@ -1,0 +1,27 @@
+{
+  "expansionMode": "expanded",
+  "ignoreNulls": false,
+  "nullValue": "",
+  "skipKey": "metatable",
+  "ignoredKeys": [],
+  "filterKeys": [
+    "metatable",
+    "frontmatter",
+    "banner",
+    "banner_x",
+    "banner_y",
+    "banner_icon",
+    "obsidianUIMode",
+    "id",
+    "cssclass",
+    "up",
+    "same",
+    "down",
+    "next",
+    "prev"
+  ],
+  "filterMode": "ignore",
+  "autolinks": false,
+  "naked": false,
+  "vault": null
+}

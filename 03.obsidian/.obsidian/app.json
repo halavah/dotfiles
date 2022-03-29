@@ -1,0 +1,28 @@
+{
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "foldIndent": true,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "autoConvertHtml": false,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "absolute",
+  "newFileLocation": "current",
+  "newFileFolderPath": "0000-index/005-paper",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./Chapter01.assets",
+  "legacyEditor": true,
+  "defaultViewMode": "source",
+  "livePreview": false,
+  "useTab": true,
+  "foldHeading": false,
+  "pdfExportSettings": {
+    "pageSize": "A3",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "fileSortOrder": "alphabetical",
+  "showFrontmatter": false
+}

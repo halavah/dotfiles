@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "f2abba063ed29631",
+    "type": "split",
+    "children": [
+      {
+        "id": "f407776be38de105",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "0000-index/002-diary/002-diary.md",
+            "mode": "preview",
+            "backlinks": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cbe19003eb1c76a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "58ebbc970c55f816",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c291da52a56c94d2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7b8c31fca62445ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "0000-index/002-diary/002-diary.md"
+              }
+            }
+          },
+          {
+            "id": "d0b9edae8870f773",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0000-index/002-diary/002-diary.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ca9b84a7c5d6a4ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0000-index/002-diary/002-diary.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "12156409b35392df",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b75e6f403696d3ff",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#0001-Part01/001-Remote/Chapter01",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 294.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "7ed2d7a2233582ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb8f1e558fcf8da1",
+        "type": "tabs",
+        "dimension": 44.66501240694789,
+        "children": [
+          {
+            "id": "69b9d7c5c0c2f37b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "33b6fd2bf7e10a81",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {}
+            }
+          },
+          {
+            "id": "cbfb9dfba9d4b863",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {}
+            }
+          },
+          {
+            "id": "f790670d34eb0a0f",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "5e349767e61275c0",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "00afd7f5db3c80ab",
+        "type": "tabs",
+        "dimension": 55.33498759305211,
+        "children": [
+          {
+            "id": "5ea6a83062a9d80f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0000-index/003-home/01-tools.md",
+                "mode": "preview",
+                "backlinks": false
+              }
+            }
+          },
+          {
+            "id": "dcb49fc237f0d8b9",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "0000-index/002-diary/002-diary.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": false,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": -1.7,
+                  "nodeSizeMultiplier": 1.24947753396029,
+                  "lineSizeMultiplier": 1.57716823406479,
+                  "collapse-forces": false,
+                  "centerStrength": 0.561691542288557,
+                  "repelStrength": 6.86520376175549,
+                  "linkStrength": 0.199440298507463,
+                  "linkDistance": 165,
+                  "scale": 1.0000000000000009,
+                  "close": true
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 286.5,
+    "collapsed": true
+  },
+  "active": "f407776be38de105",
+  "lastOpenFiles": [
+    "0000-index/002-diary/002-diary.md",
+    "0000-index/002-diary/2022-03-18.md",
+    "0000-index/002-diary/2022-03-12.md",
+    "0000-index/002-diary/2022-03-10.md",
+    "0000-index/002-diary/2022-03-07.md",
+    "0000-index/002-diary/2022-03-06.md",
+    "0000-index/002-diary/2022-03-05.md",
+    "_assets/001-Remote/001-Remote.md",
+    "_assets/_example/_example.md",
+    "_assets/001-Remote/Chapter01/Chapter01.md"
+  ]
+}

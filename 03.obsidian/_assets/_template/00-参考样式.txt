@@ -1,0 +1,95 @@
+cssclass: ad-column
+cssclass: img-grid
+cssclass: matrix
+cssclass: centerAlign
+cssclass: code-wrap
+cssclass: fullwidth
+cssclass: noyaml
+cssclass: noscroll
+
+metatable: true
+obsidianUIMode: source / preview
+mindmap-plugin: basic
+
+-----------------------------------------------------------------------------------------------------
+
+---
+id: <% tp.file.title%><% tp.date.now("YYYYMMDDHHmmss")%>
+title: <% tp.file.title%>
+created: <% tp.date.now("YYYY-MM-DD HH:mm:ss")%>
+updated: <% tp.date.now("YYYY-MM-DD HH:mm:ss")%>
+tags: <% tp.file.cursor(1) %>/<% tp.file.title%>
+
+obsidianUIMode: source
+cssclass: img-grid, centerAlign
+---
+
+<% tp.file.cursor(2) %>
+
+--------------------------------------------------
+
+---
+id: <% tp.file.title %><% tp.date.now("YYYYMMDDHHmmss") %>
+title: <% tp.file.title %>
+created: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+updated: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+tags: <% tp.file.folder(relative=true) %>
+obsidianUIMode: source
+cssclass: img-grid, centerAlign
+---
+
+<% tp.file.cursor(1) %>
+
+-----------------------------------------------------------------------------------------------------
+
+---
+id: book<% tp.date.now("YYYYMMDDHHmmss")%>
+title: <% tp.file.title%>
+info: <% tp.file.cursor(1) %>
+year: <% tp.file.cursor(2) %>
+sort: <% tp.file.cursor(3) %>
+crew: <% tp.file.cursor(4) %>
+rate: <% tp.file.cursor(5) %>
+created: <% tp.date.now("YYYY-MM-DD HH:mm:ss")%>
+updated: <% tp.date.now("YYYY-MM-DD HH:mm:ss")%>
+tags: [book/year{{DATE:YYYY}}, book/month{{DATE:MM}}]
+
+obsidianUIMode: source
+cssclass: img-grid, centerAlign
+---
+
+<% tp.file.cursor(6) %>
+
+-----------------------------------------------------------------------------------------------------
+
+---
+id: diary<% tp.date.now("YYYYMMDDHHmmss")%>
+title: <% tp.file.title%>
+created: <% tp.date.now("YYYY-MM-DD HH:mm:ss")%>
+updated: <% tp.date.now("YYYY-MM-DD HH:mm:ss")%>
+tags: [diary/year{{DATE:YYYY}}, diary/month{{DATE:MM}}]
+
+banner_x: 0.5
+banner_y: 0.5
+banner: <% tp.user.getrandomImage("_assets/_banner/05.backdrop")%>
+
+metatable: true
+obsidianUIMode: preview
+cssclass: img-grid, centerAlign
+---
+
+-----------------------------------------------------------------------------------------------------
+
+---
+metatable: true
+obsidianUIMode: preview
+---
+
+# Overview
+
+```ccard
+style: strip
+type: folder_brief_live
+```
+
+

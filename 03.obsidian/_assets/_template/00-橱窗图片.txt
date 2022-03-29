@@ -1,0 +1,16 @@
+---
+banner_x: 0.5
+banner_y: 0.5
+banner: "_assets/_banner/9.jpg"
+
+metatable: true
+obsidianUIMode: preview
+---
+
+<br>
+
+```jsx::Slidegallery
+
+```
+
+

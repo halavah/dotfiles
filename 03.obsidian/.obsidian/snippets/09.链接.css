@@ -1,0 +1,134 @@
+/*-----------------------------------------------------09、链接：![[]]样式、预览变大、外链、内链、图片--------------------------------------------------------------------------*/
+
+/*----------------------链接：![[]]样式---------------  */
+/*----------------------BUG：表格四象图文字的边框--------*/
+.markdown-preview-view .markdown-embed, .markdown-preview-view .file-embed {
+  border-top: 1px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 0px 24px;
+  margin-top: 8px;
+  display: block;
+}
+.oz-transclusion-widget {
+  padding: 3px 3px 3px 19px;
+  border: 1px solid var(--background-modifier-border) !important;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0 #ecedee;
+  margin-top: 6px;
+}
+.markdown-embed-title, .file-embed-title {
+    font-size: 0;
+}
+.markdown-embed-title {
+    height: 0;
+}
+
+
+/*----------------------链接：预览变大----------------- */
+.popover.hover-popover {
+  transform: scale(0.8);
+  max-height: 600px;
+  min-height: 100px;
+  width: 500px;
+}
+.popover.hover-popover .markdown-embed {
+  height: 600px;
+}
+
+
+/*----------------------链接：内链+外链 颜色-text-accent */
+.cm-s-obsidian span.cm-link, .cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+.cm-s-obsidian span.cm-link, .cm-s-obsidian span.cm-hmd-internal-link:hover {
+  font-weight: 550;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.cm-s-obsidian .cm-active .cm-formatting.cm-formatting-link, .cm-s-obsidian span.cm-image-alt-text.cm-link, .cm-s-obsidian:not(.is-live-preview) .cm-formatting-link+span.cm-link {
+  color: var(--text-accent);
+}
+
+
+/*----------------------链接：内链添加icon------------*/
+.theme-light .markdown-preview-view a.internal-link::before {
+  margin-right: 4px;
+  margin-left: 2px;
+  content: '';
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCA0OCA0OCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB3aWR0aD0nNDgnIGhlaWdodD0nNDgnIGZpbGw9J3doaXRlJyBmaWxsLW9wYWNpdHk9JzAuMDEnLz48cGF0aCBkPSdNOCA2QzggNC44OTU0MyA4Ljg5NTQzIDQgMTAgNEgzMEw0MCAxNFY0MkM0MCA0My4xMDQ2IDM5LjEwNDYgNDQgMzggNDRIMTBDOC44OTU0MyA0NCA4IDQzLjEwNDYgOCA0MlY2WicgZmlsbD0nbm9uZScgc3Ryb2tlPScjNDJCOTgzJyBzdHJva2Utd2lkdGg9JzQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48cGF0aCBkPSdNMTYgMjBIMzInIHN0cm9rZT0nIzQyQjk4Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48cGF0aCBkPSdNMTYgMjhIMzInIHN0cm9rZT0nIzQyQjk4Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  background-size: 16px 16px;
+  transform: translate(0, 3px);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16.8px;
+  width: 16.33px;
+}
+.theme-dark .markdown-preview-view a.internal-link::before {
+  margin-right: 4px;
+  margin-left: 2px;
+  content: '';
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMjQnIHZpZXdCb3g9JzAgMCA0OCA0OCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB3aWR0aD0nNDgnIGhlaWdodD0nNDgnIGZpbGw9J3doaXRlJyBmaWxsLW9wYWNpdHk9JzAuMDEnLz48cGF0aCBkPSdNOCA2QzggNC44OTU0MyA4Ljg5NTQzIDQgMTAgNEgzMEw0MCAxNFY0MkM0MCA0My4xMDQ2IDM5LjEwNDYgNDQgMzggNDRIMTBDOC44OTU0MyA0NCA4IDQzLjEwNDYgOCA0MlY2WicgZmlsbD0nbm9uZScgc3Ryb2tlPScjZDNhZjYzJyBzdHJva2Utd2lkdGg9JzQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48cGF0aCBkPSdNMTYgMjBIMzInIHN0cm9rZT0nI2QzYWY2Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48cGF0aCBkPSdNMTYgMjhIMzInIHN0cm9rZT0nI2QzYWY2Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  background-size: 16px 16px;
+  transform: translate(0, 3px);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16.8px;
+  width: 16.33px;
+}
+
+
+/*----------------------链接：外链添加icon-------------  */
+.theme-light .external-link {
+  background-image: none;
+  padding-right: 0;
+}
+.theme-light .markdown-preview-view .external-link:before {
+  margin-right: 4px;
+  margin-left: 2px;
+  content: '';
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCA0OCA0OCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB4PSczNC42MDc0JyB5PSczLjQ5MzknIHdpZHRoPScxNCcgaGVpZ2h0PScxOCcgcng9JzInIHRyYW5zZm9ybT0ncm90YXRlKDQ1IDM0LjYwNzQgMy40OTM5KScgc3Ryb2tlPScjNDJCOTgzJyBzdHJva2Utd2lkdGg9JzQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48cmVjdCB4PScxNi4yMjI3JyB5PScyMS44Nzg3JyB3aWR0aD0nMTQnIGhlaWdodD0nMTgnIHJ4PScyJyB0cmFuc2Zvcm09J3JvdGF0ZSg0NSAxNi4yMjI3IDIxLjg3ODcpJyBzdHJva2U9JyM0MkI5ODMnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcvPjxwYXRoIGQ9J00zMS4wNzIzIDE2LjkyOUwxNi45MzAxIDMxLjA3MTEnIHN0cm9rZT0nIzQyQjk4Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  background-size: 16px 16px;
+  transform: translate(0, 3px);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16.8px;
+  width: 16.33px;
+}
+.theme-dark .external-link {
+  color: #D3AF63 !important;
+  background-image: none;
+  padding-right: 0;
+}
+.theme-dark .markdown-preview-view .external-link:before {
+  margin-right: 4px;
+  margin-left: 2px;
+  content: '';
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMjQnIHZpZXdCb3g9JzAgMCA0OCA0OCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cmVjdCB4PSczNC42MDc0JyB5PSczLjQ5MzknIHdpZHRoPScxNCcgaGVpZ2h0PScxOCcgcng9JzInIHRyYW5zZm9ybT0ncm90YXRlKDQ1IDM0LjYwNzQgMy40OTM5KScgc3Ryb2tlPScjZDNhZjYzJyBzdHJva2Utd2lkdGg9JzQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48cmVjdCB4PScxNi4yMjI3JyB5PScyMS44Nzg3JyB3aWR0aD0nMTQnIGhlaWdodD0nMTgnIHJ4PScyJyB0cmFuc2Zvcm09J3JvdGF0ZSg0NSAxNi4yMjI3IDIxLjg3ODcpJyBzdHJva2U9JyNkM2FmNjMnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcvPjxwYXRoIGQ9J00zMS4wNzIzIDE2LjkyOUwxNi45MzAxIDMxLjA3MTEnIHN0cm9rZT0nI2QzYWY2Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  background-size: 16px 16px;
+  transform: translate(0, 3px);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16.8px;
+  width: 16.33px;
+}
+
+
+/*----------------------链接：双链到MOC中的图片添加icon- */
+.markdown-preview-view  a.internal-link[href^="TEST04_图片#^pic"]::before {
+  content: '';
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCA0OCA0OCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Y2lyY2xlIGN4PScyNCcgY3k9JzI1JyByPScyMCcgc3Ryb2tlPScjZDNhZjYzJyBzdHJva2Utd2lkdGg9JzQnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcvPjxwYXRoIGQ9J005IDM4TDE3IDI5TDMzIDQyJyBzdHJva2U9JyNkM2FmNjMnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJy8+PGNpcmNsZSBjeD0nMTgnIGN5PScxOCcgcj0nNCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjZDNhZjYzJyBzdHJva2Utd2lkdGg9JzQnLz48cGF0aCBkPSdNMjQgMzRMMzIgMjRMNDIgMzInIHN0cm9rZT0nI2QzYWY2Mycgc3Ryb2tlLXdpZHRoPSc0JyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLz48L3N2Zz4=");
+  background-size: 16px 16px;
+  transform: translate(0, 3px);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16.8px;
+  width: 16.33px;
+  margin-right: 5px;
+}
+
+
+

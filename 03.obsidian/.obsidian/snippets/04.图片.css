@@ -1,0 +1,265 @@
+/*-----------------------------------------------------04、图片：悬停放大、预览居中、预览圆角矩形、并列排版----------------------------------------------------------------------*/
+
+/*----------------------图片：悬停放大------------------*/
+/*.markdown-preview-view img:hover,
+.markdown-preview-view video:hover {
+    width: 300%;
+    height: 300%;
+    max-width: min(300%, 800vw);
+    max-height: min(300%, 800vh);
+    cursor: zoom-in;
+}
+*/
+
+/*----------------------图片：预览居中------------------*/
+/*.markdown-preview-view img, .markdown-preview-view video {
+  max-width: min(100%,800px) !important;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-cell;
+  outline: 0px solid var(--text-accent);
+}
+*/
+
+/*----------------------图片：预览圆角矩形---------------*/
+/*.markdown-preview-view img {
+  max-width: 100%;
+  outline: none;
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(8, 8, 8, 0.5));
+  background-clip: content-box,padding-box;
+  border-radius: 40px 40px 40px;
+}*/
+
+
+/*----------------------图片：并列排版（Blue Topz）------*/
+.img-grid .markdown-preview-section>div>p>.image-embed[alt*="."] {
+  padding: 0 0.3rem;
+}
+.img-grid .markdown-preview-section>div>p>.image-embed[alt*="."]:last-child {
+  padding-right: 0;
+}
+.img-grid .markdown-preview-section>div>p>.image-embed[alt*="."]:first-child {
+  padding-left: 0;
+}
+.img-grid .markdown-preview-section>div hr {
+  width: 100%;
+}
+.img-grid span.image-embed[alt*="."] {
+  display: table-cell;
+}
+.img-grid img[alt*="."] {
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+
+/*----------------------图片：并列排版（旧，目前不冲突）--*/
+/*----------------------原地址：http://github.com/lithou/sandbox*/
+/*.img-grid p {
+    display: table;
+}
+.img-grid span.image-embed[alt*="."] {
+    display: table-cell;
+    vertical-align: middle;
+}
+.img-grid img[alt*="."]:hover{
+    transform: scale(1.1);
+}
+.img-grid  a.external-link {
+    display: table-cell;
+    vertical-align: middle;
+}
+.img-grid  a.external-link > img {
+    padding-right: 30px !important;
+}
+.view-content .markdown-preview-view img {
+  padding-top: 8px;
+  padding-right: 20px;
+}
+.view-content .markdown-preview-view  p > .image-embed:nth-last-child(1) img{
+  padding-right: 0;
+}*/
+
+
+/*----------------------图片：并列排版（新，正文文字flex）*/
+/*.img-grid p {
+    display: flex;
+}
+.view-content .markdown-preview-view p a img {
+    padding-right: 30px;
+    margin: 1.6em 10px 1.6em 0 !important;
+}
+.img-grid p img[alt*="mdimg-1"] {
+    width: 100%;
+    height: auto;
+}
+.img-grid p img[alt*="mdimg-2"] {
+    width: calc((100% - 30px) * 0.5);
+    height: auto;
+}
+.img-grid p img[alt*="mdimg-3"] {
+    width: calc((100% - 60px) * 0.333333);
+    height: auto;
+}
+.img-grid p img[alt*="mdimg-4"] {
+    width: calc((100% - 90px) * 0.25);
+    height: auto;
+}
+.img-grid p img[alt*="mdimg-5"] {
+    width: calc((100% - 120px) * 0.2);
+    height: auto;
+}
+.view-content .markdown-preview-view img {
+  padding-top: 8px;
+  padding-right: 20px;
+}
+.view-content .markdown-preview-view  p > .image-embed:nth-last-child(1) img{
+  padding-right: 0;
+}
+*/
+
+
+/*----------------------图片：图片位置（扩展语法）--------*/
+img[alt$="left"],
+img[alt$="Left"],
+img[alt$="LEFT"],
+img[alt$="L"],
+.markdown-source-view.mod-cm6 img[alt$="left"],
+.markdown-source-view.mod-cm6 img[alt$="Left"],
+.markdown-source-view.mod-cm6 img[alt$="LEFT"],
+.markdown-source-view.mod-cm6 img[alt$="L"],
+.internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"],
+.internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"],
+.internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"],
+.internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"],
+body:not(.image-zoom) .view-content img[alt$="left"]:not([class="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Left"]:not([class="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="LEFT"]:not([class="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="L"]:not([class="emoji"]) {
+  margin-left: 0 !important;
+}
+
+img[alt$="right"],
+img[alt$="Right"],
+img[alt$="RIGHT"],
+img[alt$="R"],
+.markdown-source-view.mod-cm6 img[alt$="right"],
+.markdown-source-view.mod-cm6 img[alt$="Right"],
+.markdown-source-view.mod-cm6 img[alt$="RIGHT"],
+.markdown-source-view.mod-cm6 img[alt$="R"],
+.internal-embed.image-embed.is-loaded[alt$="right"] img[alt$="right"],
+.internal-embed.image-embed.is-loaded[alt$="Right"] img[alt$="Right"],
+.internal-embed.image-embed.is-loaded[alt$="RIGHT"] img[alt$="RIGHT"],
+.internal-embed.image-embed.is-loaded[alt$="R"] img[alt$="R"],
+body:not(.image-zoom) .view-content img[alt$="right"]:not([class="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Right"]:not([class="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="RIGHT"]:not([class="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="R"]:not([class="emoji"]) {
+  margin-right: 0 !important;
+}
+img[alt$="inline"],
+img[alt$="Inline"],
+img[alt$="INLINE"],
+img[alt$="inl"] {
+  display: inline !important;
+  padding: 0.05em 0.05em !important;
+  vertical-align: bottom;
+}
+img[alt$="inlineL"],
+img[alt$="InlineL"],
+img[alt$="INLINEL"],
+img[alt$="inlL"] {
+  float: left;
+  padding: 0 0.05em 0.05em 0 !important;
+}
+img[alt$="inlineR"],
+img[alt$="InlineR"],
+img[alt$="INLINER"],
+img[alt$="inlR"] {
+  float: right;
+  padding: 0 0 0.05em 0.05em !important;
+}
+.markdown-preview-view .image-embed[src$="center"],
+.markdown-preview-view .image-embed[src$="centre"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"] {
+  clear: both;
+  margin: 0.5rem auto !important;
+  width: fit-content;
+  display: block;
+}
+.markdown-preview-view .image-embed[src$="center"]::after,
+.markdown-preview-view .image-embed[src$="centre"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"]::after {
+  content: attr(alt);
+  margin-top: 0.5rem;
+  display: block;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.markdown-preview-view .image-embed[src$="left"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"] {
+  position: relative;
+  float: left;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  clear: both;
+  display: table;
+}
+.markdown-preview-view .image-embed[src$="left"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"]::after  {
+  content: attr(alt);
+  padding: 0 1rem 0 1rem;
+  margin-top: 0.5rem;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.markdown-preview-view .image-embed[src$="right"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"] {
+  position: relative;
+  float: right;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  clear: both;
+  display: table;
+}
+.markdown-preview-view .image-embed[src$="right"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"]::after {
+  content: attr(alt);
+  padding: 0 1rem 0 1rem;
+  margin-top: 0.5rem;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+span[alt*="+grid"] {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px;
+}
+.markdown-source-view.is-live-preview .internal-embed.image-embed.is-loaded[alt*="+grid"] {
+  display: inline-table;
+  vertical-align: middle;
+  max-width: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
